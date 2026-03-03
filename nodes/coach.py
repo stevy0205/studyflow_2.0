@@ -16,7 +16,7 @@ from langchain_community.chat_models import ChatOllama
 _llm = ChatOllama(
     model="llama3.1:8b-instruct-q4_K_M",
     temperature=0,
-    timeout=30,
+    timeout=60,
     max_retries=1
 )
 

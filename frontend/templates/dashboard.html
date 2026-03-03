@@ -389,6 +389,13 @@
     <div id="tips"></div>
   </div>
 
+  <!-- Entschlüsse -->
+  <div class="card" style="margin-top:1.25rem">
+    <div class="card-title">📝 Entschlüsse formulieren</div>
+    <p style="font-size:.875rem;color:var(--muted);margin-bottom:1rem">Konkrete Entschlüsse mit Datum &amp; Uhrzeit machen aus „ich sollte" ein „ich mache". Nutze diese Vorlagen:</p>
+    <div id="entschluesse-cards"></div>
+  </div>
+
   <!-- Alle Methoden -->
   <div class="card" style="margin-top:1.25rem">
     <div class="card-title">📖 Alle Lernmethoden</div>
@@ -572,17 +579,18 @@ function openModal(idx) {
       <p>${m.kurzbeschreibung}</p>
     </div>`;
 
-  if (m.ziel) body += `
+  if (m.ziel || m.llm_explanation) body += `
     <div class="modal-section">
-      <div class="modal-section-title">🎯 Ziel</div>
-      <p>${m.ziel}</p>
+      <div class="modal-section-title">🎯 Ziel / Erklärung</div>
+      <p>${m.llm_explanation || m.ziel}</p>
     </div>`;
 
-  if (m.schritte?.length) body += `
+  const schritte = m.anwendung || m.schritte || [];
+  if (schritte.length) body += `
     <div class="modal-section">
-      <div class="modal-section-title">📋 Schritte</div>
+      <div class="modal-section-title">📋 Anwendung / Schritte</div>
       <div class="modal-steps">
-        ${m.schritte.map((s,i) => `
+        ${schritte.map((s,i) => `
           <div class="modal-step">
             <div class="step-num" style="background:${cfg.color};border-color:${cfg.color}">${i+1}</div>
             <div class="step-text">${s}</div>
@@ -602,11 +610,27 @@ function openModal(idx) {
       <ul>${m.haeufige_fehler.map(f => `<li>${f}</li>`).join('')}</ul>
     </div>`;
 
-  if (m.beispiel) body += `
+  const beispiel = m.beispiel || (m.original_paraphrase ? m.original_paraphrase + '...' : null);
+  if (beispiel) body += `
     <div class="modal-section">
-      <div class="modal-section-title">📖 Beispiel</div>
-      <p style="background:${cfg.bg};border:1.5px solid ${cfg.color};border-radius:10px;padding:.75rem 1rem">${m.beispiel}</p>
+      <div class="modal-section-title">📖 Hintergrund / Beispiel</div>
+      <p style="background:${cfg.bg};border:1.5px solid ${cfg.color};border-radius:10px;padding:.75rem 1rem">${beispiel}</p>
     </div>`;
+
+  // Entschluss-Vorlagen aus JSON
+  const entschluss = m.entschluss;
+  if (entschluss && entschluss.vorlagen?.length) {
+    const vorlagen = entschluss.vorlagen.map(v =>
+      `<div style="padding:.45rem .75rem;background:${cfg.bg};border:1.5px solid ${cfg.color};border-radius:8px;margin-bottom:.4rem;font-size:.83rem">${v}</div>`
+    ).join('');
+    body += `
+    <div class="modal-section">
+      <div class="modal-section-title">📝 Entschluss formulieren</div>
+      <p style="font-size:.8rem;color:var(--muted);margin-bottom:.6rem">${entschluss.frage || ''}</p>
+      ${vorlagen}
+      ${entschluss.hinweis ? `<p style="font-size:.75rem;color:var(--muted);margin-top:.5rem;font-style:italic">${entschluss.hinweis}</p>` : ''}
+    </div>`;
+  }
 
   document.getElementById('m-body').innerHTML = body;
   document.getElementById('modal-overlay').classList.add('open');
@@ -623,6 +647,21 @@ function closeModalDirect() {
 }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+
+// Entschlüsse
+const ENTSCHLUESSE = [
+  "Ich beginne mit _____ am _____ um _____ Uhr.",
+  "Ich schreibe eine To-Do-Liste am _____ um _____ Uhr.",
+  "Ich lerne _____ am _____ von _____ bis _____ Uhr.",
+  "Ich fange mit Aufgabe _____ an am _____ um _____ Uhr.",
+];
+document.getElementById('entschluesse-cards').innerHTML = ENTSCHLUESSE.map(v => `
+  <div style="display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;
+    background:var(--cream);border:2px solid var(--navy);border-radius:10px;
+    margin-bottom:.5rem;font-size:.875rem;box-shadow:2px 2px 0 var(--navy)">
+    <span style="font-size:1.1rem">✏️</span>
+    <span>${v}</span>
+  </div>`).join('');
 
 loadAllMethods();</script>
 </body>

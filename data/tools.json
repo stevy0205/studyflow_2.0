@@ -1,514 +1,566 @@
 {
+  "_meta": {
+    "hinweis": "Ich kann keine langen, zusammenhängenden Originalpassagen 1:1 aus deinen Fotos wiedergeben (Urheberrecht). Deshalb enthält jede Methode (a) kurze Original-Ausschnitte (original_excerpt) und (b) eine sehr ausführliche, inhaltsgetreue Paraphrase (original_paraphrase) als Wissensbasis. Wo in den Bildern kein Text zu einer Methode erkennbar/enthalten war, steht status_original='fehlt_im_bildmaterial' und original_* ist leer.",
+    "kategorien_normalisiert": ["prokrastination", "unterbrechungen", "leistung", "emotion"]
+  },
+
   "30 Min Experiment": {
+    "kategorie_raw": "unterbrechungen",
     "kategorie": "unterbrechungen",
-    "kurzbeschreibung": "30 Minuten fokussiert an genau einer Aufgabe arbeiten und danach kurz auswerten, was dich abgelenkt hat.",
-    "ziel": "Ablenkungen sichtbar machen und ein verlässliches Fokus-Ritual aufbauen.",
-    "wann_nutzen": [
-      "wenn du schwer in den Flow kommst",
-      "wenn du häufig zum Handy/Browser wechselst",
-      "wenn du dich schnell verzettelst"
+    "kurzbeschreibung": "30 Minuten ohne Selbstunterbrechung am Platz bleiben – Fokus trainieren.",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„30 Minuten am Platz zu sitzen, ohne aufzustehen?“",
+      "„Streng verboten ist es jedoch, in diesen 30 Minuten aufzustehen …“",
+      "„Beobachte dich selbst: Nach wie vielen Minuten hast du dich selbst zum ersten Mal unterbrochen?“"
     ],
-    "schritte": [
-      "Wähle EINE Aufgabe und formuliere ein klares Mini-Ziel (\"fertig\" bedeutet ...).",
-      "Timer auf 30 Minuten stellen, Handy weg/Flugmodus, Tabs schließen.",
-      "Bei Ablenkung: Stichwort auf eine Ablenkungs-Liste schreiben (nicht nachgehen).",
-      "Nach 30 Minuten: 2 Minuten Review (Was hat abgelenkt? Warum? Was ändere ich im nächsten Block?)."
+    "original_paraphrase": "Die Methode beschreibt eine Challenge, bei der du für eine feste Zeitspanne (30 Minuten) am Platz bleibst und dich nicht selbst unterbrichst. In dieser Zeit sollst du nicht aufstehen und keine typischen Unterbrechungs-Handlungen ausführen (z. B. zum Smartphone greifen, nebenbei konsumieren). Vor dir liegt eine Arbeits- oder Lernaufgabe. Du entscheidest, ob du arbeitest oder „nur da sitzt“ – aber du darfst nicht die Regeln brechen. Der Kern ist Selbstbeobachtung: Du hältst fest, nach wie vielen Minuten du dich erstmals unterbrochen hast. Das dient als Diagnose und Trainingsreiz gegen den inneren Impuls, unangenehme/anstrengende Tätigkeiten zu vermeiden.",
+    "llm_explanation": "Das ist ein Konzentrations-Training: Du setzt deinem „Unterbrechungs-Impuls“ eine klare Grenze und misst, wie lange du wirklich fokussiert bleibst.",
+    "anwendung": [
+      "Lege eine Lern-/Arbeitsaufgabe bereit.",
+      "Schalte Störquellen aus (Smartphone weg/aus).",
+      "Starte 30 Minuten Timer.",
+      "Bleib sitzen und unterbrich dich nicht.",
+      "Notiere: Minute der ersten Unterbrechung."
     ],
-    "dauer": "32–35 Minuten",
-    "tipps": [
-      "Starte kleiner als du denkst (z.B. 1 Unterkapitel, 5 Aufgaben).",
-      "Schreibe Ablenkungen wirklich nur als Stichwort auf (max. 3 Sekunden)."
-    ],
-    "haeufige_fehler": [
-      "Aufgabe ist zu groß/unklar",
-      "Handy liegt sichtbar neben dir",
-      "keine Auswertung – dadurch kein Lern-Effekt"
-    ],
-    "varianten": [
-      "20/40-Minuten-Blöcke",
-      "mit kurzer Accountability-Nachricht an jemanden (\"Ich mache jetzt 30 Minuten X\")."
-    ],
-    "beispiel": "Mathe: Ziel = \"Aufgabe 1a–1c lösen\". Ablenkungs-Liste: \"WhatsApp\", \"E-Mail\", \"Snack\". Review: \"Handy aus dem Raum\"."
-  },
-
-  "Struktur-Lege-Technik": {
-    "kategorie": "leistung",
-    "kurzbeschreibung": "Du legst den Stoff als sichtbare Struktur (Gliederung/Mindmap), statt ihn nur linear zu lesen.",
-    "ziel": "Überblick + Verständnis + bessere Abrufpfade fürs Erinnern.",
-    "wann_nutzen": [
-      "bei komplexen Themen",
-      "wenn du \"alles irgendwie kennst\", aber nicht erklären kannst",
-      "als Start für ein neues Kapitel"
-    ],
-    "schritte": [
-      "Schreibe das Thema als Leitfrage in die Mitte/oben.",
-      "Erzeuge 3–6 Hauptäste (Kapitel/Dimensionen/Unterfragen).",
-      "Fülle pro Ast: Definitionen, Kernaussagen, Beispiele.",
-      "Markiere Beziehungen (\"führt zu\", \"unterscheidet sich von\", \"Voraussetzung\").",
-      "Formuliere 3 Prüfungsfragen aus der Struktur."
-    ],
-    "dauer": "15–45 Minuten",
-    "tipps": [
-      "Erst grob, dann verfeinern.",
-      "Alles in eigenen Worten – notfalls erst \"falsch\" und dann korrigieren."
-    ],
-    "haeufige_fehler": [
-      "zu früh zu detailliert",
-      "nur abschreiben statt strukturieren",
-      "keine Fragen ableiten"
-    ],
-    "varianten": [
-      "als Stichwort-Gliederung (I, II, III) statt Mindmap",
-      "mit farbigen Markierungen für \"Definition\", \"Beispiel\", \"Formel\""
-    ],
-    "beispiel": "BWL: Thema \"Marketing-Mix\" → 4Ps als Hauptäste, darunter je 2 Beispiele und typische Fehler (z.B. Preis ≠ Rabatt)."
-  },
-
-  "Chunking": {
-    "kategorie": "leistung",
-    "kurzbeschreibung": "Einzelelemente werden zu sinnvollen Paketen (Chunks) gebündelt, damit du sie leichter behalten und abrufen kannst.",
-    "ziel": "Arbeitsgedächtnis entlasten, schneller lernen, stabiler abrufen.",
-    "wann_nutzen": [
-      "bei Listen, Definitionen, Vokabeln, Formeln, Abläufen",
-      "wenn du viele Details verwechselst",
-      "für Wiederholungen (Spaced Repetition)"
-    ],
-    "schritte": [
-      "Sammle die Einzelelemente (Liste).",
-      "Gruppiere nach Bedeutung/Muster/Regel (nicht zufällig).",
-      "Gib jedem Chunk einen Namen oder eine Eselsbrücke.",
-      "Übe den Abruf chunkweise (Chunk → Details), nicht nur einzeln."
-    ],
-    "dauer": "20–60 Minuten",
-    "tipps": [
-      "Chunks müssen eine Logik haben (Regel, Kategorie, Ursache-Wirkung).",
-      "Maximal 5–7 Chunks pro Thema, sonst wird’s wieder \"zu viel\"."
-    ],
-    "haeufige_fehler": [
-      "Gruppierung ohne Bedeutung (nur 3er-Pakete)",
-      "Chunks sind zu groß",
-      "nur erstellen, aber nicht abrufen üben"
-    ],
-    "varianten": [
-      "Chunking + Karteikarten (eine Karte pro Chunk)",
-      "Chunking + kurze mündliche Erklärung (30–60 Sekunden pro Chunk)"
-    ],
-    "beispiel": "Bio: Zellorganellen → Chunks nach Funktion: \"Energie\" (Mitochondrien), \"Produktion\" (Ribosomen/ER), \"Transport\" (Golgi), \"Schutz\" (Membran)."
-  },
-
-  "Chunking-Wiki": {
-    "kategorie": "leistung",
-    "kurzbeschreibung": "Für jeden Chunk baust du eine Mini-Wiki-Seite: Definition, Beispiele, Abgrenzungen und typische Fehler.",
-    "ziel": "Verstehen + Transfer + schnelle Wiederholung durch klare Seitenstruktur.",
-    "wann_nutzen": [
-      "für prüfungsrelevante Themenblöcke",
-      "wenn du oft verwechselst oder zu oberflächlich lernst",
-      "als \"Master-Notizen\" für die Klausurphase"
-    ],
-    "schritte": [
-      "Titel = Chunk-Name.",
-      "3 Sätze Erklärung in eigenen Worten.",
-      "2 Beispiele + 1 Gegenbeispiel.",
-      "\"Verwechslungsgefahr\" + Abgrenzung zu ähnlichen Begriffen.",
-      "Formuliere 3 Prüfungsfragen/Karteikarten aus der Seite."
-    ],
-    "dauer": "10–25 Minuten pro Seite",
-    "tipps": [
-      "Beispiele sind Pflicht (sie machen Wissen prüfbar).",
-      "Gegenbeispiele helfen enorm gegen Verwechslungen."
-    ],
-    "haeufige_fehler": [
-      "zu lang (Roman statt Wiki)",
-      "nur Definition ohne Beispiele",
-      "keine Abgrenzungen"
-    ],
-    "varianten": [
-      "eine Seite pro Unterkapitel",
-      "als Notion/Obsidian/Markdown gespeichert"
-    ],
-    "beispiel": "Jura: \"Anfechtung\" → Definition, Voraussetzungen, 2 Fälle, 1 Nicht-Fall, Abgrenzung zu \"Rücktritt\", 3 Prüfungsfragen."
-  },
-
-  "Prüfungssimulation": {
-    "kategorie": "leistung",
-    "kurzbeschreibung": "Du übst unter echten Prüfungsbedingungen (Zeit, Hilfsmittel, Setting) und analysierst danach systematisch deine Fehler.",
-    "ziel": "Abrufleistung steigern, Zeitmanagement trainieren, Prüfungsroutine entwickeln.",
-    "wann_nutzen": [
-      "1–3 Wochen vor der Prüfung und dann regelmäßig",
-      "wenn du in Tests schlechter bist als beim Üben",
-      "zur Diagnose von Lücken und Stresspunkten"
-    ],
-    "schritte": [
-      "Wähle Aufgaben (Altfragen/Pool) und setze klare Rahmenbedingungen.",
-      "Simuliere wie in der Prüfung (Timer, keine Ablenkung, erlaubte Hilfsmittel).",
-      "Korrigiere mit Kriterien (Punkte/Teilschritte).",
-      "Klassifiziere Fehler: Wissenslücke / Strategie / Zeit / Nervosität.",
-      "Leite 1 Maßnahme pro Fehlerklasse ab (konkret)."
-    ],
-    "dauer": "30–180 Minuten + 15–30 Minuten Auswertung",
-    "tipps": [
-      "Auswertung ist wichtiger als die Simulation selbst.",
-      "Trainiere auch \"weitergehen, wenn du festhängst\"."
-    ],
-    "haeufige_fehler": [
-      "nur durchrechnen ohne Analyse",
-      "zu selten simulieren",
-      "Rahmenbedingungen sind nicht prüfungsnah"
-    ],
-    "varianten": [
-      "Mini-Simulation (30 Minuten nur Teilaufgaben)",
-      "Simulation + kurze Stressregulation davor (z.B. 3-Minuten-Form)"
-    ],
-    "beispiel": "Chemie: 60 Minuten Altklausur-Teil, danach Fehlerliste: \"Zeitfresser\", \"Rechenfehler\", \"Begriffe verwechselt\" + je 1 Gegenmaßnahme."
-  },
-
-  "Stoff verteilen": {
-    "kategorie": "prokrastination",
-    "kurzbeschreibung": "Du zerlegst den Stoff in kleine Einheiten und verteilst sie realistisch über mehrere Tage (Spacing).",
-    "ziel": "Aufschieben reduzieren, Lernen planbar machen, Behalten verbessern.",
-    "wann_nutzen": [
-      "wenn du zu spät anfängst",
-      "wenn du alles auf einmal lernen willst",
-      "bei langen Prüfungsphasen/Modulen"
-    ],
-    "schritte": [
-      "Liste den gesamten Stoff als Themen/Unterthemen auf.",
-      "Zerlege in Einheiten von 25–45 Minuten (klarer Output).",
-      "Verteile Einheiten über Tage/Wochen, plane 20–30% Puffer ein.",
-      "Baue Wiederholungen ein (z.B. nach 1/3/7 Tagen)."
-    ],
-    "dauer": "20–40 Minuten Planung + tägliche Umsetzung",
-    "tipps": [
-      "Plane lieber zu wenig und schaffe es – Erfolg erzeugt Momentum.",
-      "Jede Einheit braucht einen sichtbaren Output (Notizen, Aufgaben, Karten)."
-    ],
-    "haeufige_fehler": [
-      "zu optimistische Planung ohne Puffer",
-      "Einheiten ohne klare Ergebnisse",
-      "keine Wiederholungen eingeplant"
-    ],
-    "varianten": [
-      "Wochenplan mit 3 Prioritäten",
-      "nur 1–2 Einheiten pro Tag, aber konsequent"
-    ],
-    "beispiel": "Geschichte: 10 Themen → 20 Einheiten à 30 Min → 2 Einheiten/Tag für 10 Tage + 3 Puffereinheiten."
-  },
-
-  "Lernphasen beenden": {
-    "kategorie": "prokrastination",
-    "kurzbeschreibung": "Ein kurzes Shutdown-Ritual am Ende der Lernphase, damit der nächste Start leichter wird.",
-    "ziel": "Einstiegshürde senken, Stress abbauen, Anschluss sichern.",
-    "wann_nutzen": [
-      "wenn du nach Pausen schwer wieder anfängst",
-      "wenn du häufig \"mit schlechtem Gefühl\" stoppst",
-      "bei chaotischen Lernunterbrechungen"
-    ],
-    "schritte": [
-      "Stoppe 5 Minuten vor dem Ende.",
-      "Notiere: \"Was habe ich geschafft?\" (1–3 Stichpunkte).",
-      "Notiere: \"Nächster kleinster Schritt\" (max. 5 Minuten Aufwand).",
-      "Lege Material so hin, dass du sofort starten kannst."
-    ],
-    "dauer": "3–7 Minuten",
-    "tipps": [
-      "Der nächste Schritt muss lächerlich klein sein.",
-      "Offene Tabs/Seiten so lassen, dass der Einstieg 10 Sekunden dauert."
-    ],
-    "haeufige_fehler": [
-      "einfach abbrechen ohne nächsten Schritt",
-      "zu großer \"nächster Schritt\"",
-      "kein sichtbarer Abschluss"
-    ],
-    "varianten": [
-      "mit kurzer Selbstbewertung (0–10 Fokus)",
-      "mit Mini-Aufräumen (2 Minuten) als Abschlussanker"
-    ],
-    "beispiel": "Nächster Schritt: \"Nur Karteikarten 1–5 wiederholen\" statt \"Kapitel fertig lernen\"."
+    "dauer": "32 -35 Minuten",
+    "entschluss": {
+      "frage": "Wann genau willst du mit der 30-Minuten-Challenge starten?",
+      "vorlagen": [
+        "Ich beginne die 30-Minuten-Challenge heute um __:__ Uhr.",
+        "Ich beginne die 30-Minuten-Challenge morgen um __:__ Uhr.",
+        "Ich beginne die 30-Minuten-Challenge in __ Minuten."
+      ],
+      "hinweis": "Je konkreter (Uhrzeit/Ort), desto leichter startest du."
+    }
   },
 
   "Konzentration erhalten": {
+    "kategorie_raw": "unterbrechungne",
     "kategorie": "unterbrechungen",
-    "kurzbeschreibung": "Du reduzierst Ablenkungen proaktiv und nutzt Mini-Resets, um bei Drift schnell zurückzukommen.",
-    "ziel": "Längere Fokusphasen mit weniger Task-Switching.",
-    "wann_nutzen": [
-      "bei ständigem Tab-Wechsel",
-      "bei Handy-Impulsen",
-      "wenn du gedanklich schnell abschweifst"
+    "kurzbeschreibung": "Konzentration in Wellen: 30-Minuten-Phasen + professionelle Pausen, um mehrere Lernphasen zu schaffen.",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„… schon nach 8 bis 12 Minuten zu ersten Leistungseinbußen …“",
+      "„Spätestens nach 20 bis 30 Minuten sinkt die Konzentration …“",
+      "„… machst du professionell Pause …“"
     ],
-    "schritte": [
-      "Reize entfernen: Handy weg, Benachrichtigungen aus, unnötige Tabs zu.",
-      "Plane Fokusblock (25–50 Min) + definierte Pause (5–10 Min).",
-      "Ablenkungs-Parkplatz: Gedanken/To-dos kurz notieren statt nachgehen.",
-      "Mini-Reset bei Drift: 1 langer Ausatmer + Frage: \"Was ist der nächste konkrete Schritt?\""
+    "original_paraphrase": "Die Methode erklärt, dass Konzentration nicht konstant ist, sondern schwankt. Es kommt relativ schnell zu ersten Leistungseinbußen, und nach einer gewissen Zeit sinkt die Konzentration deutlich. Deshalb braucht das Gehirn Erholungspausen. Der Ablauf: Du beginnst mit einer 30-Minuten-Phase (z. B. der 30-Minuten-Challenge). Sobald die Konzentration abfällt – spätestens nach 30 Minuten – machst du eine professionell gestaltete Pause. Diese Pause nutzt du aktiv/gezielt (z. B. kurze Bewegung oder eine sehr kurze Regulierungsübung). Nach 3–5 Minuten setzt du dich wieder hin und startest die nächste 30-Minuten-Phase. So kannst du mehrere Lernphasen aneinanderhängen.",
+    "llm_explanation": "Statt „durchzupowern“ arbeitest du in klaren Fokus-Blöcken und nutzt kurze, echte Pausen, damit du länger durchhältst.",
+    "anwendung": [
+      "Starte 30 Minuten Fokusarbeit.",
+      "Spätestens nach 30 Minuten: 3–5 Minuten Pause.",
+      "Pausen aktiv nutzen (Bewegung oder kurze Regulation).",
+      "Danach nächste 30-Minuten-Phase starten.",
+      "Am Ende notieren: Wie viele Phasen geschafft? Welche Pause war am besten?"
     ],
-    "dauer": "pro Fokusblock",
-    "tipps": [
-      "Der Satz \"Nächster Schritt\" ist ein starker Rückholanker.",
-      "Je klarer das Mini-Ziel, desto weniger Drift."
-    ],
-    "haeufige_fehler": [
-      "Block ohne Ziel",
-      "Pausen werden zu lang/ungeplant",
-      "Ablenkungen werden nicht notiert, sondern verfolgt"
-    ],
-    "varianten": [
-      "Pomodoro (25/5)",
-      "Website-Blocker",
-      "Noise/ruhige Musik, wenn es hilft"
-    ],
-    "beispiel": "Beim Impuls \"kurz Instagram\" → Stichwort notieren, ausatmen, nächster Schritt: \"Definition in eigenen Worten schreiben\"."
+    "dauer": "65-70 Minuten",
+    "entschluss": {
+      "frage": "Wann genau willst du mit der 30-Minuten-Challenge starten?",
+      "vorlagen": [
+        "Ich beginne die 30-Minuten-Challenge heute um __:__ Uhr.",
+        "Ich beginne die 30-Minuten-Challenge morgen um __:__ Uhr.",
+        "Ich beginne die 30-Minuten-Challenge in __ Minuten."
+      ],
+      "hinweis": "Je konkreter (Uhrzeit/Ort), desto leichter startest du."
+    }
   },
 
-  "Reguliere deine Basisemotionen": {
-    "kategorie": "emotion",
-    "kurzbeschreibung": "Kurzer Check-in und Regulation, bevor du lernst oder wenn du merkst, dass es emotional kippt.",
-    "ziel": "Nervensystem stabilisieren, damit Lernen möglich und effizient wird.",
-    "wann_nutzen": [
-      "bei Unruhe/Überforderung",
-      "bei Ärger/Frust",
-      "bei innerem Stress vor dem Lernen"
+  "Stoff verteilen": {
+    "kategorie_raw": "prokrastination",
+    "kategorie": "prokrastination",
+    "kurzbeschreibung": "Masterplan/Verteilungsplan: Termine + Aufwand schätzen + gleichmäßig auf die verfügbare Zeit verteilen.",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„… trägst du die ‚Fixpunkte‘ von den festgesetzten Terminen …“",
+      "„… verteilst du alles, was zu tun ist, möglichst gleichmäßig …“",
+      "„… auch ohne ständige Schuldgefühle deine Freizeit zu genießen.“"
     ],
-    "schritte": [
-      "Benennen: \"Ich spüre ...\" und Intensität 0–10.",
-      "Körper reset: Schultern runter, Kiefer locker, Ausatmen verlängern.",
-      "Basis check: Wasser, Hunger, Schlaf, Bewegung, frische Luft.",
-      "Mini-Handlung (1–3 Min): trinken, Fenster auf, kurz bewegen, 2 Minuten aufräumen."
+    "original_paraphrase": "Die Methode beschreibt einen Masterplan (auch Verteilungsplan). Du startest, indem du alle festen Termine („Fixpunkte“) einträgst: Abgaben, Prüfungen, Präsentationen usw. Dann schätzt du den Gesamtaufwand: wie viel Zeit du insgesamt brauchst. Anschließend verteilst du die Aufgaben möglichst gleichmäßig auf den Zeitraum bis zu den Terminen. Ziel ist ein übergreifender Überblick, damit du Aufgaben rechtzeitig anpackst, nicht ständig unter Druck gerätst und auch deine Freizeit ohne dauernde Schuldgefühle genießen kannst. Das System ist rollierend: Du kannst es aktualisieren, wenn sich Termine/Umfang ändern.",
+    "llm_explanation": "Du baust dir eine Landkarte: erst Fixpunkte, dann Aufwand, dann gleichmäßig verteilen – so wird Lernen planbar statt last minute.",
+    "anwendung": [
+      "Alle Fixpunkte sammeln (Abgaben/Prüfungen/Präsentationen).",
+      "Gesamtaufwand schätzen (Stunden/Einheiten).",
+      "Auf Wochen/Zeitraum gleichmäßig verteilen.",
+      "Regelmäßig aktualisieren."
     ],
-    "dauer": "3–8 Minuten",
-    "tipps": [
-      "Benennen reduziert Druck (\"Ich bin nervös\" statt \"Ich bin schlecht\").",
-      "Kleine körperliche Maßnahmen wirken oft schneller als Grübeln."
-    ],
-    "haeufige_fehler": [
-      "Gefühl wegdrücken statt benennen",
-      "zu große Lösung suchen statt Mini-Schritt",
-      "kein Basis-Check (Hunger/Schlaf ignoriert)"
-    ],
-    "varianten": [
-      "3-Minuten-Form",
-      "Sekundenform"
-    ],
-    "beispiel": "Vor Lernen: \"Anspannung 7/10\" → 5 lange Ausatmer + Wasser + 2 Minuten Schreibtisch frei, dann starten."
+    "dauer": "45 Minuten",
+     "entschluss": {
+      "frage": "Wann möchtest du deinen Masterplan erstellen?",
+      "vorlagen": [
+        "Ich erstelle den Masterplan heute um __:__ Uhr.",
+        "Ich erstelle den Masterplan morgen um __:__ Uhr.",
+        "Ich erstelle den Masterplan in __ Minuten."
+      ],
+      "hinweis": "Lege vorher Kalender/Termine bereit."
+    }
   },
 
-  "Reguliere deine Basisemotionen (3 Minuten Form)": {
-    "kategorie": "emotion",
-    "kurzbeschreibung": "Sehr kompaktes 3-Minuten-Protokoll für akute Anspannung.",
-    "ziel": "Schnell stabilisieren und handlungsfähig werden.",
-    "wann_nutzen": [
-      "wenn du dich gerade blockiert fühlst",
-      "kurz vor einem Lernblock oder einer Simulation"
+  "Lernphasen vorausschauend beenden": {
+    "kategorie_raw": "prokrastination",
+    "kategorie": "prokrastination",
+    "kurzbeschreibung": "Lern- und Arbeitsphasen vorausschauend beenden: nächsten Schritt festlegen statt „offen“ aufhören.",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„Was will ich als Nächstes tun? Wie mache ich weiter?“",
+      "„… etwas bereitlegen, was du beim nächsten Schritt brauchen wirst.“"
     ],
-    "schritte": [
-      "30 Sekunden: Emotion benennen + Intensität 0–10.",
-      "90 Sekunden: Atmung (z.B. 4s ein, 6–8s aus).",
-      "60 Sekunden: \"Nächster kleinster Schritt\" definieren und Material bereit legen."
+    "original_paraphrase": "Die Methode beschreibt, dass es leichter ist, wieder neu anzufangen, wenn du eine Phase nicht abrupt und „offen“ beendest. Stattdessen beendest du vorausschauend: Du hältst fest, was der nächste konkrete Schritt ist („Was will ich als Nächstes tun? Wie mache ich weiter?“). Du kannst außerdem Dinge so vorbereiten, dass der Einstieg beim nächsten Mal leichter wird (Material bereitlegen, nächste Aufgabe markieren). Die Idee ist: Der Wiedereinstieg wird zur kleinen, klaren Handlung statt zur großen Hürde.",
+    "llm_explanation": "Du hörst nicht „einfach auf“, sondern baust eine Brücke zum nächsten Start – damit du morgen leichter wieder reinkommst.",
+    "anwendung": [
+      "Vor dem Aufhören: nächsten Mini-Schritt definieren.",
+      "Notiere den nächsten Schritt sichtbar.",
+      "Lege Material/Dateien so bereit, dass du direkt starten kannst."
     ],
-    "dauer": "3 Minuten",
-    "tipps": [
-      "Ausatmen länger als Einatmen ist meist beruhigend.",
-      "Der nächste Schritt muss sofort startbar sein."
-    ],
-    "haeufige_fehler": [
-      "zu lange analysieren",
-      "kein konkreter nächster Schritt"
-    ],
-    "varianten": [
-      "mit kurzer Körperanspannung/Entspannung (Schultern anspannen → lösen)"
-    ],
-    "beispiel": "Nächster Schritt: \"1 Aufgabe markieren und nur den ersten Rechenschritt machen\"."
-  },
-
-  "Reguliere deine Basisemotionen (Sekundenform)": {
-    "kategorie": "emotion",
-    "kurzbeschreibung": "Mikro-Intervention mitten im Lernen, wenn du merkst, dass du kippst.",
-    "ziel": "In 10–30 Sekunden zurück in den Fokus kommen.",
-    "wann_nutzen": [
-      "bei plötzlicher Nervosität",
-      "bei Frust/Blackout-Momenten",
-      "wenn du merkst, dass du flüchten willst"
-    ],
-    "schritte": [
-      "1–2 Atemzüge: Ausatmen verlängern.",
-      "Blick fixieren: einen Punkt im Raum.",
-      "Satz: \"Nur der nächste Schritt.\""
-    ],
-    "dauer": "10–30 Sekunden",
-    "tipps": [
-      "Erst Körper, dann Denken.",
-      "Danach sofort eine Mini-Handlung (ein Satz schreiben, eine Zahl einsetzen)."
-    ],
-    "haeufige_fehler": [
-      "weitergrübeln statt handeln",
-      "zu viel auf einmal wollen"
-    ],
-    "varianten": [
-      "mit kurzer Handbewegung (Stift neu greifen) als Anker"
-    ],
-    "beispiel": "Blackout → langer Ausatmer → \"nur nächste Zeile\" → schreibe Überschrift/Definition."
+    "dauer": "5 Minuten",
+    "entschluss": {
+      "frage": "Wann willst du diese Abschluss-Routine das nächste Mal anwenden?",
+      "vorlagen": [
+        "Ich beende heute meine nächste Lernphase bewusst mit dem nächsten Schritt.",
+        "Ich nutze die Abschluss-Routine ab __:__ Uhr (heute).",
+        "Ich nutze die Abschluss-Routine ab der nächsten Lernphase."
+      ],
+      "hinweis": "Ziel ist: 1 konkreter nächster Schritt – nicht mehr."
+    }
   },
 
   "Entschlüsse fassen": {
+    "kategorie_raw": "prokrastination",
     "kategorie": "prokrastination",
-    "kurzbeschreibung": "Du baust Wenn-Dann-Pläne, die dich trotz Widerstand ins Handeln bringen.",
-    "ziel": "Startbar werden, auch wenn Motivation fehlt.",
-    "wann_nutzen": [
-      "wenn du immer wieder aufschiebst",
-      "wenn dich bestimmte Gefühle triggern (Angst, Widerstand, Müdigkeit)",
-      "wenn du oft \"gleich\" sagst und es nie passiert"
+    "kurzbeschreibung": "Konkrete Entschlüsse (Datum/Uhrzeit/Verbindlichkeit) als Starthebel – Rubikon überwinden.",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„Entschlüsse: Ich beginne … am … um … Uhr“",
+      "„Ich schreibe eine To Do Liste … um … Uhr“"
     ],
-    "schritte": [
-      "Hindernis benennen: \"Wenn ich X spüre/denke ...\"",
-      "Dann-Plan formulieren: \"... dann mache ich 5 Minuten Y.\"",
-      "Reibung senken: Material vorbereiten (offene Seite, Stift, Aufgabe markiert).",
-      "Nach 5 Minuten entscheiden: weitermachen oder bewusst stoppen (mit Lernphasen beenden)."
+    "original_paraphrase": "Die Methode arbeitet mit konkreten Entschlüssen als Handlungsstart. Du triffst eine klare Entscheidung mit Datum und Uhrzeit, wodurch du den Übergang vom Planen zum Tun erleichterst. Statt vage vorzuhaben „irgendwann zu lernen“, formulierst du einen konkreten Start. Das wird als Hebel beschrieben, um das tatsächliche Beginnen (Rubikon) zu schaffen. Ergänzend können kleine vorbereitende Schritte (z. B. To-do-Liste) ebenfalls als Entschluss festgelegt werden.",
+    "llm_explanation": "Ein fester Starttermin macht aus „ich sollte“ ein „ich mache“.",
+    "anwendung": [
+      "Lege Startdatum und Uhrzeit fest.",
+      "Schreibe den Entschluss als Satz auf.",
+      "Richte die Umgebung so ein, dass du zum Zeitpunkt starten kannst."
     ],
-    "dauer": "2–5 Minuten Vorbereitung + 5 Minuten Start",
-    "tipps": [
-      "5 Minuten sind nicht verhandelbar – danach ist alles optional.",
-      "Dann-Plan muss konkret sein (nicht \"ich lerne\", sondern \"ich löse Aufgabe 1a\")."
+    "dauer": "20 Minuten",
+    "entschluss": {
+      "frage": "Welchen konkreten Entschluss willst du jetzt festlegen (Datum + Uhrzeit)?",
+      "vorlagen": [
+        "Ich beginne am __.__.__ um __:__ Uhr.",
+        "Ich beginne heute um __:__ Uhr.",
+        "Ich beginne in __ Minuten."
+      ],
+      "hinweis": "Nicht diskutieren – nur festlegen."
+    }
+  },
+
+  "Wissensnetz": {
+    "kategorie_raw": "leistung",
+    "kategorie": "leistung",
+    "kurzbeschreibung": "Begriffe flexibel vernetzen (nicht baumartig), um Zusammenhänge sichtbar zu machen.",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„… musst du beim Wissensnetz die Grundordnung selbst schaffen.“",
+      "„… entstehen nach und nach Verbindungen.“"
     ],
-    "haeufige_fehler": [
-      "Plan ist zu allgemein",
-      "Startschritt ist zu groß",
-      "keine Vorbereitung der Umgebung"
+    "original_paraphrase": "Im Unterschied zur Mindmap, die eine baumartige Grundordnung nahelegt, sollst du beim Wissensnetz die Grundordnung selbst erzeugen. Du startest im Querformat mit einem möglichst wichtigen Begriff. Während du Wissen aufnimmst, kommen weitere Begriffe hinzu. Diese verbindest du mit dem ersten Begriff – oder notierst sie zunächst getrennt, falls noch keine Verbindung klar ist. Mit der Zeit entstehen zunehmend Verbindungen, und du verstehst immer besser, wie die Teile zusammengehören.",
+    "llm_explanation": "Du baust ein Netz statt einen Baum: flexibel verbinden, bis das Ganze Sinn ergibt.",
+    "anwendung": [
+      "Starte mit einem zentralen Begriff.",
+      "Ergänze neue Begriffe beim Lernen.",
+      "Ziehe Verbindungen, sobald Beziehungen klar werden.",
+      "Überarbeite das Netz, wenn du neue Zusammenhänge erkennst."
     ],
-    "varianten": [
-      "mit Belohnung danach (z.B. Tee, kurze Pause)",
-      "mit externem Trigger (Kalenderalarm, feste Uhrzeit)"
+    "dauer": "60+ Minuten",
+    "entschluss": {
+      "frage": "Welchen konkreten Entschluss willst du jetzt festlegen (Datum + Uhrzeit)?",
+      "vorlagen": [
+        "Ich beginne am __.__.__ um __:__ Uhr.",
+        "Ich beginne heute um __:__ Uhr.",
+        "Ich beginne in __ Minuten."
+      ],
+      "hinweis": "Nicht diskutieren – nur festlegen."
+    }
+  },
+
+  "Struktur-Lege-Technik": {
+    "kategorie_raw": "leistung",
+    "kategorie": "leistung",
+    "kurzbeschreibung": "15–20 Begriffe auf Karten/Haftnotizen schreiben und so lange umordnen, bis die Struktur stimmt.",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„… 15 bis 20 Begriffe/Inhalte auf jeweils ein Kärtchen …“",
+      "„… so lange flexibel um, bis du mit der endgültigen Anordnung zufrieden bist.“"
     ],
-    "beispiel": "\"Wenn ich zum Handy greife, dann schreibe ich den Impuls auf und mache 5 Minuten Karteikarten.\""
+    "original_paraphrase": "Die Strukturlegetechnik wird als besonders empfehlenswert beschrieben, um Wissen zu vernetzen. Du schreibst 15–20 Begriffe oder Inhalte jeweils auf ein Kärtchen bzw. eine Haftnotiz (Post-it). Dann ordnest du diese Begriffe so an, wie sie deiner Meinung nach zusammengehören. Du kannst die Anordnung immer wieder flexibel verändern, bis du mit der endgültigen Struktur zufrieden bist. Dadurch steigt nicht nur der Lernerfolg, sondern auch das Kompetenzerleben („ich habe verstanden“) und die Motivation.",
+    "llm_explanation": "Du „legst“ dir Wissen wie ein Puzzle: erst Begriffe sammeln, dann so lange schieben, bis du Zusammenhänge wirklich verstehst.",
+    "anwendung": [
+      "15–20 zentrale Begriffe notieren (je 1 Karte).",
+      "Karten nach Zusammengehörigkeit gruppieren.",
+      "Gruppen verbinden/umordnen, bis es stimmig ist.",
+      "Ergebnis kurz erklären (laut oder schriftlich)."
+    ],
+    "dauer": "45 Minuten",
+     "entschluss": {
+      "frage": "Wann willst du die Struktur-Lege-Technik starten?",
+      "vorlagen": [
+        "Ich starte die Struktur-Lege-Technik heute um __:__ Uhr.",
+        "Ich starte die Struktur-Lege-Technik in __ Minuten.",
+        "Ich starte die Struktur-Lege-Technik morgen um __:__ Uhr."
+      ],
+      "hinweis": "Lege Karten/Post-its vorher bereit."
+    }
   },
 
   "Themen-Zerlegungs-Verfahren": {
+    "kategorie_raw": "leistung",
     "kategorie": "leistung",
-    "kurzbeschreibung": "Du zerlegst ein Thema in prüfbare Teilfähigkeiten und leitest daraus konkrete Lernziele ab.",
-    "ziel": "Klarer Lernplan ohne blinde Flecken.",
-    "wann_nutzen": [
-      "wenn du nicht weißt, wo du anfangen sollst",
-      "wenn ein Thema zu groß wirkt",
-      "für Prüfungsrelevanz-Priorisierung"
+    "kurzbeschreibung": "Aufgaben-/Themenstellungen Wort für Wort zerlegen und spontan Stichworte sammeln, um Denken wieder „anzuschalten“.",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„… schreibst an jedes relevante Wort … was dir dazu einfällt.“",
+      "„… 1 bis 2 Minuten … lediglich … mit Stichworten …“"
     ],
-    "schritte": [
-      "Formuliere das Thema als Frage (\"Kann ich ...?\").",
-      "Zerlege in Teilfragen: Definition, Erklärung, Anwendung, Beispiele, typische Aufgaben.",
-      "Definiere pro Teil ein Mindestkriterium (\"Ich kann 3 Aufgaben lösen\").",
-      "Priorisiere nach Prüfungsrelevanz und Aufwand.",
-      "Plane Einheiten (Stoff verteilen) und prüfe mit Mini-Simulationen."
+    "original_paraphrase": "Die Methode ist für Situationen gedacht, in denen du dich blockiert fühlst und keinen Zugriff auf gelerntes Wissen findest – besonders unter Stress. In Stresssituationen wird das Denken abgeschaltet, Emotionen übernehmen. Deshalb sollst du die Aufgaben- oder Themenstellung in einzelne relevante Wörter zerlegen. Zu jedem relevanten Wort schreibst du spontan Stichworte auf, die dir dazu einfallen. Wichtig: Du versuchst in dieser Phase nicht, sofort die Lösung oder einen Fließtext zu produzieren. Stattdessen sammelst du 1–2 Minuten lang nur Stichworte. Dadurch entsteht ein Netzwerk an Anknüpfungen, das dir hilft, wieder Zugang zum Denken zu bekommen. Empfohlen wird, das an alten Prüfungsaufgaben oder schwierigen Fragestellungen zu trainieren.",
+    "llm_explanation": "Wenn Stress dich blockiert: zerlege die Aufgabe, sammle Stichworte – und bring dein Denken wieder ins Laufen.",
+    "anwendung": [
+      "Aufgabe/Thema abschreiben.",
+      "Alle relevanten Wörter markieren.",
+      "Zu jedem Wort 1–3 Stichworte notieren (1–2 Minuten).",
+      "Erst danach Struktur/Lösung entwickeln."
     ],
-    "dauer": "15–30 Minuten",
-    "tipps": [
-      "Mindestkriterien machen Fortschritt messbar.",
-      "Prüfungsrelevanz vor Perfektion."
+    "dauer": "25 Minuten",
+     "entschluss": {
+      "frage": "Wann willst du die Struktur-Lege-Technik starten?",
+      "vorlagen": [
+        "Ich starte die Struktur-Lege-Technik heute um __:__ Uhr.",
+        "Ich starte die Struktur-Lege-Technik in __ Minuten.",
+        "Ich starte die Struktur-Lege-Technik morgen um __:__ Uhr."
+      ],
+      "hinweis": "Lege Karten/Post-its vorher bereit."
+    }
+  },
+
+  "Chunking": {
+    "kategorie_raw": "leistung",
+    "kategorie": "leistung",
+    "kurzbeschreibung": "Einzelinfos zu Einheiten bündeln („Chunks“), um schneller abzurufen und besser zu leisten.",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„Ein ‚Chunk‘ ist ein Klumpen oder ein Bündel.“",
+      "„… verringert … die Abrufzeit und steigert … die Qualität deiner Leistungen.“"
     ],
-    "haeufige_fehler": [
-      "zu grobe Teilung (bleibt unklar)",
-      "keine Kriterien (kein Messpunkt)",
-      "alles gleich wichtig behandeln"
+    "original_paraphrase": "Die Methode erklärt, dass in Tests/Prüfungen oft wenig Zeit bleibt, um Informationen einzeln zu suchen und Antworten zu formulieren. Wenn du Wissen während des Lernens in Paketen strukturierst, kannst du später schneller darauf zugreifen. Chunking bedeutet, Einzelinformationen zu Einheiten (Chunks) zusammenzufassen. Dann musst du beim Abrufen nicht mühsam Einzelelemente zusammensuchen, sondern greifst direkt auf das Informationsbündel zu. Eine konkrete Strategie ist: Am Ende jeder Lernphase stellst du dir selbst (oder lässt dir stellen) Fragen/Aufgaben in zufälliger Reihenfolge und versuchst, so gut wie möglich zu antworten. Dabei merkst du, was du verstanden hast, was fehlt und was nachzuarbeiten ist. Das machst du nicht erst kurz vor der Prüfung, sondern nach jeder Lernphase. So werden die Chunks schrittweise größer, und Lösungen werden immer besser.",
+    "llm_explanation": "Du packst Wissen in „Bündel“, damit du im Stress nicht suchen musst, sondern direkt abrufen kannst.",
+    "anwendung": [
+      "Am Ende jeder Lernphase: 5–10 Prüfungsfragen erstellen.",
+      "Fragen in zufälliger Reihenfolge beantworten (laut oder schriftlich).",
+      "Lücken markieren und gezielt nacharbeiten.",
+      "Erklärung/Antworten als „Chunk“ zusammenfassen."
+    ], "dauer": "15 Minuten",
+      "entschluss": {
+      "frage": "Wann möchtest du das Themen-Zerlegungs-Verfahren anwenden (bei welcher Aufgabe)?",
+      "vorlagen": [
+        "Ich nutze das Zerlegungs-Verfahren jetzt für Aufgabe __.",
+        "Ich nutze das Zerlegungs-Verfahren heute um __:__ Uhr für Thema __.",
+        "Ich nutze das Zerlegungs-Verfahren in __ Minuten für Aufgabe __."
+      ],
+      "hinweis": "Erst Stichworte sammeln – noch keine Lösung schreiben."
+    }
+  },
+
+  "Chunking-Wiki": {
+    "kategorie_raw": "leistung",
+    "kategorie": "leistung",
+    "kurzbeschreibung": "Wissen aktiv in einen kurzen Wikipedia-Artikel umformen (10–30 Minuten) – Chunking durch Strukturieren.",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„… schreibe einen kurzen Wikipedia – Beitrag.“",
+      "„… zwischen 10 und 30 Minuten Zeit.“"
     ],
-    "varianten": [
-      "als Tabelle: Teilfähigkeit | Kriterium | Status",
-      "als Kanban (To do / Doing / Done)"
-    ],
-    "beispiel": "Informatik: \"Rekursion\" → definieren, Ablauf erklären, 3 Standardaufgaben lösen, typische Fehler erkennen."
+    "original_paraphrase": "Die Methode begründet, dass du Wissen oft verteilt gespeichert hast, aber Inhalte nicht zu einem Gesamtzusammenhang neu angeordnet wurden. Um Inhalte konsequent in einen sachlogischen Zusammenhang zu bringen, verfasst du einen kurzen „Wiki“-Beitrag zu dem, was du gerade lernst. Dafür nimmst du dir 10–30 Minuten Zeit. Ziel ist eine aktive Gedächtnisleistung: Informationen werden geordnet, reduziert und in Beziehung gesetzt. Das wird mit den Konzepten „fading out“, Oberbegriffen/Superzeichenbildung und Chunking verknüpft. Ergebnis ist ein strukturierter Text, der dir auch das spätere Wiedergeben erleichtert.",
+    "llm_explanation": "Du schreibst das Thema so, als würdest du es erklären müssen – dadurch ordnet sich dein Wissen zu einem Chunk.",
+    "anwendung": [
+      "Thema festlegen.",
+      "10–30 Minuten Timer setzen.",
+      "Kurzen Wiki-Text mit Überschriften/Kernpunkten schreiben.",
+      "Zum Schluss 3 Kernaussagen markieren."
+    ],"dauer": "30 Minuten",
+       "entschluss": {
+      "frage": "Wann willst du heute Chunking am Ende deiner Lernphase machen?",
+      "vorlagen": [
+        "Ich mache Chunking heute nach meiner Lernphase um __:__ Uhr.",
+        "Ich mache Chunking heute nach der nächsten Lernphase.",
+        "Ich mache Chunking in __ Minuten nach dem Lernen."
+      ],
+      "hinweis": "Chunking passiert am Ende – als Abruf-Check."
+    }
+  },
+
+  "Prüfungssimulation": {
+    "kategorie_raw": "leistung",
+    "kategorie": "leistung",
+    "kurzbeschreibung": "Unter Prüfungsbedingungen üben (Zeit, Format, ohne Hilfen), um Abruf und Stressresistenz zu trainieren.",
+    "status_original": "fehlt_im_bildmaterial",
+    "original_excerpt": [],
+    "original_paraphrase": "",
+    "llm_explanation": "Du übst so realistisch wie möglich: Zeitlimit, Aufgabenformat, keine Hilfsmittel. Danach analysierst du Fehler und passt deine Strategie an.",
+    "anwendung": [
+      "Prüfungsformat festlegen (Zeit, Aufgaben, Hilfsmittel).",
+      "Simulation durchführen (ohne Unterbrechung).",
+      "Lösungen vergleichen und Fehler notieren.",
+      "Gezielt nacharbeiten und erneut simulieren."
+    ], "dauer": "65-95 Minuten",
+       "entschluss": {
+      "frage": "Wann möchtest du die Prüfungssimulation durchführen (mit Zeitlimit)?",
+      "vorlagen": [
+        "Ich mache die Prüfungssimulation heute um __:__ Uhr.",
+        "Ich mache die Prüfungssimulation morgen um __:__ Uhr.",
+        "Ich mache die Prüfungssimulation am __.__.__ um __:__ Uhr."
+      ],
+      "hinweis": "So realistisch wie möglich: Zeitlimit + ohne Hilfen."
+    }
   },
 
   "Wöchentliches Feedback": {
+    "kategorie_raw": "leistung",
     "kategorie": "leistung",
-    "kurzbeschreibung": "Ein wöchentliches Review, um zu sehen, was wirkt, und deinen Plan gezielt anzupassen.",
-    "ziel": "Kontinuierliche Verbesserung statt Dauerstress.",
-    "wann_nutzen": [
-      "bei längeren Lernphasen",
-      "wenn du dich festgefahren fühlst",
-      "um Planung und Realität abzugleichen"
-    ],
-    "schritte": [
-      "Fakten: Was habe ich konkret geschafft? (Einheiten, Aufgaben, Seiten)",
-      "Wirkfaktoren: Was hat am meisten geholfen?",
-      "Engpass: Wo hakt es? (1–2 Punkte)",
-      "Experiment: Was teste ich nächste Woche? (eine klare Änderung)",
-      "Plan: Welche 3 Prioritäten setze ich für nächste Woche?"
-    ],
-    "dauer": "10–20 Minuten (1× pro Woche)",
-    "tipps": [
-      "Nur 1 Experiment pro Woche – sonst wird’s unübersichtlich.",
-      "Zahlen helfen (z.B. 6 Fokusblöcke, 2 Simulationen)."
-    ],
-    "haeufige_fehler": [
-      "nur bewerten statt Maßnahmen ableiten",
-      "zu viele Änderungen auf einmal",
-      "keine Prioritäten"
-    ],
-    "varianten": [
-      "mit kurzer Stimmungsskala (0–10 Stress, 0–10 Fokus)",
-      "mit Lernpartner: 10 Minuten gegenseitiges Update"
-    ],
-    "beispiel": "Engpass: \"Simulationen vermeide ich\" → Experiment: \"1 Mini-Simulation à 30 Min am Mittwoch\"."
-  },
-
-  "Prüfungsangst systematisch bewältigen": {
-    "kategorie": "emotion",
-    "kurzbeschreibung": "Du zerlegst Prüfungsangst in Auslöser, Gedanken, Körperreaktionen und Verhalten und trainierst gezielt dagegen (inkl. Exposition).",
-    "ziel": "Trotz Angst handlungsfähig bleiben und Leistung abrufen.",
-    "wann_nutzen": [
-      "bei starker Nervosität/Blackouts",
-      "wenn du Übungsleistung nicht in Tests bringst",
-      "wenn du Prüfungen vermeidest"
-    ],
-    "schritte": [
-      "Triggerliste erstellen (welche Situationen lösen Angst aus?).",
-      "Gedanken + Körperzeichen notieren (z.B. \"Ich schaffe das nicht\", Herzrasen).",
-      "Gegenstrategien festlegen: Atmung, hilfreiche Sätze, Fokus auf nächsten Schritt.",
-      "Exposition planen: kleine Simulationen, dann steigern (Dauer/Schwierigkeit/Setting).",
-      "Nach jeder Exposition Beweise sammeln: \"Ich konnte trotz Angst ...\""
-    ],
-    "dauer": "15–30 Minuten pro Session + Simulationen",
-    "tipps": [
-      "Angst sinkt oft durch Wiederholung in ähnlichem Setting.",
-      "Ziel ist nicht \"keine Angst\", sondern \"trotz Angst handeln\"."
-    ],
-    "haeufige_fehler": [
-      "nur beruhigen wollen, ohne Exposition",
-      "zu große Sprünge (zu harte Simulation)",
-      "keine Nachbereitung/Beweissammlung"
-    ],
-    "varianten": [
-      "mit 3-Minuten-Form direkt vor Simulation",
-      "mit Fehlerklassifikation aus Prüfungssimulation (Zeit/Strategie/Nervosität)"
-    ],
-    "beispiel": "Stufe 1: 15 Min Mini-Test zu Hause. Stufe 2: 45 Min mit Timer. Stufe 3: 90 Min im \"Prüfungssetting\"."
+    "kurzbeschreibung": "Wöchentlich reflektieren: Was hat funktioniert? Was nicht? Nächste Woche anpassen.",
+    "status_original": "fehlt_im_bildmaterial",
+    "original_excerpt": [],
+    "original_paraphrase": "",
+    "llm_explanation": "Ein kurzer Wochen-Check macht Lernen steuerbar: du behältst Überblick und verbesserst deinen Plan iterativ.",
+    "anwendung": [
+      "1x pro Woche 10 Minuten Review.",
+      "Erfolge und Probleme notieren.",
+      "Eine konkrete Anpassung für nächste Woche festlegen."
+    ],"dauer": "10 Minuten",
+     "entschluss": {
+      "frage": "Wann möchtest du dein Wochen-Feedback machen (10 Minuten)?",
+      "vorlagen": [
+        "Ich mache mein Wochen-Feedback jeden __ um __:__ Uhr.",
+        "Ich mache mein Wochen-Feedback diese Woche am __ um __:__ Uhr.",
+        "Ich mache mein Wochen-Feedback morgen um __:__ Uhr."
+      ],
+      "hinweis": "Eine Anpassung reicht – nicht alles auf einmal."
+    }
   },
 
   "Prüfungstipps": {
+    "kategorie_raw": "leistung",
     "kategorie": "leistung",
-    "kurzbeschreibung": "Konkrete Strategien, um in Prüfungen Zeit zu managen, Punkte zu sichern und typische Fehler zu vermeiden.",
-    "ziel": "Punktesicherheit + weniger Flüchtigkeitsfehler + bessere Strategie.",
-    "wann_nutzen": [
-      "kurz vor Prüfungen",
-      "als Ergänzung zur Prüfungssimulation",
-      "wenn du oft an Aufgaben hängenbleibst"
+    "kurzbeschreibung": "Praktische Hinweise für Vorbereitung und Durchführung von Prüfungen.",
+    "status_original": "fehlt_im_bildmaterial",
+    "original_excerpt": [],
+    "original_paraphrase": "",
+    "llm_explanation": "Das kann z. B. Zeitmanagement, Aufgabenreihenfolge, aktive Abrufstrategien und Stressregulation umfassen.",
+    "anwendung": [
+      "Vorbereitung: Wiederholplan + aktive Übungen.",
+      "Währenddessen: erst Überblick, dann leichte Aufgaben, dann schwere.",
+      "Nachher: Fehleranalyse."
+    ],"dauer": "30 Minuten",
+    "entschluss": {
+      "frage": "Wann möchtest du an deinen Prüfungstipps arbeiten (Vorbereitung oder Prüfungstag)?",
+      "vorlagen": [
+        "Ich arbeite heute um __:__ Uhr an meinen Prüfungstipps.",
+        "Ich arbeite morgen um __:__ Uhr an meinen Prüfungstipps.",
+        "Ich arbeite in __ Minuten an meinen Prüfungstipps."
+      ],
+      "hinweis": "Wir fokussieren auf 1–2 konkrete Hebel."
+    }
+     
+  },
+
+  "Prüfungsangst systematisch bewältigen": {
+    "kategorie_raw": "emotion",
+    "kategorie": "emotion",
+    "kurzbeschreibung": "Angstreaktionen verstehen, regulieren und schrittweise abbauen (Training + Exposition + Abrufübungen).",
+    "status_original": "fehlt_im_bildmaterial",
+    "original_excerpt": [],
+    "original_paraphrase": "",
+    "llm_explanation": "Du kombinierst: (1) Regulation (Atmung/Stopp/kurze Übung), (2) realistische Prüfungssimulation, (3) Nachbesprechung, um Sicherheit aufzubauen.",
+    "anwendung": [
+      "Angstsignale erkennen (Körper, Gedanken, Verhalten).",
+      "Kurz-Regulation nutzen.",
+      "Mini-Simulationen steigern.",
+      "Erfolge dokumentieren."
+    ],"dauer": "15-60 Minuten",
+      "entschluss": {
+        "frage": "Wann möchtest du an deinen Prüfungstipps arbeiten (Vorbereitung oder Prüfungstag)?",
+        "vorlagen": [
+          "Ich arbeite heute um __:__ Uhr an meinen Prüfungstipps.",
+          "Ich arbeite morgen um __:__ Uhr an meinen Prüfungstipps.",
+          "Ich arbeite in __ Minuten an meinen Prüfungstipps."
+        ],
+        "hinweis": "Wir fokussieren auf 1–2 konkrete Hebel."
+      }
+  },
+
+
+  "Reguliere deine Basisemotionen (10 Minuten Form)": {
+    "kategorie_raw": "emotion",
+    "kategorie": "emotion",
+    "kurzbeschreibung": "Langform als Training (regelmäßig üben, besonders vor wichtigen Prüfungen).",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„Beginne mit der Langform von 10 Minuten.“",
+      "„Vor wichtigen Prüfungen solltest du zwei Mal pro Woche die Langform anhören.“"
     ],
-    "schritte": [
-      "Aufgaben zuerst überfliegen, leichte Punkte sichern.",
-      "Zeitbudget pro Aufgabe festlegen (und sichtbar tracken).",
-      "Bei Hängenbleiben: markieren, weiter, später zurück.",
-      "Sauberer Lösungsweg + Einheiten/Definitionen prüfen.",
-      "Am Ende 3-Minuten-Check: Rechenzeichen, Einheiten, Randbedingungen."
+    "original_paraphrase": "Die Langform wird als Trainingsvariante beschrieben, um emotionale Anspannung gezielt zu regulieren und die kognitive Leistungsfähigkeit zu schützen. Der Text erklärt, dass starke Emotionen anspruchsvolle kognitive Leistungen beeinträchtigen können. Deshalb soll die Langform nicht nur im Notfall genutzt werden, sondern regelmäßig – insbesondere vor wichtigen Prüfungen – damit Regulation sicher abrufbar wird.",
+    "llm_explanation": "Das ist dein Trainingsmodus: du übst Regulation regelmäßig, damit sie später unter Druck automatisch funktioniert.",
+    "anwendung": [
+      "Ruhige Situation wählen.",
+      "10-Minuten-Übung vollständig durchführen.",
+      "In Prüfungsphasen regelmäßig wiederholen (z. B. 2x pro Woche).",
+      "Vorher/Nachher-Anspannung kurz einschätzen."
+    ],"dauer": "10 Minuten",
+      "entschluss": {
+      "frage": "Wann willst du die 10-Minuten-Regulation trainieren?",
+      "vorlagen": [
+        "Ich mache die 10-Minuten-Übung heute um __:__ Uhr.",
+        "Ich mache die 10-Minuten-Übung morgen um __:__ Uhr.",
+        "Ich mache die 10-Minuten-Übung in __ Minuten."
+      ],
+      "hinweis": "Training wirkt am besten regelmäßig, nicht nur im Notfall."
+    }
+  },
+
+  "Reguliere deine Basisemotionen (3 Minuten Form)": {
+    "kategorie_raw": "emotion",
+    "kategorie": "emotion",
+    "kurzbeschreibung": "Kurzform für schnelle Stabilisierung, z. B. am Prüfungstag oder vor Präsentationen.",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„… gehe zur 3-Minuten-Form über.“",
+      "„Setze die 3-Minuten-Form am Tag der Prüfungen oder Präsentationen ein.“"
     ],
-    "dauer": "5–15 Minuten + Übung in Simulationen",
-    "tipps": [
-      "Strategie muss in Simulationen geübt werden, nicht nur gelesen.",
-      "Teilpunkte aktiv anvisieren (Teilschritte sauber hinschreiben)."
+    "original_paraphrase": "Die 3-Minuten-Form ist als kürzere, schnell einsetzbare Variante gedacht, die besonders in unmittelbarer Nähe zu Leistungssituationen genutzt werden soll (Prüfungstag/Präsentationen). Sie baut auf dem vorherigen Üben der Langform auf: erst die Grundlage mit der Langform festigen, dann die Kurzform zuverlässig abrufen können.",
+    "llm_explanation": "Das ist der schnelle Einsatzmodus: kurz regulieren, dann wieder handlungsfähig werden.",
+    "anwendung": [
+      "3-Minuten-Übung vollständig durchführen.",
+      "Direkt danach: Fokus auf den nächsten konkreten Schritt (z. B. Aufgabe 1 beginnen)."
+    ],"dauer": "3 Minuten",
+      "entschluss": {
+      "frage": "Wann willst du die 10-Minuten-Regulation trainieren?",
+      "vorlagen": [
+        "Ich mache die 10-Minuten-Übung heute um __:__ Uhr.",
+        "Ich mache die 10-Minuten-Übung morgen um __:__ Uhr.",
+        "Ich mache die 10-Minuten-Übung in __ Minuten."
+      ],
+      "hinweis": "Training wirkt am besten regelmäßig, nicht nur im Notfall."
+    }
+  },
+
+  "Reguliere deine Basisemotionen (Sekundenform)": {
+    "kategorie_raw": "emotion",
+    "kategorie": "emotion",
+    "kurzbeschreibung": "Akut-Tool: Stoppsignal + tiefe Bauchatmung für kritische Situationen.",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„… Sekundenform … Kombination aus Stoppcode und tiefer Bauchatmung.“"
     ],
-    "haeufige_fehler": [
-      "zu lange an einer Aufgabe festbeißen",
-      "Zeitbudget ignorieren",
-      "keine Endkontrolle"
+    "original_paraphrase": "Die Sekundenform ist für sehr kurze, kritische Momente gedacht, in denen du sofort regulieren musst (z. B. starke Anspannung, Blackout-Gefühl). Sie kombiniert ein klares inneres Stoppsignal (Stoppcode) mit tiefer Bauchatmung, um die Stressreaktion zu unterbrechen und schnell wieder in einen stabileren Zustand zu kommen.",
+    "llm_explanation": "Notfall-Button: kurz stoppen, tief atmen, dann den nächsten Mini-Schritt wählen.",
+    "anwendung": [
+      "Inneres Stoppsignal setzen (Stoppcode).",
+      "1–3 tiefe Bauchatmungen.",
+      "Nächsten Mini-Schritt starten (z. B. eine Zeile lesen)."
+    ],"dauer": "1 Minute",
+    "entschluss": {
+      "frage": "In welcher Situation willst du die Sekundenform nutzen (z. B. Blackout, Stresspeak)?",
+      "vorlagen": [
+        "Ich nutze die Sekundenform, wenn __ passiert.",
+        "Ich nutze die Sekundenform beim nächsten Stresspeak.",
+        "Ich nutze die Sekundenform jetzt."
+      ],
+      "hinweis": "Sekundenform = schnell stoppen + atmen + nächster Mini-Schritt."
+    }
+  },
+
+  "Präsentation sandwichartig gestalten": {
+    "kategorie_raw": "leistung",
+    "kategorie": "leistung",
+    "kurzbeschreibung": "Vorträge in 8–12-Minuten-Blöcken + Aktivierungsphasen („Sandwich-Prinzip“).",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„… Menschen etwa 8 bis 12 Minuten … aufmerksam folgen …“",
+      "„… nennt man SANDWICH-PRINZIP.“"
     ],
-    "varianten": [
-      "Checkliste auf einem Zettel (vor Simulation/Prüfung)",
-      "Routinen: Start-Scan (2 Min) + End-Scan (3 Min)"
+    "original_paraphrase": "Die Methode beschreibt, dass Aufmerksamkeit in Vorträgen begrenzt ist. Nach einer gewissen Zeit lässt die Konzentration nach. Deshalb ist es wichtig, das Publikum zu aktivieren: z. B. mit einer Frage, einer kleinen Abstimmung oder kurzen Denkpausen. Danach folgt wieder ein Input-Block, dann erneut Aktivierung. Empirisch wird beschrieben, dass Präsentationen im Sandwich-Format beim Publikum besser ankommen als Vorträge ohne eingeschobene Aktivierungsphasen.",
+    "llm_explanation": "Teile Präsentationen in kurze Input-Blöcke und aktiviere dazwischen – so bleibt dein Publikum dabei.",
+    "anwendung": [
+      "Input-Block (8–12 Minuten) planen.",
+      "Aktivierung einbauen (Frage/Abstimmung/kurze Denkpause).",
+      "Nächster Input-Block, dann wieder Aktivierung."
+    ], "dauer": "40-60 Minuten",
+    "entschluss": {
+      "frage": "In welcher Situation willst du die Sekundenform nutzen (z. B. Blackout, Stresspeak)?",
+      "vorlagen": [
+        "Ich nutze die Sekundenform, wenn __ passiert.",
+        "Ich nutze die Sekundenform beim nächsten Stresspeak.",
+        "Ich nutze die Sekundenform jetzt."
+      ],
+      "hinweis": "Sekundenform = schnell stoppen + atmen + nächster Mini-Schritt."
+    }
+  },
+
+  "Prüfungstipps (Präsentation: 3-Sekunden-Kontrollblick)": {
+    "kategorie_raw": "leistung",
+    "kategorie": "leistung",
+    "kurzbeschreibung": "Vor jeder neuen Folie 3 Sekunden kontrollieren – entlastet Publikum, erhöht Sicherheit, unterstützt Emotionsregulation.",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„… für etwa 3 Sekunden … kontrollierst … erst danach beginnst du zu sprechen.“"
     ],
-    "beispiel": "Mathe: Erst 1–2 sichere Aufgaben lösen, dann mittlere, schwere zuletzt. Bei Blockade: 60 Sekunden, dann weiter."
+    "original_paraphrase": "Der 3-Sekunden-Kontrollblick bedeutet: Wenn eine Folie erscheint, drehst du dich kurz zur Projektionsfläche und überprüfst, ob es die richtige Folie ist. Erst danach sprichst du. Das wird aus mehreren Gründen empfohlen: Das Publikum kann die Folie kurz verarbeiten, ohne dass gleichzeitig gesprochen wird; du gewinnst selbst fachliche Sicherheit, weil du kurz überlegst, was du sagen willst; und du kannst diese Sekunden nutzen, um deine mentale Verfassung/Anspannung zu regulieren. Zur Erinnerung wird ein Tischreiter oder ein Zettel mit einer großen „3“ vorgeschlagen.",
+    "llm_explanation": "Mini-Pause vor jeder Folie: Publikum entlasten, selbst sammeln, Stress runterregeln.",
+    "anwendung": [
+      "Folie erscheint.",
+      "3 Sekunden anschauen/kontrollieren.",
+      "Dann sprechen.",
+      "Erinnerungshilfe (Zettel/Tischreiter „3“) nutzen."
+    ], "dauer": "",
+    "entschluss": {
+      "frage": "Wann planst du deine Präsentation im Sandwich-Prinzip?",
+      "vorlagen": [
+        "Ich plane meine Präsentation heute um __:__ Uhr im Sandwich-Prinzip.",
+        "Ich plane meine Präsentation morgen um __:__ Uhr im Sandwich-Prinzip.",
+        "Ich plane meine Präsentation in __ Minuten im Sandwich-Prinzip."
+      ],
+      "hinweis": "Pro Block: Input + Aktivierung + nächster Input."
+    }
+  },
+  
+  "Intelligent wiederholen": {
+    "kategorie_raw": "leistung",
+    "kategorie": "leistung",
+    "kurzbeschreibung": "Rückwärts planen und den Stoff verteilt wiederholen, statt Last-Minute-Lernen.",
+    "status_original": "aus_bildmaterial",
+    "original_excerpt": [
+      "„Zähle vom Tag der Leistungsfeststellung aus rückwärts.“",
+      "„Verteile den Lernstoff gleichmäßig.“",
+      "„Lasse den letzten Tag als Puffer frei.“"
+    ],
+    "original_paraphrase": "Die Methode beschreibt, dass es erfolgreicher ist, einige Tage vor einer Leistungsfeststellung mit dem Lernen zu beginnen, anstatt alles kurz vorher zu machen. Der Ablauf ist rückwärts gedacht: Du nimmst den Tag der Leistungsfeststellung als Zielpunkt und zählst von dort aus die verfügbaren Lerntage rückwärts. Dann verteilst du den Lernstoff möglichst gleichmäßig auf diese Tage. Ein zentraler Punkt ist, den letzten Tag nicht vollzuplanen, sondern als Puffer frei zu lassen – für Unerwartetes, Wiederholung oder Entlastung. Zusätzlich wird empfohlen, jeden Tag kurz zu wiederholen, damit das Gelernte nicht nur einmal aufgenommen, sondern regelmäßig aktiv abgerufen und stabilisiert wird.",
+    "llm_explanation": "Du planst nicht nach Gefühl, sondern rückwärts vom Prüfungstag. So entsteht ein realistischer Wiederholplan mit Puffer – und du wiederholst täglich kurz aktiv.",
+    "anwendung": [
+      "Prüfungs-/Abgabetag festlegen.",
+      "Anzahl verfügbarer Lerntage bestimmen.",
+      "Von diesem Tag rückwärts planen.",
+      "Stoff gleichmäßig auf die Tage verteilen.",
+      "Letzten Tag als Puffer freilassen.",
+      "Jeden Tag 5–10 Minuten kurz aktiv wiederholen (z. B. Fragen beantworten)."
+    ],
+    "dauer": "10–20 Minuten",
+      "entschluss": {
+      "frage": "Ab wann willst du den 3-Sekunden-Kontrollblick konsequent nutzen?",
+      "vorlagen": [
+        "Ich nutze den 3-Sekunden-Kontrollblick ab der nächsten Probe.",
+        "Ich nutze den 3-Sekunden-Kontrollblick in der nächsten Präsentation.",
+        "Ich nutze den 3-Sekunden-Kontrollblick heute beim Üben um __:__ Uhr."
+      ],
+      "hinweis": "3 Sekunden wirken klein – sind aber ein starker Stabilitätsanker."
+    }
+
   }
+
+ 
 }

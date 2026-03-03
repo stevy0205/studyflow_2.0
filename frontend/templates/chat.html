@@ -437,6 +437,10 @@ function setQR(replies) {
     `<button class="qr-btn" onclick="sendQuick('${r}')">${r}</button>`).join('');
 }
 
+// ── Session Phase State ───────────────────────────────────────────────────────
+let sessionPhase   = 'method_selection'; // method_selection | method_detail | session_active
+let chosenMethod   = null;
+
 // ── Init ─────────────────────────────────────────────────────────────────────
 window.addEventListener('load', () => {
   if (introMsg) {
@@ -446,11 +450,11 @@ window.addEventListener('load', () => {
     const c1=AREA_CFG[m1.kategorie], c2=AREA_CFG[m2.kategorie];
     addMessage(
       `Hey! Ich habe deinen Fragebogen ausgewertet. 🎉\n\nHier sind deine **2 empfohlenen Methoden**:\n\n` +
-      `**1. ${m1.name}** ${c1?.icon||''}  (${m1.dauer})\n${m1.kurzbeschreibung}\n\n` +
-      `**2. ${m2.name}** ${c2?.icon||''}  (${m2.dauer})\n${m2.kurzbeschreibung}\n\n` +
+      `**1. ${m1.name}** ${c1?.icon||''}  (${m1.dauer||''})\n${m1.kurzbeschreibung}\n\n` +
+      `**2. ${m2.name}** ${c2?.icon||''}  (${m2.dauer||''})\n${m2.kurzbeschreibung}\n\n` +
       `Tippe **1** oder **2** zum Auswählen, oder stelle eine Frage! 💬`, 'bot');
   }
-  setQR(['1 wählen', '2 wählen', 'Erkläre Methode 1', 'Erkläre Methode 2']);
+  setQR(['Methode 1', 'Methode 2', 'Erkläre Methode 1', 'Erkläre Methode 2']);
 });
 
 // ── Send ─────────────────────────────────────────────────────────────────────
@@ -465,34 +469,51 @@ async function sendMessage() {
   try {
     const data = await fetch('/api/chat',{
       method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({message:text, thread_id:threadId})
+      body: JSON.stringify({
+        message: text,
+        thread_id: threadId,
+        session_phase: sessionPhase,
+        selected_methods: methods,
+        chosen_method: chosenMethod,
+      })
     }).then(r=>r.json());
     removeTyping();
     addMessage(data.reply, 'bot');
-    updateQR(data.reply);
+    // Phase und chosen_method vom Server übernehmen
+    if (data.new_phase) sessionPhase = data.new_phase;
+    if (data.chosen_method) chosenMethod = data.chosen_method;
+    updateQR(data.reply, sessionPhase);
   } catch(e) {
     removeTyping();
     addMessage('Verbindungsfehler – bitte neu laden.', 'bot');
   }
 }
 
-function sendQuick(text) { document.getElementById('input').value=text; sendMessage(); }
+function sendQuick(text) {
+  // Normalisiere: "Methode 1" → "1", "Methode 2" → "2"
+  const normalized = text.replace(/^methode\s*1$/i, '1').replace(/^methode\s*2$/i, '2');
+  document.getElementById('input').value = normalized;
+  sendMessage();
+}
 
 function selectMethod(idx) {
   document.querySelectorAll('.method-chip').forEach((c,i) => c.classList.toggle('active', i===idx));
   sendQuick(String(idx+1));
 }
 
-function updateQR(reply) {
+function updateQR(reply, phase) {
   const l = reply.toLowerCase();
-  if (l.includes('starten') || l.includes('los geht')) {
-    setQR(['Starten 🚀', 'Erst eine Frage', 'Andere Methode']);
-  } else if (l.includes('feedback') || l.includes('wie war')) {
-    setQR(['Super! 🎉', 'Ging so... 🤔', 'Hat nicht gepasst 😕', 'Nächste Methode']);
-  } else if (l.includes('wiederhol') || l.includes('nächste')) {
-    setQR(['Wiederholen 🔁', 'Neue Methode', 'Beenden ✅']);
+  if (phase === 'method_detail') {
+    setQR(['Starten 🚀', 'Noch eine Frage', 'Andere Methode']);
+  } else if (phase === 'session_active') {
+    if (l.includes('wiederholen') || l.includes('nächste methode') || l.includes('beenden')) {
+      setQR(['Wiederholen 🔁', 'Nächste Methode ➡️', 'Beenden ✅']);
+    } else {
+      // Feedback abfragen
+      setQR(['Super! 🌟', 'Teilweise gut 👍', 'Neutral 😐', 'Eher nicht 👎', 'Hat nicht gepasst ❌']);
+    }
   } else {
-    setQR(['Starten', 'Mehr erklären', 'Andere Methode']);
+    setQR(['Methode 1', 'Methode 2', 'Erkläre Methode 1', 'Erkläre Methode 2']);
   }
 }
 
