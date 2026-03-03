@@ -438,8 +438,9 @@ function setQR(replies) {
 }
 
 // ── Session Phase State ───────────────────────────────────────────────────────
-let sessionPhase   = 'method_selection'; // method_selection | method_detail | session_active
-let chosenMethod   = null;
+let sessionPhase    = 'method_selection';
+let chosenMethod    = null;
+let usedMethodNames = [];
 
 // ── Init ─────────────────────────────────────────────────────────────────────
 window.addEventListener('load', () => {
@@ -475,14 +476,15 @@ async function sendMessage() {
         session_phase: sessionPhase,
         selected_methods: methods,
         chosen_method: chosenMethod,
+        used_method_names: usedMethodNames,
       })
     }).then(r=>r.json());
     removeTyping();
     addMessage(data.reply, 'bot');
-    // Phase und chosen_method vom Server übernehmen
     if (data.new_phase) sessionPhase = data.new_phase;
     if (data.chosen_method) chosenMethod = data.chosen_method;
-    updateQR(data.reply, sessionPhase);
+    if (data.used_method_names) usedMethodNames = data.used_method_names;
+    updateQR(data.qr_hint || data.new_phase);
   } catch(e) {
     removeTyping();
     addMessage('Verbindungsfehler – bitte neu laden.', 'bot');
@@ -501,19 +503,31 @@ function selectMethod(idx) {
   sendQuick(String(idx+1));
 }
 
-function updateQR(reply, phase) {
-  const l = reply.toLowerCase();
-  if (phase === 'method_detail') {
-    setQR(['Starten 🚀', 'Noch eine Frage', 'Andere Methode']);
-  } else if (phase === 'session_active') {
-    if (l.includes('wiederholen') || l.includes('nächste methode') || l.includes('beenden')) {
-      setQR(['Wiederholen 🔁', 'Nächste Methode ➡️', 'Beenden ✅']);
-    } else {
-      // Feedback abfragen
+function updateQR(hint) {
+  switch(hint) {
+    case 'detail':
+      setQR(['Starten 🚀', 'Noch eine Frage', 'Andere Methode']);
+      break;
+    case 'feedback':
       setQR(['Super! 🌟', 'Teilweise gut 👍', 'Neutral 😐', 'Eher nicht 👎', 'Hat nicht gepasst ❌']);
-    }
-  } else {
-    setQR(['Methode 1', 'Methode 2', 'Erkläre Methode 1', 'Erkläre Methode 2']);
+      break;
+    case 'after_feedback':
+      setQR(['Wiederholen 🔁', 'Nächste Methode ➡️', 'Beenden ✅']);
+      break;
+    case 'negative':
+      setQR(['Nächste Methode ➡️', 'Beenden ✅']);
+      break;
+    case 'session':
+      setQR(['Super! 🌟', 'Teilweise gut 👍', 'Neutral 😐', 'Eher nicht 👎', 'Hat nicht gepasst ❌']);
+      break;
+    case 'asking':
+      setQR([]);  // Keine QR – User soll frei tippen
+      break;
+    case 'all_done':
+      setQR(['Wiederholen 🔁', 'Beenden ✅']);
+      break;
+    default:
+      setQR(['Methode 1', 'Methode 2', 'Erkläre Methode 1', 'Erkläre Methode 2']);
   }
 }
 
