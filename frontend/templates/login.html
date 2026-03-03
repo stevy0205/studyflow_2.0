@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyFlow – Los geht's!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:  #fdf8f0;
+      --yellow: #ffd60a;
+      --coral:  #ff6b6b;
+      --mint:   #06d6a0;
+      --blue:   #118ab2;
+      --navy:   #1a1a2e;
+      --ink:    #2d2d2d;
+      --muted:  #7a7a8c;
+      --white:  #ffffff;
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .doodles {
+      position: fixed; inset: 0;
+      pointer-events: none; z-index: 0; overflow: hidden;
+    }
+    .doodle {
+      position: absolute; opacity: .10; font-size: 2.5rem;
+      animation: float 6s ease-in-out infinite;
+      user-select: none;
+    }
+    .doodle:nth-child(1) { top:5%;  left:3%;  animation-delay:0s; }
+    .doodle:nth-child(2) { top:12%; right:6%; animation-delay:1s;   font-size:1.8rem; }
+    .doodle:nth-child(3) { top:30%; left:8%;  animation-delay:2s;   font-size:3rem; }
+    .doodle:nth-child(4) { top:55%; right:4%; animation-delay:.5s; }
+    .doodle:nth-child(5) { top:70%; left:5%;  animation-delay:1.5s; font-size:2rem; }
+    .doodle:nth-child(6) { top:85%; right:8%; animation-delay:3s;   font-size:3.5rem; }
+    .doodle:nth-child(7) { top:45%; left:50%; animation-delay:2.5s; font-size:1.5rem; }
+    .doodle:nth-child(8) { top:20%; left:45%; animation-delay:.8s;  font-size:2.2rem; }
+    @keyframes float {
+      0%,100% { transform: translateY(0) rotate(-3deg); }
+      50%      { transform: translateY(-18px) rotate(3deg); }
+    }
+
+    .page {
+      position: relative; z-index: 1; min-height: 100vh;
+      display: grid; grid-template-columns: 1fr 1fr;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 4rem 3rem;
+    }
+    .logo {
+      font-family: 'Cabin Sketch', cursive; font-size: 2rem; font-weight: 700;
+      margin-bottom: 3rem;
+    }
+    .logo-dot {
+      display: inline-block; width: 10px; height: 10px;
+      border-radius: 50%; background: var(--coral); margin-left: 4px;
+    }
+    .hero-tag {
+      display: inline-block; background: var(--yellow); color: var(--navy);
+      font-size: .75rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: .12em; padding: .3rem .8rem; border-radius: 4px;
+      margin-bottom: 1.2rem; transform: rotate(-1.5deg); width: fit-content;
+    }
+    .hero h1 {
+      font-family: 'Cabin Sketch', cursive;
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      line-height: 1.05; margin-bottom: 1.4rem; color: var(--navy);
+    }
+    .underline {
+      position: relative; display: inline-block;
+    }
+    .underline::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 6px; background: var(--coral); border-radius: 3px; transform: rotate(-.5deg);
+    }
+    .hero p {
+      font-size: 1.05rem; line-height: 1.7; color: var(--muted);
+      max-width: 380px; margin-bottom: 2.5rem;
+    }
+    .badges { display: flex; flex-wrap: wrap; gap: .6rem; }
+    .badge {
+      display: flex; align-items: center; gap: .4rem;
+      padding: .5rem 1rem; border-radius: 999px;
+      font-size: .8rem; font-weight: 700; border: 2px solid currentColor;
+    }
+    .badge.yellow { color: #b8860b; background: #fffbe0; }
+    .badge.coral  { color: var(--coral); background: #fff0f0; }
+    .badge.mint   { color: #05a07a; background: #e8fff8; }
+
+    /* ── Form ── */
+    .form-side {
+      display: flex; align-items: center; justify-content: center;
+      padding: 3rem 2rem; background: var(--white);
+      border-left: 3px solid var(--navy); position: relative;
+    }
+    .form-side::before {
+      content: ''; position: absolute; top: -8px; left: 40px;
+      width: 60px; height: 20px; background: var(--yellow);
+      border-radius: 2px; transform: rotate(-2deg);
+      box-shadow: 0 2px 6px rgba(0,0,0,.15);
+    }
+    .form-box { width: 100%; max-width: 400px; }
+    .form-heading {
+      font-family: 'Cabin Sketch', cursive; font-size: 2.2rem;
+      color: var(--navy); margin-bottom: .4rem;
+    }
+    .form-sub { color: var(--muted); font-size: .9rem; margin-bottom: 2rem; }
+
+    .tabs { display: flex; gap: .5rem; margin-bottom: 1.75rem; }
+    .tab {
+      flex: 1; padding: .6rem; border: 2.5px solid var(--navy);
+      border-radius: 8px; background: transparent;
+      font-family: 'Nunito', sans-serif; font-size: .875rem; font-weight: 700;
+      cursor: pointer; transition: all .15s; color: var(--ink);
+    }
+    .tab.active { background: var(--navy); color: var(--white); }
+
+    .field { margin-bottom: 1.1rem; }
+    .field label {
+      display: block; font-size: .78rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: .08em;
+      color: var(--navy); margin-bottom: .4rem;
+    }
+    .field input {
+      width: 100%; padding: .75rem 1rem;
+      border: 2.5px solid #e0ddd5; border-radius: 10px;
+      font-family: 'Nunito', sans-serif; font-size: .95rem;
+      background: var(--cream); color: var(--ink); outline: none;
+      transition: border-color .15s;
+    }
+    .field input:focus { border-color: var(--blue); }
+
+    .btn-primary {
+      width: 100%; padding: .85rem; background: var(--navy); color: var(--white);
+      border: none; border-radius: 10px; font-family: 'Nunito', sans-serif;
+      font-size: 1rem; font-weight: 800; cursor: pointer;
+      transition: transform .1s, box-shadow .1s;
+      box-shadow: 4px 4px 0 var(--coral); margin-top: .25rem;
+    }
+    .btn-primary:hover  { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--coral); }
+    .btn-primary:active { transform: translate(2px,2px);   box-shadow: 2px 2px 0 var(--coral); }
+
+    .divider {
+      display: flex; align-items: center; gap: .75rem;
+      margin: 1.25rem 0; color: var(--muted); font-size: .8rem; font-weight: 700;
+    }
+    .divider::before, .divider::after {
+      content: ''; flex: 1; height: 2px; background: #e0ddd5;
+    }
+
+    .btn-guest {
+      width: 100%; padding: .8rem; background: var(--yellow); color: var(--navy);
+      border: 2.5px solid var(--navy); border-radius: 10px;
+      font-family: 'Nunito', sans-serif; font-size: .95rem; font-weight: 800;
+      cursor: pointer; transition: transform .1s, box-shadow .1s;
+      box-shadow: 4px 4px 0 var(--navy);
+    }
+    .btn-guest:hover  { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--navy); }
+    .btn-guest:active { transform: translate(2px,2px);   box-shadow: 2px 2px 0 var(--navy); }
+
+    .error-msg { color: var(--coral); font-size: .82rem; font-weight: 700; margin-top: .5rem; display: none; }
+    .error-msg.visible { display: block; }
+    #register-panel { display: none; }
+
+    @media (max-width: 768px) {
+      .page { grid-template-columns: 1fr; }
+      .hero { padding: 2rem; }
+      .form-side { border-left: none; border-top: 3px solid var(--navy); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="doodles">
+  <span class="doodle">📚</span><span class="doodle">✏️</span>
+  <span class="doodle">🎯</span><span class="doodle">💡</span>
+  <span class="doodle">⏰</span><span class="doodle">📝</span>
+  <span class="doodle">🧠</span><span class="doodle">🚀</span>
+</div>
+
+<div class="page">
+  <div class="hero">
+    <div class="logo">StudyFlow <span class="logo-dot"></span></div>
+    <div class="hero-tag">✨ Dein KI-Lerncoach</div>
+    <h1>Lerne endlich <span class="underline">richtig</span> effizient.</h1>
+    <p>Beantworte 24 kurze Fragen – dein persönlicher Coach analysiert dein Lernverhalten und empfiehlt die besten Methoden für dich.</p>
+    <div class="badges">
+      <span class="badge yellow">📊 Persönliche Analyse</span>
+      <span class="badge coral">🎯 Passende Methoden</span>
+      <span class="badge mint">💬 KI-Coach</span>
+    </div>
+  </div>
+
+  <div class="form-side">
+    <div class="form-box">
+      <h2 class="form-heading">Hallo! 👋</h2>
+      <p class="form-sub">Meld dich an oder starte direkt als Gast.</p>
+
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('login')">Anmelden</button>
+        <button class="tab" onclick="showTab('register')">Neu hier?</button>
+      </div>
+
+      <div id="login-panel">
+        <div class="field"><label>E-Mail</label>
+          <input type="email" id="login-email" placeholder="deine@uni.de" /></div>
+        <div class="field"><label>Passwort</label>
+          <input type="password" id="login-password" placeholder="••••••••"
+            onkeydown="if(event.key==='Enter') doLogin()" /></div>
+        <button class="btn-primary" onclick="doLogin()">Anmelden →</button>
+        <p class="error-msg" id="login-error">Bitte alle Felder ausfüllen.</p>
+      </div>
+
+      <div id="register-panel">
+        <div class="field"><label>Dein Name</label>
+          <input type="text" id="reg-name" placeholder="z.B. Anna" /></div>
+        <div class="field"><label>E-Mail</label>
+          <input type="email" id="reg-email" placeholder="deine@uni.de" /></div>
+        <div class="field"><label>Passwort</label>
+          <input type="password" id="reg-password" placeholder="••••••••" /></div>
+        <button class="btn-primary" onclick="doRegister()">Account erstellen →</button>
+        <p class="error-msg" id="reg-error">Bitte alle Felder ausfüllen.</p>
+      </div>
+
+      <div class="divider">oder einfach</div>
+      <button class="btn-guest" onclick="doGuest()">⚡ Als Gast starten</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showTab(tab) {
+    document.querySelectorAll('.tab').forEach((t,i) =>
+      t.classList.toggle('active', (i===0&&tab==='login')||(i===1&&tab==='register')));
+    document.getElementById('login-panel').style.display    = tab==='login'    ? 'block':'none';
+    document.getElementById('register-panel').style.display = tab==='register' ? 'block':'none';
+  }
+  async function doLogin() {
+    const username = document.getElementById('login-email').value.trim();
+    const password = document.getElementById('login-password').value;
+    if (!username||!password) { document.getElementById('login-error').classList.add('visible'); return; }
+
+    const res = await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username,password})});
+    if (!res.ok) { document.getElementById('login-error').textContent='Falscher Benutzername oder Passwort.'; document.getElementById('login-error').classList.add('visible'); return; }
+    const data = await res.json();
+
+    sessionStorage.setItem('thread_id',    data.thread_id);
+    sessionStorage.setItem('username',     data.name || data.username);
+    sessionStorage.setItem('login_user',   data.username);
+    sessionStorage.setItem('is_logged_in', 'true');
+
+    // Gespeichertes Ergebnis vorhanden → Fragebogen überspringen
+    if (data.has_saved_result && data.saved_result) {
+      const s = data.saved_result;
+      sessionStorage.setItem('top_areas',        JSON.stringify(s.top_areas));
+      sessionStorage.setItem('selected_methods', JSON.stringify(s.selected_methods));
+      sessionStorage.setItem('area_scores',      JSON.stringify(s.area_scores));
+      sessionStorage.setItem('intro_message',    '');
+      window.location.href = '/chat';
+    } else {
+      window.location.href = '/questionnaire';
+    }
+  }
+  async function doRegister() {
+    const name=document.getElementById('reg-name').value.trim();
+    const email=document.getElementById('reg-email').value.trim();
+    const password=document.getElementById('reg-password').value;
+    if(!name||!email||!password){document.getElementById('reg-error').classList.add('visible');return;}
+    const data = await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:email,password})}).then(r=>r.json());
+    sessionStorage.setItem('thread_id',data.thread_id);
+    sessionStorage.setItem('username',name);
+    sessionStorage.setItem('is_logged_in','true');
+    window.location.href='/questionnaire';
+  }
+  async function doGuest() {
+    const data = await fetch('/api/guest',{method:'POST'}).then(r=>r.json());
+    sessionStorage.setItem('thread_id',data.thread_id);
+    sessionStorage.setItem('is_logged_in','false');
+    window.location.href='/questionnaire';
+  }
+</script>
+</body>
+</html>

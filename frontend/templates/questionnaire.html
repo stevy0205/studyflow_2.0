@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyFlow – Fragebogen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:  #fdf8f0;
+      --yellow: #ffd60a;
+      --coral:  #ff6b6b;
+      --mint:   #06d6a0;
+      --blue:   #118ab2;
+      --purple: #845ec2;
+      --navy:   #1a1a2e;
+      --ink:    #2d2d2d;
+      --muted:  #7a7a8c;
+      --white:  #ffffff;
+    }
+
+    /* Area-specific colors */
+    .area-prokrastination { --area-color: var(--purple); --area-bg: #f5f0ff; }
+    .area-unterbrechungen { --area-color: var(--blue);   --area-bg: #e8f4ff; }
+    .area-leistung        { --area-color: #e07b00;       --area-bg: #fff5e0; }
+    .area-emotion         { --area-color: var(--coral);  --area-bg: #fff0f0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Topbar ── */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: var(--white);
+      border-bottom: 3px solid var(--navy);
+      position: sticky; top: 0; z-index: 10;
+    }
+
+    .logo {
+      font-family: 'Cabin Sketch', cursive;
+      font-size: 1.4rem; font-weight: 700;
+    }
+
+    .progress-area {
+      display: flex; align-items: center; gap: 1rem;
+      flex: 1; max-width: 500px; margin: 0 2rem;
+    }
+
+    .progress-track {
+      flex: 1; height: 10px;
+      background: #e8e5de;
+      border-radius: 99px;
+      border: 2px solid var(--navy);
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--coral), var(--yellow));
+      border-radius: 99px;
+      transition: width .4s cubic-bezier(.34,1.56,.64,1);
+      width: 0%;
+    }
+
+    .progress-label {
+      font-size: .85rem; font-weight: 800; color: var(--navy);
+      white-space: nowrap;
+    }
+
+    /* ── Main ── */
+    .main {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      padding: 2rem;
+    }
+
+    .question-card {
+      width: 100%; max-width: 660px;
+      background: var(--white);
+      border: 3px solid var(--navy);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 8px 8px 0 var(--navy);
+      animation: slideIn .35s cubic-bezier(.34,1.56,.64,1);
+      position: relative;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(20px) scale(.97); }
+      to   { opacity: 1; transform: translateY(0)   scale(1); }
+    }
+
+    /* Sticky note corner */
+    .question-card::before {
+      content: '';
+      position: absolute;
+      top: -3px; right: 32px;
+      width: 48px; height: 14px;
+      border-radius: 0 0 4px 4px;
+      background: var(--area-color, var(--yellow));
+      box-shadow: 0 2px 4px rgba(0,0,0,.12);
+      transition: background .3s;
+    }
+
+    .area-badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .35rem .85rem;
+      background: var(--area-bg, #f5f0ff);
+      color: var(--area-color, var(--purple));
+      border: 2px solid var(--area-color, var(--purple));
+      border-radius: 999px;
+      font-size: .75rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: .08em;
+      margin-bottom: 1.25rem;
+      transition: all .3s;
+    }
+
+    .q-meta {
+      font-size: .8rem; font-weight: 700; color: var(--muted);
+      margin-bottom: .5rem;
+    }
+
+    .q-text {
+      font-family: 'Cabin Sketch', cursive;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      line-height: 1.3; color: var(--navy);
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Scale ── */
+    .scale { display: flex; gap: .6rem; margin-bottom: .75rem; }
+
+    .scale-btn {
+      flex: 1;
+      aspect-ratio: 1; max-width: 80px;
+      border: 2.5px solid #d0cdc5;
+      border-radius: 12px;
+      background: var(--cream);
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.1rem; font-weight: 800;
+      cursor: pointer;
+      transition: all .15s cubic-bezier(.34,1.56,.64,1);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted);
+    }
+
+    .scale-btn:hover {
+      border-color: var(--area-color, var(--purple));
+      color: var(--area-color, var(--purple));
+      transform: translateY(-3px);
+    }
+
+    .scale-btn.selected {
+      background: var(--area-color, var(--purple));
+      border-color: var(--area-color, var(--purple));
+      color: var(--white);
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,.15);
+    }
+
+    .scale-labels {
+      display: flex; justify-content: space-between;
+      font-size: .72rem; font-weight: 700; color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    /* ── Nav ── */
+    .nav { display: flex; gap: .75rem; }
+
+    .btn-back {
+      padding: .75rem 1.4rem;
+      background: transparent; color: var(--muted);
+      border: 2.5px solid #d0cdc5;
+      border-radius: 10px;
+      font-family: 'Nunito', sans-serif; font-size: .9rem; font-weight: 700;
+      cursor: pointer; transition: all .15s;
+    }
+    .btn-back:hover { border-color: var(--navy); color: var(--navy); }
+
+    .btn-next {
+      flex: 1; padding: .75rem 1.4rem;
+      background: var(--navy); color: var(--white);
+      border: 2.5px solid var(--navy);
+      border-radius: 10px;
+      font-family: 'Nunito', sans-serif; font-size: .95rem; font-weight: 800;
+      cursor: pointer;
+      box-shadow: 3px 3px 0 var(--area-color, var(--purple));
+      transition: all .15s;
+      opacity: .4; pointer-events: none;
+    }
+    .btn-next.enabled {
+      opacity: 1; pointer-events: all;
+    }
+    .btn-next.enabled:hover {
+      transform: translate(-2px,-2px);
+      box-shadow: 5px 5px 0 var(--area-color, var(--purple));
+    }
+
+    /* ── Loading ── */
+    .loading {
+      display: none; position: fixed; inset: 0;
+      background: rgba(253,248,240,.92);
+      backdrop-filter: blur(6px);
+      flex-direction: column; align-items: center; justify-content: center;
+      gap: 1.5rem; z-index: 100;
+    }
+    .loading.visible { display: flex; }
+
+    .loading-card {
+      background: var(--white);
+      border: 3px solid var(--navy); border-radius: 20px;
+      padding: 2.5rem 3rem; text-align: center;
+      box-shadow: 8px 8px 0 var(--navy);
+    }
+
+    .loading-emoji { font-size: 3rem; animation: spin 2s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .loading-card h3 {
+      font-family: 'Cabin Sketch', cursive;
+      font-size: 1.6rem; color: var(--navy); margin: 1rem 0 .4rem;
+    }
+    .loading-card p { color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">StudyFlow</div>
+  <div class="progress-area">
+    <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
+    <span class="progress-label" id="prog-label">1/24</span>
+  </div>
+  <div style="width:100px"></div>
+</div>
+
+<div class="main">
+  <div class="question-card area-prokrastination" id="q-card">
+    <div class="area-badge" id="area-badge">⏳ Prokrastination</div>
+    <div class="q-meta" id="q-meta">Frage 1 von 24</div>
+    <div class="q-text" id="q-text">Lädt...</div>
+
+    <div class="scale" id="scale">
+      <button class="scale-btn" onclick="select(0)">0</button>
+      <button class="scale-btn" onclick="select(1)">1</button>
+      <button class="scale-btn" onclick="select(2)">2</button>
+      <button class="scale-btn" onclick="select(3)">3</button>
+    </div>
+    <div class="scale-labels">
+      <span>Stimme gar nicht zu</span>
+      <span>Stimme voll zu</span>
+    </div>
+
+    <div class="nav">
+      <button class="btn-back" id="btn-back" onclick="prevQ()">← Zurück</button>
+      <button class="btn-next" id="btn-next" onclick="nextQ()">Weiter →</button>
+    </div>
+  </div>
+</div>
+
+<!-- Loading -->
+<div class="loading" id="loading">
+  <div class="loading-card">
+    <div class="loading-emoji">🔍</div>
+    <h3>Analyse läuft...</h3>
+    <p>Deine Antworten werden ausgewertet.</p>
+  </div>
+</div>
+
+<script>
+const QUESTIONS = [
+  {text:"Ich schiebe Aufgaben oft auf, obwohl ich weiß, dass ich anfangen sollte.", area:"prokrastination"},
+  {text:"Ich fange Lernphasen häufig später an als geplant.", area:"prokrastination"},
+  {text:"Mir fällt es schwer, mich zum Starten zu motivieren.", area:"prokrastination"},
+  {text:"Ich plane meinen Lernstoff realistisch über mehrere Tage.", area:"prokrastination"},
+  {text:"Ich beende Lernphasen mit einem klaren Plan für den nächsten Start.", area:"prokrastination"},
+  {text:"Ich habe konkrete Strategien, wenn ich innerlich Widerstand spüre.", area:"prokrastination"},
+  {text:"Ich wechsle beim Lernen häufig zwischen Apps, Tabs oder Aufgaben.", area:"unterbrechungen"},
+  {text:"Das Handy lenkt mich regelmäßig beim Lernen ab.", area:"unterbrechungen"},
+  {text:"Ich kann Ablenkungen gut ignorieren und bleibe bei der Aufgabe.", area:"unterbrechungen"},
+  {text:"Ich nutze aktiv Techniken (z.B. Timer, Flugmodus), um fokussiert zu bleiben.", area:"unterbrechungen"},
+  {text:"Ich bemerke, wenn meine Konzentration nachlässt, und korrigiere das gezielt.", area:"unterbrechungen"},
+  {text:"Meine Lernphasen sind klar strukturiert mit definierten Pausen.", area:"unterbrechungen"},
+  {text:"Ich lerne Stoff oft durch aktives Strukturieren statt passives Lesen.", area:"leistung"},
+  {text:"Ich übe regelmäßig unter Prüfungsbedingungen.", area:"leistung"},
+  {text:"Ich zerteile komplexe Themen in lernbare Einheiten.", area:"leistung"},
+  {text:"Ich analysiere meine Fehler nach Übungen systematisch.", area:"leistung"},
+  {text:"Ich weiß genau, was ich in welchem Thema können muss.", area:"leistung"},
+  {text:"Ich passe meine Lernstrategie regelmäßig auf Basis meines Fortschritts an.", area:"leistung"},
+  {text:"Prüfungssituationen lösen bei mir starke Nervosität oder Blockaden aus.", area:"emotion"},
+  {text:"Emotionaler Stress (Frust, Angst, Druck) beeinträchtigt mein Lernen.", area:"emotion"},
+  {text:"Ich habe Techniken, um mich vor oder während dem Lernen zu stabilisieren.", area:"emotion"},
+  {text:"Ich erkenne, wann ich eine Pause oder Regulation brauche.", area:"emotion"},
+  {text:"Negative Gedanken ('Ich schaffe das nicht') machen mir häufig zu schaffen.", area:"emotion"},
+  {text:"Ich gehe gut mit Rückschlägen und schlechten Lerntagen um.", area:"emotion"},
+];
+
+const AREA_META = {
+  prokrastination: {label:"⏳ Prokrastination", cls:"area-prokrastination"},
+  unterbrechungen: {label:"🎯 Unterbrechungen", cls:"area-unterbrechungen"},
+  leistung:        {label:"📚 Leistung",        cls:"area-leistung"},
+  emotion:         {label:"💪 Emotion",         cls:"area-emotion"},
+};
+
+let current = 0;
+const answers = new Array(24).fill(null);
+
+function render() {
+  const q = QUESTIONS[current];
+  const meta = AREA_META[q.area];
+  const card = document.getElementById('q-card');
+
+  // Swap area class
+  Object.values(AREA_META).forEach(m => card.classList.remove(m.cls));
+  card.classList.add(meta.cls);
+
+  document.getElementById('area-badge').textContent = meta.label;
+  document.getElementById('q-meta').textContent = `Frage ${current+1} von 24`;
+  document.getElementById('q-text').textContent = q.text;
+
+  // Progress
+  document.getElementById('prog-fill').style.width = ((current/24)*100)+'%';
+  document.getElementById('prog-label').textContent = `${current+1}/24`;
+
+  // Scale
+  document.querySelectorAll('.scale-btn').forEach((btn,i) =>
+    btn.classList.toggle('selected', answers[current] === i+1));
+
+  // Nav
+  document.getElementById('btn-back').style.visibility = current===0 ? 'hidden' : 'visible';
+  const nxt = document.getElementById('btn-next');
+  nxt.classList.toggle('enabled', answers[current] !== null);
+  nxt.textContent = current===23 ? 'Auswerten 🚀' : 'Weiter →';
+
+  // Re-animate
+  card.style.animation='none'; card.offsetHeight; card.style.animation='';
+}
+
+function select(val) {
+  answers[current] = val;
+  document.querySelectorAll('.scale-btn').forEach((btn,i) =>
+    btn.classList.toggle('selected', i===val));
+  document.getElementById('btn-next').classList.add('enabled');
+  if (current < 23) setTimeout(nextQ, 380);
+}
+
+function nextQ() {
+  if (answers[current]===null) return;
+  if (current<23) { current++; render(); }
+  else submitAnswers();
+}
+
+function prevQ() { if(current>0){current--;render();} }
+
+async function submitAnswers() {
+  document.getElementById('loading').classList.add('visible');
+  const thread_id    = sessionStorage.getItem('thread_id');
+  const is_logged_in = sessionStorage.getItem('is_logged_in')==='true';
+  const user_name    = sessionStorage.getItem('username') || null;
+  const username     = sessionStorage.getItem('login_user') || null;
+  try {
+    const data = await fetch('/api/questionnaire',{
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({answers,thread_id,is_logged_in,user_name,username})
+    }).then(r=>r.json());
+    sessionStorage.setItem('thread_id',        data.thread_id);
+    sessionStorage.setItem('top_areas',        JSON.stringify(data.top_areas));
+    sessionStorage.setItem('selected_methods', JSON.stringify(data.selected_methods));
+    sessionStorage.setItem('area_scores',      JSON.stringify(data.area_scores));
+    sessionStorage.setItem('intro_message',    data.intro_message||'');
+    window.location.href='/chat';
+  } catch(e) {
+    document.getElementById('loading').classList.remove('visible');
+    alert('Fehler bei der Auswertung. Bitte versuche es erneut.');
+  }
+}
+
+render();
+</script>
+</body>
+</html>
