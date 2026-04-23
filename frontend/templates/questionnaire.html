@@ -367,12 +367,11 @@ async function submitAnswers() {
   document.getElementById('loading').classList.add('visible');
   const thread_id    = sessionStorage.getItem('thread_id');
   const is_logged_in = sessionStorage.getItem('is_logged_in')==='true';
-  const user_name    = sessionStorage.getItem('username') || null;
-  const username     = sessionStorage.getItem('login_user') || null;
+  const email        = sessionStorage.getItem('login_email') || null;
   try {
     const data = await fetch('/api/questionnaire',{
       method:'POST', headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({answers,thread_id,is_logged_in,user_name,username})
+      body:JSON.stringify({answers, thread_id, is_logged_in, email})
     }).then(r=>r.json());
     sessionStorage.setItem('thread_id',        data.thread_id);
     sessionStorage.setItem('top_areas',        JSON.stringify(data.top_areas));

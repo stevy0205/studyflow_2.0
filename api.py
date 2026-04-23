@@ -11,11 +11,10 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
-from dotenv import load_dotenv
-load_dotenv() 
+
 from typing import Optional
 from graph import graph
-from database import init_db, verify_login, save_result, get_latest_result
+from database import init_db, verify_login, register_user, save_result, get_latest_result
 
 # ── App Setup ──────────────────────────────────────────────────────────────────
 app = FastAPI(title="StudyFlow Coach")
@@ -32,16 +31,20 @@ def startup():
 
 # ── Models ─────────────────────────────────────────────────────────────────────
 
+class RegisterRequest(BaseModel):
+    email: str
+    password: str
+    name: str
+
 class LoginRequest(BaseModel):
-    username: str
+    email: str
     password: str
 
 class QuestionnaireRequest(BaseModel):
     answers: list
     thread_id: Optional[str] = None
     is_logged_in: bool = False
-    username: Optional[str] = None
-    user_name: Optional[str] = None
+    email: Optional[str] = None
 
 class ChatRequest(BaseModel):
     message: str
@@ -75,24 +78,46 @@ async def dashboard_page(request: Request):
 
 @app.post("/api/login")
 async def login(req: LoginRequest):
-    user = verify_login(req.username, req.password)
+    user = verify_login(req.email, req.password)
     if not user:
-        raise HTTPException(status_code=401, detail="Ungültige Zugangsdaten.")
+        raise HTTPException(status_code=401, detail="Ungültige E-Mail oder Passwort.")
 
     thread_id = str(uuid.uuid4())
-
-    # Letztes Ergebnis laden falls vorhanden
-    saved = get_latest_result(user["username"])
+    saved = get_latest_result(user["email"])
 
     return {
         "thread_id":        thread_id,
-        "username":         user["username"],
+        "email":            user["email"],
         "name":             user["name"],
         "is_logged_in":     True,
         "has_saved_result": saved is not None,
-        # Gespeicherte Ergebnisse direkt mitschicken → Frontend kann Fragebogen überspringen
         "saved_result":     saved,
     }
+
+
+@app.post("/api/register")
+async def register(req: RegisterRequest):
+    import re
+    if not re.match(r"[^@]+@[^@]+\.[^@]+", req.email):
+        raise HTTPException(status_code=400, detail="Bitte eine gültige E-Mail-Adresse eingeben.")
+    if len(req.password) < 6:
+        raise HTTPException(status_code=400, detail="Passwort muss mindestens 6 Zeichen haben.")
+    if not req.name.strip():
+        raise HTTPException(status_code=400, detail="Name darf nicht leer sein.")
+    try:
+        user = register_user(req.email, req.password, req.name)
+    except ValueError as e:
+        raise HTTPException(status_code=409, detail=str(e))
+
+    return {
+        "thread_id":        str(uuid.uuid4()),
+        "email":            user["email"],
+        "name":             user["name"],
+        "is_logged_in":     True,
+        "has_saved_result": False,
+        "saved_result":     None,
+    }
+
 
 
 @app.post("/api/guest")
@@ -151,9 +176,9 @@ async def submit_questionnaire(req: QuestionnaireRequest):
     intro += "Tippe **1** oder **2** zum Auswählen, oder stelle eine Frage! 💬"
 
     # ── Ergebnis in DB speichern (nur eingeloggte User) ────────────────────────
-    if req.is_logged_in and req.username:
+    if req.is_logged_in and req.email:
         save_result(
-            username         = req.username,
+            email            = req.email,
             area_scores      = area_scores,
             top_areas        = top_areas,
             selected_methods = selected_methods,

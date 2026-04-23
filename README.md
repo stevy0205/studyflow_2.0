@@ -5,11 +5,20 @@ Ein konversationeller Coaching-Chatbot basierend auf dem Flowchart-Diagramm.
 ## Projektstruktur
 
 ```
-coach_bot/
+root/
+├── data/
+    ├── tools.json         # Tool Beschreibungen
+├── frontend/
+    ├── templates          # HTML Templates für UI    
+├── tests/
+    ├── test_llm_judge.py  # LLM Tests
+    ├── test_unit.py       # Statische Unit Tests für deterministisches Verhalten
 ├── graph.py               # Haupt-Graph (StateGraph)
 ├── state.py               # CoachState TypedDict
 ├── routers.py             # Alle Router-Funktionen
-├── requirements.txt
+├── api.py
+├── database.py
+├── tools_registry.py
 └── nodes/
     ├── auth.py            # Login / Gastmodus
     ├── profile.py         # Profil laden
@@ -24,34 +33,20 @@ coach_bot/
 
 ```bash
 pip install -r requirements.txt
-export OPENAI_API_KEY=sk-...
+
 ```
 
 ## Verwendung
 
-```python
-from graph import graph
-
-config = {"configurable": {"thread_id": "user-123"}}
-
-# Eingeloggter Nutzer
-result = graph.invoke(
-    {"is_logged_in": True, "user_profile": {"name": "Anna"}},
-    config=config
-)
-
-# Gast
-result = graph.invoke(
-    {"is_logged_in": False},
-    config=config
-)
-
-# Antwort auf Fragebogen (24 Zahlen, kommagetrennt)
-result = graph.invoke(
-    {"messages": [{"role": "user", "content": "4,3,5,2,4,3,2,4,3,5,4,3,5,4,3,2,4,5,3,4,5,3,4,5"}]},
-    config=config
-)
+```bash
+python3 uvicorn api:app --reload
 ```
+
+## Tests
+
+pytest tests/test_llm_judge.py -v -s
+
+pytest tests/test_unit.py -v -s
 
 ## Graph-Übersicht
 
@@ -71,7 +66,7 @@ Login → Profil laden (oder Gast) → Fragebogen (24 Fragen)
 
 ## Anpassen
 
-- **Methoden-Katalog**: `nodes/method_selection.py` → `METHODS` Liste erweitern
+- **Methoden-Katalog**: `nodes/method_selection.py` → Siehe Tools Registry
 - **Fragen**: `nodes/questionnaire.py` → `QUESTIONS` Liste anpassen
 - **Bereiche**: `nodes/questionnaire.py` → `AREAS` Liste anpassen
 - **LLM-Modell**: `nodes/coach.py` und `routers.py` → `ChatOpenAI(model=...)`

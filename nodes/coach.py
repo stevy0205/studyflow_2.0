@@ -5,13 +5,10 @@ Nutzt ToolsRegistry.format_for_llm() für strukturierte Prompts.
 
 from langchain_core.messages import AIMessage, SystemMessage, HumanMessage
 from langchain_openai import ChatOpenAI
-
 from state import CoachState
 from tools_registry import ToolsRegistry
-
-#_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.4)
-
 from langchain_community.chat_models import ChatOllama
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
 _llm = ChatOllama(
     model="llama3.1:8b-instruct-q4_K_M",
@@ -55,7 +52,7 @@ def _build_tool_context(state: CoachState) -> str:
 
     return ""
 
-from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
+
 
 def coach_explain_node(state: CoachState) -> dict:
     """

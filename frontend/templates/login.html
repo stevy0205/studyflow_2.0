@@ -252,20 +252,31 @@
     document.getElementById('register-panel').style.display = tab==='register' ? 'block':'none';
   }
   async function doLogin() {
-    const username = document.getElementById('login-email').value.trim();
+    const email    = document.getElementById('login-email').value.trim();
     const password = document.getElementById('login-password').value;
-    if (!username||!password) { document.getElementById('login-error').classList.add('visible'); return; }
+    const errEl    = document.getElementById('login-error');
+    errEl.classList.remove('visible');
+    if (!email || !password) {
+      errEl.textContent = 'Bitte alle Felder ausfüllen.';
+      errEl.classList.add('visible'); return;
+    }
 
-    const res = await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username,password})});
-    if (!res.ok) { document.getElementById('login-error').textContent='Falscher Benutzername oder Passwort.'; document.getElementById('login-error').classList.add('visible'); return; }
+    const res = await fetch('/api/login', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, password})
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      errEl.textContent = err.detail || 'Falsche E-Mail oder Passwort.';
+      errEl.classList.add('visible'); return;
+    }
     const data = await res.json();
 
     sessionStorage.setItem('thread_id',    data.thread_id);
-    sessionStorage.setItem('username',     data.name || data.username);
-    sessionStorage.setItem('login_user',   data.username);
+    sessionStorage.setItem('username',     data.name);
+    sessionStorage.setItem('login_email',  data.email);
     sessionStorage.setItem('is_logged_in', 'true');
 
-    // Gespeichertes Ergebnis vorhanden → Fragebogen überspringen
     if (data.has_saved_result && data.saved_result) {
       const s = data.saved_result;
       sessionStorage.setItem('top_areas',        JSON.stringify(s.top_areas));
@@ -277,16 +288,38 @@
       window.location.href = '/questionnaire';
     }
   }
+
   async function doRegister() {
-    const name=document.getElementById('reg-name').value.trim();
-    const email=document.getElementById('reg-email').value.trim();
-    const password=document.getElementById('reg-password').value;
-    if(!name||!email||!password){document.getElementById('reg-error').classList.add('visible');return;}
-    const data = await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:email,password})}).then(r=>r.json());
-    sessionStorage.setItem('thread_id',data.thread_id);
-    sessionStorage.setItem('username',name);
-    sessionStorage.setItem('is_logged_in','true');
-    window.location.href='/questionnaire';
+    const name     = document.getElementById('reg-name').value.trim();
+    const email    = document.getElementById('reg-email').value.trim();
+    const password = document.getElementById('reg-password').value;
+    const errEl    = document.getElementById('reg-error');
+    errEl.classList.remove('visible');
+
+    if (!name || !email || !password) {
+      errEl.textContent = 'Bitte alle Felder ausfüllen.';
+      errEl.classList.add('visible'); return;
+    }
+    if (password.length < 6) {
+      errEl.textContent = 'Passwort muss mindestens 6 Zeichen haben.';
+      errEl.classList.add('visible'); return;
+    }
+
+    const res = await fetch('/api/register', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email, password, name})
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      errEl.textContent = err.detail || 'Registrierung fehlgeschlagen.';
+      errEl.classList.add('visible'); return;
+    }
+    const data = await res.json();
+    sessionStorage.setItem('thread_id',    data.thread_id);
+    sessionStorage.setItem('username',     data.name);
+    sessionStorage.setItem('login_email',  data.email);
+    sessionStorage.setItem('is_logged_in', 'true');
+    window.location.href = '/questionnaire';
   }
   async function doGuest() {
     const data = await fetch('/api/guest',{method:'POST'}).then(r=>r.json());
