@@ -1,6 +1,6 @@
 # Coach Bot – LangGraph Implementation
 
-Ein konversationeller Coaching-Chatbot basierend auf dem Flowchart-Diagramm.
+Ein konversationeller Coaching-Chatbot welcher Studenten bei Prüfungsängsten oder Problemen beim Lernen unterstützen soll.
 
 ## Projektstruktur
 
