@@ -41,6 +41,19 @@ pip install -r requirements.txt
 ```bash
 python3 uvicorn api:app --reload
 ```
+## 🐳 Anwendung mit Docker starten
+
+Die Anwendung kann auch über Docker gestartet werden, um eine einheitliche Umgebung sicherzustellen.
+
+### Voraussetzungen
+
+- Docker installiert
+- Docker Compose installiert
+
+### Start
+
+```bash
+docker compose up --build
 
 ## Tests
 
