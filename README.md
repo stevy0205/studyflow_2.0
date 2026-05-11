@@ -34,6 +34,12 @@ root/
 ```bash
 pip install -r requirements.txt
 
+Es muss eine env file mit variablen vorliegen. Ein beispiel ist unter env.example hinterlegt, allerdings muss hier der open ai key eingesetzt werden.
+
+cp .env.example .env 
+
+
+
 ```
 
 ## Verwendung
