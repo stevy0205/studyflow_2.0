@@ -34,18 +34,15 @@ root/
 ```bash
 pip install -r requirements.txt
 
-Es muss eine env file mit variablen vorliegen. Ein beispiel ist unter env.example hinterlegt, allerdings muss hier der open ai key eingesetzt werden.
+Es muss eine env file mit Env-Variablen vorliegen. Ein Beispiel ist unter env.example hinterlegt, allerdings muss hier der open ai key eingesetzt werden.
 
 cp .env.example .env 
-
-
-
 ```
 
 ## Verwendung
 
 ```bash
-python3 uvicorn api:app --reload
+python3 -m uvicorn api:app --reload
 ```
 ## 🐳 Anwendung mit Docker starten
 
@@ -63,9 +60,9 @@ docker compose up --build
 
 ## Tests
 
-pytest tests/test_llm_judge.py -v -s
+pytest -m tests/test_llm_judge.py -v -s
 
-pytest tests/test_unit.py -v -s
+pytest -m tests/test_unit.py -v -s
 
 ## Graph-Übersicht
 
