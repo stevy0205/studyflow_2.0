@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title id="head-title">report.html</title>
+      <link href="assets\style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <h1 id="title">report.html</h1>
+    <p>Report generated on 14-Jun-2026 at 17:07:49 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+        v4.2.0</p>
+    <div id="environment-header">
+      <h2>Environment</h2>
+    </div>
+    <table id="environment"></table>
+    <!-- TEMPLATES -->
+      <template id="template_environment_row">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+    <template id="template_results-table__body--empty">
+      <tbody class="results-table-row">
+        <tr id="not-found-message">
+          <td colspan="4">No results found. Check the filters.</td>
+        </tr>
+      </tbody>
+    </template>
+    <template id="template_results-table__tbody">
+      <tbody class="results-table-row">
+        <tr class="collapsible">
+        </tr>
+        <tr class="extras-row">
+          <td class="extra" colspan="4">
+            <div class="extraHTML"></div>
+            <div class="media">
+              <div class="media-container">
+                  <div class="media-container__nav--left">&lt;</div>
+                  <div class="media-container__viewport">
+                    <img src="" />
+                    <video controls>
+                      <source src="" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="media-container__nav--right">&gt;</div>
+                </div>
+                <div class="media__name"></div>
+                <div class="media__counter"></div>
+            </div>
+            <div class="logwrapper">
+              <div class="logexpander"></div>
+              <div class="log"></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </template>
+    <!-- END TEMPLATES -->
+    <div class="summary">
+      <div class="summary__data">
+        <h2>Summary</h2>
+        <div class="additional-summary prefix">
+        </div>
+        <p class="run-count">93 tests took 00:01:47.</p>
+        <p class="filter">(Un)check the boxes to filter the results.</p>
+        <div class="summary__reload">
+          <div class="summary__reload__button hidden" onclick="location.reload()">
+            <div>There are still tests running. <br />Reload this page to get the latest results!</div>
+          </div>
+        </div>
+        <div class="summary__spacer"></div>
+        <div class="controls">
+          <div class="filters">
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" >
+            <span class="failed">8 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" >
+            <span class="passed">85 Passed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled>
+            <span class="skipped">0 Skipped,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled>
+            <span class="xfailed">0 Expected failures,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xpassed" disabled>
+            <span class="xpassed">0 Unexpected passes,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="error" disabled>
+            <span class="error">0 Errors,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="rerun" disabled>
+            <span class="rerun">0 Reruns</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="retried" disabled>
+            <span class="retried">0 Retried,</span>
+          </div>
+          <div class="collapse">
+            <button id="show_all_details">Show all details</button>&nbsp;/&nbsp;<button id="hide_all_details">Hide all details</button>
+          </div>
+        </div>
+      </div>
+      <div class="additional-summary summary">
+      </div>
+      <div class="additional-summary postfix">
+      </div>
+    </div>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable" data-column-type="result">Result</th>
+          <th class="sortable" data-column-type="testId">Test</th>
+          <th class="sortable" data-column-type="duration">Duration</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+    </table>
+  <footer>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.14.4&#34;, &#34;Platform&#34;: &#34;Windows-11-10.0.26200-SP0&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;9.0.2&#34;, &#34;pluggy&#34;: &#34;1.6.0&#34;}, &#34;Plugins&#34;: {&#34;anyio&#34;: &#34;4.12.1&#34;, &#34;langsmith&#34;: &#34;0.7.9&#34;, &#34;asyncio&#34;: &#34;1.3.0&#34;, &#34;cov&#34;: &#34;7.1.0&#34;, &#34;html&#34;: &#34;4.2.0&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;}}, &#34;tests&#34;: {&#34;tests/test_llm_judge.py::test_sentiment_synthetic[Das hat super funktioniert, ich war sehr fokussiert!-positive]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_synthetic[Das hat super funktioniert, ich war sehr fokussiert!-positive]&#34;, &#34;duration&#34;: &#34;00:00:05&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_synthetic[Das hat super funktioniert, ich war sehr fokussiert!-positive]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:05&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[SYN] &amp;#x27;Das hat super funktioniert, ich war sehr fokussiert!&amp;#x27; \u2192 positive (erwartet: positive) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;#x27;Das Feedback ist eindeutig positiv, da der Nutzer sehr zufrieden ist und die Methode als erfolgreich beschreibt.&amp;#x27;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_synthetic[Hat ganz okay geklappt, aber ich war manchmal abgelenkt.-partial_positive]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_synthetic[Hat ganz okay geklappt, aber ich war manchmal abgelenkt.-partial_positive]&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_synthetic[Hat ganz okay geklappt, aber ich war manchmal abgelenkt.-partial_positive]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;text = &amp;#x27;Hat ganz okay geklappt, aber ich war manchmal abgelenkt.&amp;#x27;, expected = &amp;#x27;partial_positive&amp;#x27;\n\n    @pytest.mark.asyncio\n    @pytest.mark.parametrize(&amp;quot;text,expected&amp;quot;, SENTIMENT_CASES_SYNTHETIC)\n    async def test_sentiment_synthetic(text, expected):\n        &amp;quot;&amp;quot;&amp;quot;Sentinel: synthetische Baseline-F\u00e4lle m\u00fcssen weiterhin funktionieren.&amp;quot;&amp;quot;&amp;quot;\n        predicted = await call_llm_sentiment(text)\n        result    = await judge_sentiment(text, predicted, expected)\n        print(f&amp;quot;\\n[SYN] &amp;#x27;{text[:60]}&amp;#x27; \u2192 {predicted} (erwartet: {expected}) | {result}&amp;quot;)\n&amp;gt;       assert result[&amp;quot;correct&amp;quot;], f&amp;quot;Sentiment falsch: {result[&amp;#x27;reason&amp;#x27;]}&amp;quot;\nE       AssertionError: Sentiment falsch: Das Feedback enth\u00e4lt sowohl einen positiven Aspekt (&amp;#x27;ganz okay geklappt&amp;#x27;) als auch einen negativen (&amp;#x27;manchmal abgelenkt&amp;#x27;). Die Kategorie partial_positive ist daher passender, da sie beide Aspekte ber\u00fccksichtigt. partial_negative w\u00e4re nur korrekt, wenn der negative Aspekt \u00fcberwiegt, was hier nicht der Fall ist.\nE       assert False\n\ntests\\test_llm_judge.py:404: AssertionError\n\n----------------------------- Captured stdout call -----------------------------\n\n[SYN] &amp;#x27;Hat ganz okay geklappt, aber ich war manchmal abgelenkt.&amp;#x27; \u2192 partial_negative (erwartet: partial_positive) | {&amp;#x27;correct&amp;#x27;: False, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback enth\u00e4lt sowohl einen positiven Aspekt (&amp;#x27;ganz okay geklappt&amp;#x27;) als auch einen negativen (&amp;#x27;manchmal abgelenkt&amp;#x27;). Die Kategorie partial_positive ist daher passender, da sie beide Aspekte ber\u00fccksichtigt. partial_negative w\u00e4re nur korrekt, wenn der negative Aspekt \u00fcberwiegt, was hier nicht der Fall ist.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_synthetic[War so mittel, nicht besonders gut aber auch nicht schlecht.-neutral]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_synthetic[War so mittel, nicht besonders gut aber auch nicht schlecht.-neutral]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_synthetic[War so mittel, nicht besonders gut aber auch nicht schlecht.-neutral]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[SYN] &amp;#x27;War so mittel, nicht besonders gut aber auch nicht schlecht.&amp;#x27; \u2192 neutral (erwartet: neutral) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;#x27;Das Feedback beschreibt eine mittlere, ausgeglichene Haltung ohne klare positive oder negative Tendenz. Die Klassifikation als neutral ist daher korrekt.&amp;#x27;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_synthetic[Ich fand es eher schwierig, hat nicht so gut gepasst f\\xfcr mich.-partial_negative]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_synthetic[Ich fand es eher schwierig, hat nicht so gut gepasst f\\xfcr mich.-partial_negative]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_synthetic[Ich fand es eher schwierig, hat nicht so gut gepasst f\\xfcr mich.-partial_negative]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;text = &amp;#x27;Ich fand es eher schwierig, hat nicht so gut gepasst f\u00fcr mich.&amp;#x27;, expected = &amp;#x27;partial_negative&amp;#x27;\n\n    @pytest.mark.asyncio\n    @pytest.mark.parametrize(&amp;quot;text,expected&amp;quot;, SENTIMENT_CASES_SYNTHETIC)\n    async def test_sentiment_synthetic(text, expected):\n        &amp;quot;&amp;quot;&amp;quot;Sentinel: synthetische Baseline-F\u00e4lle m\u00fcssen weiterhin funktionieren.&amp;quot;&amp;quot;&amp;quot;\n        predicted = await call_llm_sentiment(text)\n        result    = await judge_sentiment(text, predicted, expected)\n        print(f&amp;quot;\\n[SYN] &amp;#x27;{text[:60]}&amp;#x27; \u2192 {predicted} (erwartet: {expected}) | {result}&amp;quot;)\n&amp;gt;       assert result[&amp;quot;correct&amp;quot;], f&amp;quot;Sentiment falsch: {result[&amp;#x27;reason&amp;#x27;]}&amp;quot;\nE       AssertionError: Sentiment falsch: Das Feedback dr\u00fcckt eine teilweise negative Erfahrung aus (&amp;#x27;eher schwierig&amp;#x27;, &amp;#x27;nicht so gut gepasst&amp;#x27;), aber keine komplett negative Ablehnung. &amp;#x27;partial_negative&amp;#x27; ist daher passender als &amp;#x27;negative&amp;#x27;.\nE       assert False\n\ntests\\test_llm_judge.py:404: AssertionError\n\n----------------------------- Captured stdout call -----------------------------\n\n[SYN] &amp;#x27;Ich fand es eher schwierig, hat nicht so gut gepasst f\u00fcr mic&amp;#x27; \u2192 negative (erwartet: partial_negative) | {&amp;#x27;correct&amp;#x27;: False, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback dr\u00fcckt eine teilweise negative Erfahrung aus (&amp;#x27;eher schwierig&amp;#x27;, &amp;#x27;nicht so gut gepasst&amp;#x27;), aber keine komplett negative Ablehnung. &amp;#x27;partial_negative&amp;#x27; ist daher passender als &amp;#x27;negative&amp;#x27;.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_synthetic[Das war komplett nutzlos f\\xfcr mich, ich konnte gar nichts damit anfangen.-negative]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_synthetic[Das war komplett nutzlos f\\xfcr mich, ich konnte gar nichts damit anfangen.-negative]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_synthetic[Das war komplett nutzlos f\\xfcr mich, ich konnte gar nichts damit anfangen.-negative]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[SYN] &amp;#x27;Das war komplett nutzlos f\u00fcr mich, ich konnte gar nichts dam&amp;#x27; \u2192 negative (erwartet: negative) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback ist eindeutig negativ formuliert, da der Nutzer keinen Nutzen aus der Methode ziehen konnte. Die Vorhersage &amp;#x27;negative&amp;#x27; ist korrekt.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_synthetic[Hab die 30 Minuten kaum durchgehalten aber immerhin versucht.-partial_negative]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_synthetic[Hab die 30 Minuten kaum durchgehalten aber immerhin versucht.-partial_negative]&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_synthetic[Hab die 30 Minuten kaum durchgehalten aber immerhin versucht.-partial_negative]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[SYN] &amp;#x27;Hab die 30 Minuten kaum durchgehalten aber immerhin versucht&amp;#x27; \u2192 partial_negative (erwartet: partial_negative) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;#x27;Das Feedback dr\u00fcckt aus, dass es schwer war durchzuhalten (negativ), aber auch ein kleiner positiver Aspekt (immerhin versucht) genannt wird. partial_negative ist daher passend.&amp;#x27;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_synthetic[Ehrlich gesagt hat mir die Methode heute sehr geholfen.-positive]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_synthetic[Ehrlich gesagt hat mir die Methode heute sehr geholfen.-positive]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_synthetic[Ehrlich gesagt hat mir die Methode heute sehr geholfen.-positive]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[SYN] &amp;#x27;Ehrlich gesagt hat mir die Methode heute sehr geholfen.&amp;#x27; \u2192 positive (erwartet: positive) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback ist eindeutig positiv formuliert (&amp;#x27;sehr geholfen&amp;#x27;), daher ist die Klassifikation als &amp;#x27;positive&amp;#x27; korrekt.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_synthetic[Keine Ahnung, irgendwie weder noch.-neutral]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_synthetic[Keine Ahnung, irgendwie weder noch.-neutral]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_synthetic[Keine Ahnung, irgendwie weder noch.-neutral]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[SYN] &amp;#x27;Keine Ahnung, irgendwie weder noch.&amp;#x27; \u2192 neutral (erwartet: neutral) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback dr\u00fcckt keine klare positive oder negative Meinung aus, sondern Unentschlossenheit. &amp;#x27;Neutral&amp;#x27; ist daher korrekt.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Ich habe mich nicht unterbrochen, da ich st\\xe4ndig die Uhr vor mir hatte und wirklich versucht habe durchzuhalten. Geholfen hat mir dabei, dass eben alles was ich brauche vor mir habe und mein Handy aus ist.-positive]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Ich habe mich nicht unterbrochen, da ich st\\xe4ndig die Uhr vor mir hatte und wirklich versucht habe durchzuhalten. Geholfen hat mir dabei, dass eben alles was ich brauche vor mir habe und mein Handy aus ist.-positive]&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Ich habe mich nicht unterbrochen, da ich st\\xe4ndig die Uhr vor mir hatte und wirklich versucht habe durchzuhalten. Geholfen hat mir dabei, dass eben alles was ich brauche vor mir habe und mein Handy aus ist.-positive]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Ich habe mich nicht unterbrochen, da ich st\u00e4ndig die Uhr vor mir hatte&amp;#x27; \u2192 positive (erwartet: positive) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback hebt positive Aspekte der Methode hervor, wie das Durchhalten und die hilfreichen Rahmenbedingungen. Es gibt keine negativen oder neutralen Aussagen, daher ist &amp;#x27;positive&amp;#x27; korrekt.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Ich habe die Email-Erinnerung bekommen als ich im Bett gelegen und Reels auf Instagram angeschaut habe. Die Nachricht hat mich nicht nur erinnert, sondern auch motiviert aufzustehen. Ich bin tats\\xe4chlich damit fertig geworden nach wochenlangen aufschieben :)-positive]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Ich habe die Email-Erinnerung bekommen als ich im Bett gelegen und Reels auf Instagram angeschaut habe. Die Nachricht hat mich nicht nur erinnert, sondern auch motiviert aufzustehen. Ich bin tats\\xe4chlich damit fertig geworden nach wochenlangen aufschieben :)-positive]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Ich habe die Email-Erinnerung bekommen als ich im Bett gelegen und Reels auf Instagram angeschaut habe. Die Nachricht hat mich nicht nur erinnert, sondern auch motiviert aufzustehen. Ich bin tats\\xe4chlich damit fertig geworden nach wochenlangen aufschieben :)-positive]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Ich habe die Email-Erinnerung bekommen als ich im Bett gelegen und Ree&amp;#x27; \u2192 positive (erwartet: positive) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback beschreibt eine positive Erfahrung mit der Lernmethode, da die Erinnerung motivierend wirkte und zum erfolgreichen Abschluss der Aufgabe f\u00fchrte. Die Klassifikation als &amp;#x27;positive&amp;#x27; ist korrekt.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Das bewusste fassen von Entschl\\xfcssen f\\xfchlt sich gut an, fast so, als h\\xe4tte man das Vorhaben bereits erledigt. Es ist motivierend, bewusst die Entscheidung zu treffen.-positive]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Das bewusste fassen von Entschl\\xfcssen f\\xfchlt sich gut an, fast so, als h\\xe4tte man das Vorhaben bereits erledigt. Es ist motivierend, bewusst die Entscheidung zu treffen.-positive]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Das bewusste fassen von Entschl\\xfcssen f\\xfchlt sich gut an, fast so, als h\\xe4tte man das Vorhaben bereits erledigt. Es ist motivierend, bewusst die Entscheidung zu treffen.-positive]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Das bewusste fassen von Entschl\u00fcssen f\u00fchlt sich gut an, fast so, als h&amp;#x27; \u2192 positive (erwartet: positive) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback beschreibt positive Gef\u00fchle wie Motivation und ein gutes Gef\u00fchl beim bewussten Entscheiden. Die Klassifikation als &amp;#x27;positive&amp;#x27; ist daher korrekt.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Tiefer Atem war gut, f\\xfchle mich ruhiger und wacher zugleich. Es hat eine stabilisierende Wirkung, meinen K\\xf6rper zu sp\\xfcren.-positive]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Tiefer Atem war gut, f\\xfchle mich ruhiger und wacher zugleich. Es hat eine stabilisierende Wirkung, meinen K\\xf6rper zu sp\\xfcren.-positive]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Tiefer Atem war gut, f\\xfchle mich ruhiger und wacher zugleich. Es hat eine stabilisierende Wirkung, meinen K\\xf6rper zu sp\\xfcren.-positive]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Tiefer Atem war gut, f\u00fchle mich ruhiger und wacher zugleich. Es hat ei&amp;#x27; \u2192 positive (erwartet: positive) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback beschreibt ausschlie\u00dflich positive Effekte wie Ruhe, Wachheit und eine stabilisierende Wirkung. Die Klassifikation als &amp;#x27;positive&amp;#x27; ist korrekt.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Das hat mir sehr geholfen! Ich bin tags\\xfcber entspannter, weil ich wei\\xdf, was zu tun ist und dann auch fertig mit Lernen bin, wenn ich es geschafft habe-positive]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Das hat mir sehr geholfen! Ich bin tags\\xfcber entspannter, weil ich wei\\xdf, was zu tun ist und dann auch fertig mit Lernen bin, wenn ich es geschafft habe-positive]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Das hat mir sehr geholfen! Ich bin tags\\xfcber entspannter, weil ich wei\\xdf, was zu tun ist und dann auch fertig mit Lernen bin, wenn ich es geschafft habe-positive]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Das hat mir sehr geholfen! Ich bin tags\u00fcber entspannter, weil ich wei\u00df&amp;#x27; \u2192 positive (erwartet: positive) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;#x27;Das Feedback ist eindeutig positiv, da die Person beschreibt, dass ihr geholfen wurde und sie entspannter ist. Die Vorhersage ist korrekt.&amp;#x27;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Mit der Planungs-Methode habe ich eine strukturierte \\xdcbersicht erhalten. Allerdings hat mir der Wochenplan nicht so sehr geholfen, da ich jede Woche genau dasselbe lernen muss.-partial_positive]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Mit der Planungs-Methode habe ich eine strukturierte \\xdcbersicht erhalten. Allerdings hat mir der Wochenplan nicht so sehr geholfen, da ich jede Woche genau dasselbe lernen muss.-partial_positive]&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Mit der Planungs-Methode habe ich eine strukturierte \\xdcbersicht erhalten. Allerdings hat mir der Wochenplan nicht so sehr geholfen, da ich jede Woche genau dasselbe lernen muss.-partial_positive]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Mit der Planungs-Methode habe ich eine strukturierte \u00dcbersicht erhalte&amp;#x27; \u2192 partial_positive (erwartet: partial_positive) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;#x27;Das Feedback enth\u00e4lt sowohl positive Aspekte (strukturierte \u00dcbersicht) als auch negative (Wochenplan hilft nicht). Die Kategorie partial_positive ist daher passend.&amp;#x27;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Das Tool hilft aufjedenfall sich zu entspannen. Denke es k\\xf6nnte Abends vor dem Schlafen sinnvoll sein. Inwiefern ich meine Emotionen besser regulieren kann, ist noch nicht absch\\xe4tzbar.-partial_positive]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Das Tool hilft aufjedenfall sich zu entspannen. Denke es k\\xf6nnte Abends vor dem Schlafen sinnvoll sein. Inwiefern ich meine Emotionen besser regulieren kann, ist noch nicht absch\\xe4tzbar.-partial_positive]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Das Tool hilft aufjedenfall sich zu entspannen. Denke es k\\xf6nnte Abends vor dem Schlafen sinnvoll sein. Inwiefern ich meine Emotionen besser regulieren kann, ist noch nicht absch\\xe4tzbar.-partial_positive]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Das Tool hilft aufjedenfall sich zu entspannen. Denke es k\u00f6nnte Abends&amp;#x27; \u2192 partial_positive (erwartet: partial_positive) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;#x27;Das Feedback enth\u00e4lt positive Aspekte (hilft zu entspannen, sinnvoll abends), aber auch Unsicherheit bez\u00fcglich der Emotionsregulation. Daher ist partial_positive angemessen.&amp;#x27;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[ich wusste nicht, dass die Uhr stoppt, wenn ich die App wechsle. N\\xe4chstes Mal nehme ich das Handy um den Timer laufen zu lassen. Es hat super geklappt, bin gut vorangekommen.-partial_positive]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[ich wusste nicht, dass die Uhr stoppt, wenn ich die App wechsle. N\\xe4chstes Mal nehme ich das Handy um den Timer laufen zu lassen. Es hat super geklappt, bin gut vorangekommen.-partial_positive]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[ich wusste nicht, dass die Uhr stoppt, wenn ich die App wechsle. N\\xe4chstes Mal nehme ich das Handy um den Timer laufen zu lassen. Es hat super geklappt, bin gut vorangekommen.-partial_positive]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;ich wusste nicht, dass die Uhr stoppt, wenn ich die App wechsle. N\u00e4chs&amp;#x27; \u2192 partial_positive (erwartet: partial_positive) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;#x27;Das Feedback enth\u00e4lt sowohl einen kleinen Kritikpunkt (Uhr stoppt beim App-Wechsel) als auch positives Feedback (super geklappt, gut vorangekommen). Die Kategorie partial_positive ist daher passend.&amp;#x27;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Ich finde es gut, sich bereits im Voraus in die Pr\\xfcfungssituation hineinzuversetzen. Allerdings macht es f\\xfcr mich trotzdem einen Unterschied, wenn in der richtigen Pr\\xfcfung auch noch die Pr\\xfcfer da sind.-partial_positive]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Ich finde es gut, sich bereits im Voraus in die Pr\\xfcfungssituation hineinzuversetzen. Allerdings macht es f\\xfcr mich trotzdem einen Unterschied, wenn in der richtigen Pr\\xfcfung auch noch die Pr\\xfcfer da sind.-partial_positive]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Ich finde es gut, sich bereits im Voraus in die Pr\\xfcfungssituation hineinzuversetzen. Allerdings macht es f\\xfcr mich trotzdem einen Unterschied, wenn in der richtigen Pr\\xfcfung auch noch die Pr\\xfcfer da sind.-partial_positive]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Ich finde es gut, sich bereits im Voraus in die Pr\u00fcfungssituation hine&amp;#x27; \u2192 partial_positive (erwartet: partial_positive) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;#x27;Das Feedback enth\u00e4lt sowohl positive Aspekte (gut, sich in die Pr\u00fcfungssituation hineinzuversetzen) als auch einen leichten Vorbehalt (Unterschied durch Anwesenheit der Pr\u00fcfer). Die Kategorie partial_positive ist daher passend.&amp;#x27;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[leichter Druck\\naber auch Erleichterung, es im Blick zu haben-partial_positive]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[leichter Druck\\naber auch Erleichterung, es im Blick zu haben-partial_positive]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[leichter Druck\\naber auch Erleichterung, es im Blick zu haben-partial_positive]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;leichter Druck\naber auch Erleichterung, es im Blick zu haben&amp;#x27; \u2192 partial_positive (erwartet: partial_positive) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback enth\u00e4lt sowohl einen leichten negativen Aspekt (&amp;#x27;leichter Druck&amp;#x27;) als auch einen positiven (&amp;#x27;Erleichterung&amp;#x27;), was insgesamt als partial_positive angemessen klassifiziert ist.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Es ist ein sehr warmer Tag und ich musste was drinken-neutral]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Es ist ein sehr warmer Tag und ich musste was drinken-neutral]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Es ist ein sehr warmer Tag und ich musste was drinken-neutral]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Es ist ein sehr warmer Tag und ich musste was drinken&amp;#x27; \u2192 neutral (erwartet: neutral) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback enth\u00e4lt keine Bewertung der Lernmethode, sondern beschreibt nur eine Situation. Daher ist &amp;#x27;neutral&amp;#x27; korrekt.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Musti alles erkl\\xe4ren-neutral]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Musti alles erkl\\xe4ren-neutral]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Musti alles erkl\\xe4ren-neutral]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;text = &amp;#x27;Musti alles erkl\u00e4ren&amp;#x27;, expected = &amp;#x27;neutral&amp;#x27;\n\n    @pytest.mark.asyncio\n    @pytest.mark.parametrize(&amp;quot;text,expected&amp;quot;, SENTIMENT_CASES_REAL)\n    async def test_sentiment_real_users(text, expected):\n        &amp;quot;&amp;quot;&amp;quot;\n        Ground Truth aus echten Nutzerfeedbacks des StudyFlow-Piloten (Feb 2026).\n        Realistischer als Synthetic: umgangssprachlich, kurz, ambivalent,\n        Bug-Reports, Feature-Requests, Diskrepanz zwischen Text und Wichtigkeit-Score.\n        &amp;quot;&amp;quot;&amp;quot;\n        predicted = await call_llm_sentiment(text)\n        result    = await judge_sentiment(text, predicted, expected)\n        print(f&amp;quot;\\n[REAL] &amp;#x27;{text[:70]}&amp;#x27; \u2192 {predicted} (erwartet: {expected}) | {result}&amp;quot;)\n&amp;gt;       assert result[&amp;quot;correct&amp;quot;], f&amp;quot;Sentiment falsch: {result[&amp;#x27;reason&amp;#x27;]}&amp;quot;\nE       AssertionError: Sentiment falsch: Das Feedback ist eine sachliche Aussage ohne erkennbare Wertung oder Emotion. Es handelt sich nicht um eine negative Bewertung, sondern um eine neutrale Feststellung. Die Vorhersage &amp;#x27;negative&amp;#x27; ist daher nicht korrekt.\nE       assert False\n\ntests\\test_llm_judge.py:418: AssertionError\n\n----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Musti alles erkl\u00e4ren&amp;#x27; \u2192 negative (erwartet: neutral) | {&amp;#x27;correct&amp;#x27;: False, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback ist eine sachliche Aussage ohne erkennbare Wertung oder Emotion. Es handelt sich nicht um eine negative Bewertung, sondern um eine neutrale Feststellung. Die Vorhersage &amp;#x27;negative&amp;#x27; ist daher nicht korrekt.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Ich habe noch keine Erfahrungen-neutral]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Ich habe noch keine Erfahrungen-neutral]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Ich habe noch keine Erfahrungen-neutral]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Ich habe noch keine Erfahrungen&amp;#x27; \u2192 neutral (erwartet: neutral) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback enth\u00e4lt keine Wertung oder Emotion, sondern lediglich die Aussage, dass keine Erfahrung vorliegt. &amp;#x27;Neutral&amp;#x27; ist daher korrekt.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Es war schwer einzusch\\xe4tzen, wie lange ich f\\xfcr was brauche. Es w\\xe4re gut, wenn man eintragen k\\xf6nnte was man machen soll und die App mir einen Plan erstellt.-neutral]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Es war schwer einzusch\\xe4tzen, wie lange ich f\\xfcr was brauche. Es w\\xe4re gut, wenn man eintragen k\\xf6nnte was man machen soll und die App mir einen Plan erstellt.-neutral]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Es war schwer einzusch\\xe4tzen, wie lange ich f\\xfcr was brauche. Es w\\xe4re gut, wenn man eintragen k\\xf6nnte was man machen soll und die App mir einen Plan erstellt.-neutral]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;text = &amp;#x27;Es war schwer einzusch\u00e4tzen, wie lange ich f\u00fcr was brauche. Es w\u00e4re gut, wenn man eintragen k\u00f6nnte was man machen soll und die App mir einen Plan erstellt.&amp;#x27;, expected = &amp;#x27;neutral&amp;#x27;\n\n    @pytest.mark.asyncio\n    @pytest.mark.parametrize(&amp;quot;text,expected&amp;quot;, SENTIMENT_CASES_REAL)\n    async def test_sentiment_real_users(text, expected):\n        &amp;quot;&amp;quot;&amp;quot;\n        Ground Truth aus echten Nutzerfeedbacks des StudyFlow-Piloten (Feb 2026).\n        Realistischer als Synthetic: umgangssprachlich, kurz, ambivalent,\n        Bug-Reports, Feature-Requests, Diskrepanz zwischen Text und Wichtigkeit-Score.\n        &amp;quot;&amp;quot;&amp;quot;\n        predicted = await call_llm_sentiment(text)\n        result    = await judge_sentiment(text, predicted, expected)\n        print(f&amp;quot;\\n[REAL] &amp;#x27;{text[:70]}&amp;#x27; \u2192 {predicted} (erwartet: {expected}) | {result}&amp;quot;)\n&amp;gt;       assert result[&amp;quot;correct&amp;quot;], f&amp;quot;Sentiment falsch: {result[&amp;#x27;reason&amp;#x27;]}&amp;quot;\nE       AssertionError: Sentiment falsch: Das Feedback enth\u00e4lt konstruktive Kritik und Verbesserungsvorschl\u00e4ge, aber keine eindeutig negative oder teilweise negative Bewertung der Methode. Es ist eher neutral gehalten, da keine starke Emotion oder Wertung ausgedr\u00fcckt wird.\nE       assert False\n\ntests\\test_llm_judge.py:418: AssertionError\n\n----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Es war schwer einzusch\u00e4tzen, wie lange ich f\u00fcr was brauche. Es w\u00e4re gu&amp;#x27; \u2192 partial_negative (erwartet: neutral) | {&amp;#x27;correct&amp;#x27;: False, &amp;#x27;reason&amp;#x27;: &amp;#x27;Das Feedback enth\u00e4lt konstruktive Kritik und Verbesserungsvorschl\u00e4ge, aber keine eindeutig negative oder teilweise negative Bewertung der Methode. Es ist eher neutral gehalten, da keine starke Emotion oder Wertung ausgedr\u00fcckt wird.&amp;#x27;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Ich konnte mich lange Konzentrieren, allerdings habe ich das Gef\\xfchl, in der Zeit nicht immer produktiv zu sein. Nach den ersten 30 Minuten f\\xfchle ich mich energielos.-neutral]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Ich konnte mich lange Konzentrieren, allerdings habe ich das Gef\\xfchl, in der Zeit nicht immer produktiv zu sein. Nach den ersten 30 Minuten f\\xfchle ich mich energielos.-neutral]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Ich konnte mich lange Konzentrieren, allerdings habe ich das Gef\\xfchl, in der Zeit nicht immer produktiv zu sein. Nach den ersten 30 Minuten f\\xfchle ich mich energielos.-neutral]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Ich konnte mich lange Konzentrieren, allerdings habe ich das Gef\u00fchl, i&amp;#x27; \u2192 partial_negative (erwartet: neutral) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback enth\u00e4lt sowohl positive als auch negative Aspekte, wobei der negative Eindruck (Energielosigkeit, Gef\u00fchl mangelnder Produktivit\u00e4t) \u00fcberwiegt. &amp;#x27;Partial_negative&amp;#x27; ist daher vertretbar, da das Feedback nicht v\u00f6llig neutral ist.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Meine Gedanken sind abgeschweift, da ich meine aktuelle Aufgabe als langweilig empfand. Au\\xdferdem habe ich nachher noch etwas zu erledigen und musste daran denken.-partial_negative]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Meine Gedanken sind abgeschweift, da ich meine aktuelle Aufgabe als langweilig empfand. Au\\xdferdem habe ich nachher noch etwas zu erledigen und musste daran denken.-partial_negative]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Meine Gedanken sind abgeschweift, da ich meine aktuelle Aufgabe als langweilig empfand. Au\\xdferdem habe ich nachher noch etwas zu erledigen und musste daran denken.-partial_negative]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;text = &amp;#x27;Meine Gedanken sind abgeschweift, da ich meine aktuelle Aufgabe als langweilig empfand. Au\u00dferdem habe ich nachher noch etwas zu erledigen und musste daran denken.&amp;#x27;, expected = &amp;#x27;partial_negative&amp;#x27;\n\n    @pytest.mark.asyncio\n    @pytest.mark.parametrize(&amp;quot;text,expected&amp;quot;, SENTIMENT_CASES_REAL)\n    async def test_sentiment_real_users(text, expected):\n        &amp;quot;&amp;quot;&amp;quot;\n        Ground Truth aus echten Nutzerfeedbacks des StudyFlow-Piloten (Feb 2026).\n        Realistischer als Synthetic: umgangssprachlich, kurz, ambivalent,\n        Bug-Reports, Feature-Requests, Diskrepanz zwischen Text und Wichtigkeit-Score.\n        &amp;quot;&amp;quot;&amp;quot;\n        predicted = await call_llm_sentiment(text)\n        result    = await judge_sentiment(text, predicted, expected)\n        print(f&amp;quot;\\n[REAL] &amp;#x27;{text[:70]}&amp;#x27; \u2192 {predicted} (erwartet: {expected}) | {result}&amp;quot;)\n&amp;gt;       assert result[&amp;quot;correct&amp;quot;], f&amp;quot;Sentiment falsch: {result[&amp;#x27;reason&amp;#x27;]}&amp;quot;\nE       AssertionError: Sentiment falsch: Das Feedback beschreibt eine teilweise negative Erfahrung (Langeweile, Ablenkung), aber keine komplett negative Einstellung zur Lernmethode. &amp;#x27;partial_negative&amp;#x27; ist daher passender als &amp;#x27;negative&amp;#x27;.\nE       assert False\n\ntests\\test_llm_judge.py:418: AssertionError\n\n----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Meine Gedanken sind abgeschweift, da ich meine aktuelle Aufgabe als la&amp;#x27; \u2192 negative (erwartet: partial_negative) | {&amp;#x27;correct&amp;#x27;: False, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback beschreibt eine teilweise negative Erfahrung (Langeweile, Ablenkung), aber keine komplett negative Einstellung zur Lernmethode. &amp;#x27;partial_negative&amp;#x27; ist daher passender als &amp;#x27;negative&amp;#x27;.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Ich hab ein Problem mit Tagtr\\xe4umen. Besonders beim lernen bemerke ich es, wenn ich etwas nicht direkt verstehe. Mein Kopf driftet direkt ab, und wenn es nur f\\xfcr 5-10 Sekunden ist-partial_negative]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Ich hab ein Problem mit Tagtr\\xe4umen. Besonders beim lernen bemerke ich es, wenn ich etwas nicht direkt verstehe. Mein Kopf driftet direkt ab, und wenn es nur f\\xfcr 5-10 Sekunden ist-partial_negative]&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Ich hab ein Problem mit Tagtr\\xe4umen. Besonders beim lernen bemerke ich es, wenn ich etwas nicht direkt verstehe. Mein Kopf driftet direkt ab, und wenn es nur f\\xfcr 5-10 Sekunden ist-partial_negative]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;text = &amp;#x27;Ich hab ein Problem mit Tagtr\u00e4umen. Besonders beim lernen bemerke ich es, wenn ich etwas nicht direkt verstehe. Mein Kopf driftet direkt ab, und wenn es nur f\u00fcr 5-10 Sekunden ist&amp;#x27;, expected = &amp;#x27;partial_negative&amp;#x27;\n\n    @pytest.mark.asyncio\n    @pytest.mark.parametrize(&amp;quot;text,expected&amp;quot;, SENTIMENT_CASES_REAL)\n    async def test_sentiment_real_users(text, expected):\n        &amp;quot;&amp;quot;&amp;quot;\n        Ground Truth aus echten Nutzerfeedbacks des StudyFlow-Piloten (Feb 2026).\n        Realistischer als Synthetic: umgangssprachlich, kurz, ambivalent,\n        Bug-Reports, Feature-Requests, Diskrepanz zwischen Text und Wichtigkeit-Score.\n        &amp;quot;&amp;quot;&amp;quot;\n        predicted = await call_llm_sentiment(text)\n        result    = await judge_sentiment(text, predicted, expected)\n        print(f&amp;quot;\\n[REAL] &amp;#x27;{text[:70]}&amp;#x27; \u2192 {predicted} (erwartet: {expected}) | {result}&amp;quot;)\n&amp;gt;       assert result[&amp;quot;correct&amp;quot;], f&amp;quot;Sentiment falsch: {result[&amp;#x27;reason&amp;#x27;]}&amp;quot;\nE       AssertionError: Sentiment falsch: Das Feedback beschreibt ein spezifisches, aber begrenztes Problem beim Lernen (Tagtr\u00e4umen bei Unverst\u00e4ndnis), nicht eine komplett negative Einstellung zur Lernmethode. &amp;#x27;partial_negative&amp;#x27; ist daher passender als &amp;#x27;negative&amp;#x27;, da nicht alles schlecht bewertet wird.\nE       assert False\n\ntests\\test_llm_judge.py:418: AssertionError\n\n----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Ich hab ein Problem mit Tagtr\u00e4umen. Besonders beim lernen bemerke ich &amp;#x27; \u2192 negative (erwartet: partial_negative) | {&amp;#x27;correct&amp;#x27;: False, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback beschreibt ein spezifisches, aber begrenztes Problem beim Lernen (Tagtr\u00e4umen bei Unverst\u00e4ndnis), nicht eine komplett negative Einstellung zur Lernmethode. &amp;#x27;partial_negative&amp;#x27; ist daher passender als &amp;#x27;negative&amp;#x27;, da nicht alles schlecht bewertet wird.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[ungutes Gef\\xfchl, Stress, etwas wirklich anzugehen, Berg vor Augen?-partial_negative]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[ungutes Gef\\xfchl, Stress, etwas wirklich anzugehen, Berg vor Augen?-partial_negative]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[ungutes Gef\\xfchl, Stress, etwas wirklich anzugehen, Berg vor Augen?-partial_negative]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;text = &amp;#x27;ungutes Gef\u00fchl, Stress, etwas wirklich anzugehen, Berg vor Augen?&amp;#x27;, expected = &amp;#x27;partial_negative&amp;#x27;\n\n    @pytest.mark.asyncio\n    @pytest.mark.parametrize(&amp;quot;text,expected&amp;quot;, SENTIMENT_CASES_REAL)\n    async def test_sentiment_real_users(text, expected):\n        &amp;quot;&amp;quot;&amp;quot;\n        Ground Truth aus echten Nutzerfeedbacks des StudyFlow-Piloten (Feb 2026).\n        Realistischer als Synthetic: umgangssprachlich, kurz, ambivalent,\n        Bug-Reports, Feature-Requests, Diskrepanz zwischen Text und Wichtigkeit-Score.\n        &amp;quot;&amp;quot;&amp;quot;\n        predicted = await call_llm_sentiment(text)\n        result    = await judge_sentiment(text, predicted, expected)\n        print(f&amp;quot;\\n[REAL] &amp;#x27;{text[:70]}&amp;#x27; \u2192 {predicted} (erwartet: {expected}) | {result}&amp;quot;)\n&amp;gt;       assert result[&amp;quot;correct&amp;quot;], f&amp;quot;Sentiment falsch: {result[&amp;#x27;reason&amp;#x27;]}&amp;quot;\nE       AssertionError: Sentiment falsch: Das Feedback beschreibt negative Gef\u00fchle, aber nicht in voller Auspr\u00e4gung, sondern eher Unsicherheit und Stress. &amp;#x27;partial_negative&amp;#x27; ist daher passender als &amp;#x27;negative&amp;#x27;, da keine vollst\u00e4ndige Ablehnung oder starke Negativit\u00e4t ausgedr\u00fcckt wird.\nE       assert False\n\ntests\\test_llm_judge.py:418: AssertionError\n\n----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;ungutes Gef\u00fchl, Stress, etwas wirklich anzugehen, Berg vor Augen?&amp;#x27; \u2192 negative (erwartet: partial_negative) | {&amp;#x27;correct&amp;#x27;: False, &amp;#x27;reason&amp;#x27;: &amp;quot;Das Feedback beschreibt negative Gef\u00fchle, aber nicht in voller Auspr\u00e4gung, sondern eher Unsicherheit und Stress. &amp;#x27;partial_negative&amp;#x27; ist daher passender als &amp;#x27;negative&amp;#x27;, da keine vollst\u00e4ndige Ablehnung oder starke Negativit\u00e4t ausgedr\u00fcckt wird.&amp;quot;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Unsicher, da noch nie zuvor so richtig angewandt. Bisschen \\xfcberfordernd etwas zu planen was in ein paar Wochen ist-partial_negative]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Unsicher, da noch nie zuvor so richtig angewandt. Bisschen \\xfcberfordernd etwas zu planen was in ein paar Wochen ist-partial_negative]&#34;, &#34;duration&#34;: &#34;00:00:02&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Unsicher, da noch nie zuvor so richtig angewandt. Bisschen \\xfcberfordernd etwas zu planen was in ein paar Wochen ist-partial_negative]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:02&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Unsicher, da noch nie zuvor so richtig angewandt. Bisschen \u00fcberfordern&amp;#x27; \u2192 partial_negative (erwartet: partial_negative) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;#x27;Das Feedback dr\u00fcckt Unsicherheit und \u00dcberforderung aus, was klar auf eine teilweise negative Haltung hinweist. Die Klassifikation als partial_negative ist daher korrekt.&amp;#x27;}\n&#34;}], &#34;tests/test_llm_judge.py::test_sentiment_real_users[Es sollte irgendein Belohnungssystem geben, dass mich motiviert zu lernen. Gamification Elemente wie Level oder Punkte w\\xfcrden mir sehr helfen.-partial_negative]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_sentiment_real_users[Es sollte irgendein Belohnungssystem geben, dass mich motiviert zu lernen. Gamification Elemente wie Level oder Punkte w\\xfcrden mir sehr helfen.-partial_negative]&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_sentiment_real_users[Es sollte irgendein Belohnungssystem geben, dass mich motiviert zu lernen. Gamification Elemente wie Level oder Punkte w\\xfcrden mir sehr helfen.-partial_negative]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[REAL] &amp;#x27;Es sollte irgendein Belohnungssystem geben, dass mich motiviert zu ler&amp;#x27; \u2192 partial_negative (erwartet: partial_negative) | {&amp;#x27;correct&amp;#x27;: True, &amp;#x27;reason&amp;#x27;: &amp;#x27;Das Feedback \u00e4u\u00dfert einen Verbesserungsvorschlag und impliziert, dass die aktuelle Methode nicht ausreichend motivierend ist. Es ist keine starke negative Kritik, sondern ein konstruktiver Hinweis, daher ist partial_negative korrekt.&amp;#x27;}\n&#34;}], &#34;tests/test_llm_judge.py::test_answer_quality[Wie lange soll ich beim 30-Minuten-Experiment sitzen?-\\n### 30 Min Experiment\\n**Beschreibung:** 30 Minuten ohne Selbstunterbrechung am Platz bleiben \\u2013 Fokus trainieren.\\n**Anwendung:**\\n1. Lege eine Aufgabe bereit. 2. Schalte St\\xf6rquellen aus. 3. Starte 30-Min-Timer.\\n4. Bleib sitzen und unterbrich dich nicht. 5. Notiere: Minute der ersten Unterbrechung.\\n-3-False]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_answer_quality[Wie lange soll ich beim 30-Minuten-Experiment sitzen?-\\n### 30 Min Experiment\\n**Beschreibung:** 30 Minuten ohne Selbstunterbrechung am Platz bleiben \\u2013 Fokus trainieren.\\n**Anwendung:**\\n1. Lege eine Aufgabe bereit. 2. Schalte St\\xf6rquellen aus. 3. Starte 30-Min-Timer.\\n4. Bleib sitzen und unterbrich dich nicht. 5. Notiere: Minute der ersten Unterbrechung.\\n-3-False]&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_answer_quality[Wie lange soll ich beim 30-Minuten-Experiment sitzen?-\\n### 30 Min Experiment\\n**Beschreibung:** 30 Minuten ohne Selbstunterbrechung am Platz bleiben \\u2013 Fokus trainieren.\\n**Anwendung:**\\n1. Lege eine Aufgabe bereit. 2. Schalte St\\xf6rquellen aus. 3. Starte 30-Min-Timer.\\n4. Bleib sitzen und unterbrich dich nicht. 5. Notiere: Minute der ersten Unterbrechung.\\n-3-False]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[ANSWER] Q: &amp;#x27;Wie lange soll ich beim 30-Minuten-Experiment sitzen?&amp;#x27; | Score: 3/4 | Die Antwort ist korrekt und gibt die wesentliche Information wieder: Man soll 30\n&#34;}], &#34;tests/test_llm_judge.py::test_answer_quality[Was mache ich wenn ich aufstehen muss auf die Toilette?-\\n### 30 Min Experiment\\n**Beschreibung:** 30 Minuten ohne Selbstunterbrechung am Platz bleiben \\u2013 Fokus trainieren.\\n**Anwendung:**\\n1. Lege eine Aufgabe bereit. 2. Schalte St\\xf6rquellen aus. 3. Starte 30-Min-Timer.\\n4. Bleib sitzen und unterbrich dich nicht. 5. Notiere: Minute der ersten Unterbrechung.\\n-2-True]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_answer_quality[Was mache ich wenn ich aufstehen muss auf die Toilette?-\\n### 30 Min Experiment\\n**Beschreibung:** 30 Minuten ohne Selbstunterbrechung am Platz bleiben \\u2013 Fokus trainieren.\\n**Anwendung:**\\n1. Lege eine Aufgabe bereit. 2. Schalte St\\xf6rquellen aus. 3. Starte 30-Min-Timer.\\n4. Bleib sitzen und unterbrich dich nicht. 5. Notiere: Minute der ersten Unterbrechung.\\n-2-True]&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_answer_quality[Was mache ich wenn ich aufstehen muss auf die Toilette?-\\n### 30 Min Experiment\\n**Beschreibung:** 30 Minuten ohne Selbstunterbrechung am Platz bleiben \\u2013 Fokus trainieren.\\n**Anwendung:**\\n1. Lege eine Aufgabe bereit. 2. Schalte St\\xf6rquellen aus. 3. Starte 30-Min-Timer.\\n4. Bleib sitzen und unterbrich dich nicht. 5. Notiere: Minute der ersten Unterbrechung.\\n-2-True]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;question = &amp;#x27;Was mache ich wenn ich aufstehen muss auf die Toilette?&amp;#x27;\ncontext = &amp;#x27;\\n### 30 Min Experiment\\n**Beschreibung:** 30 Minuten ohne Selbstunterbrechung am Platz bleiben \u2013 Fokus trainieren.\\n...us. 3. Starte 30-Min-Timer.\\n4. Bleib sitzen und unterbrich dich nicht. 5. Notiere: Minute der ersten Unterbrechung.\\n&amp;#x27;\nmin_score = 2, expect_uncertainty = True\n\n    @pytest.mark.asyncio\n    @pytest.mark.parametrize(&amp;quot;question,context,min_score,expect_uncertainty&amp;quot;, QUESTION_CASES)\n    async def test_answer_quality(question, context, min_score, expect_uncertainty):\n        &amp;quot;&amp;quot;&amp;quot;LLM-Antworten sind sachlich, hilfreich und halluzinieren nicht.&amp;quot;&amp;quot;&amp;quot;\n        answer = await call_llm_answer(question, context)\n        result = await judge_answer_quality(question, context, answer)\n        print(f&amp;quot;\\n[ANSWER] Q: &amp;#x27;{question}&amp;#x27; | Score: {result.get(&amp;#x27;score&amp;#x27;)}/4 | {result.get(&amp;#x27;reason&amp;#x27;,&amp;#x27;&amp;#x27;)[:80]}&amp;quot;)\n        assert result[&amp;quot;score&amp;quot;] &amp;gt;= min_score, f&amp;quot;Score zu niedrig ({result[&amp;#x27;score&amp;#x27;]}/4): {result[&amp;#x27;reason&amp;#x27;]}&amp;quot;\n        assert result[&amp;quot;not_hallucinating&amp;quot;], f&amp;quot;Halluziniert: {result[&amp;#x27;reason&amp;#x27;]}&amp;quot;\n        if expect_uncertainty:\n&amp;gt;           assert result[&amp;quot;admits_uncertainty&amp;quot;], f&amp;quot;H\u00e4tte Unsicherheit zugeben sollen: {result[&amp;#x27;reason&amp;#x27;]}&amp;quot;\nE           AssertionError: H\u00e4tte Unsicherheit zugeben sollen: Die Antwort ist korrekt und hilfreich, da sie die Regeln des Experiments klar wiedergibt und erkl\u00e4rt, wie mit dem Bed\u00fcrfnis, auf die Toilette zu gehen, umzugehen ist. Allerdings fehlt ein Hinweis darauf, dass k\u00f6rperliche Bed\u00fcrfnisse Vorrang haben k\u00f6nnen und dass es in Ordnung ist, das Experiment ggf. zu unterbrechen, wenn es dringend ist. Ein kurzer Zusatz zur Flexibilit\u00e4t oder zum Umgang mit unvermeidbaren Unterbrechungen h\u00e4tte die Antwort noch hilfreicher gemacht.\nE           assert False\n\ntests\\test_llm_judge.py:431: AssertionError\n\n----------------------------- Captured stdout call -----------------------------\n\n[ANSWER] Q: &amp;#x27;Was mache ich wenn ich aufstehen muss auf die Toilette?&amp;#x27; | Score: 3/4 | Die Antwort ist korrekt und hilfreich, da sie die Regeln des Experiments klar wi\n&#34;}], &#34;tests/test_llm_judge.py::test_answer_quality[Wie viele Chunks soll ich pro Lernphase erstellen?-\\n### Chunking\\n**Beschreibung:** Einzelinfos zu Einheiten b\\xfcndeln, um schneller abzurufen.\\n**Anwendung:**\\n1. Am Ende jeder Lernphase: 5-10 Pr\\xfcfungsfragen erstellen.\\n2. Fragen in zuf\\xe4lliger Reihenfolge beantworten.\\n3. L\\xfccken markieren und gezielt nacharbeiten.\\n-2-False]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_answer_quality[Wie viele Chunks soll ich pro Lernphase erstellen?-\\n### Chunking\\n**Beschreibung:** Einzelinfos zu Einheiten b\\xfcndeln, um schneller abzurufen.\\n**Anwendung:**\\n1. Am Ende jeder Lernphase: 5-10 Pr\\xfcfungsfragen erstellen.\\n2. Fragen in zuf\\xe4lliger Reihenfolge beantworten.\\n3. L\\xfccken markieren und gezielt nacharbeiten.\\n-2-False]&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_answer_quality[Wie viele Chunks soll ich pro Lernphase erstellen?-\\n### Chunking\\n**Beschreibung:** Einzelinfos zu Einheiten b\\xfcndeln, um schneller abzurufen.\\n**Anwendung:**\\n1. Am Ende jeder Lernphase: 5-10 Pr\\xfcfungsfragen erstellen.\\n2. Fragen in zuf\\xe4lliger Reihenfolge beantworten.\\n3. L\\xfccken markieren und gezielt nacharbeiten.\\n-2-False]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[ANSWER] Q: &amp;#x27;Wie viele Chunks soll ich pro Lernphase erstellen?&amp;#x27; | Score: 4/4 | Die Antwort ist korrekt, gibt Unsicherheit offen zu und verweist auf die im Meth\n&#34;}], &#34;tests/test_llm_judge.py::test_answer_quality[Welche Musik ist am besten beim Lernen?-\\n### Chunking\\n**Beschreibung:** Einzelinfos zu Einheiten b\\xfcndeln, um schneller abzurufen.\\n**Anwendung:**\\n1. Am Ende jeder Lernphase: 5-10 Pr\\xfcfungsfragen erstellen.\\n2. Fragen in zuf\\xe4lliger Reihenfolge beantworten.\\n3. L\\xfccken markieren und gezielt nacharbeiten.\\n-1-True]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_answer_quality[Welche Musik ist am besten beim Lernen?-\\n### Chunking\\n**Beschreibung:** Einzelinfos zu Einheiten b\\xfcndeln, um schneller abzurufen.\\n**Anwendung:**\\n1. Am Ende jeder Lernphase: 5-10 Pr\\xfcfungsfragen erstellen.\\n2. Fragen in zuf\\xe4lliger Reihenfolge beantworten.\\n3. L\\xfccken markieren und gezielt nacharbeiten.\\n-1-True]&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_answer_quality[Welche Musik ist am besten beim Lernen?-\\n### Chunking\\n**Beschreibung:** Einzelinfos zu Einheiten b\\xfcndeln, um schneller abzurufen.\\n**Anwendung:**\\n1. Am Ende jeder Lernphase: 5-10 Pr\\xfcfungsfragen erstellen.\\n2. Fragen in zuf\\xe4lliger Reihenfolge beantworten.\\n3. L\\xfccken markieren und gezielt nacharbeiten.\\n-1-True]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[ANSWER] Q: &amp;#x27;Welche Musik ist am besten beim Lernen?&amp;#x27; | Score: 4/4 | Die Antwort ist korrekt, da sie ehrlich zugibt, dass im gegebenen Methoden-Konte\n&#34;}], &#34;tests/test_llm_judge.py::test_answer_quality[Was bedeutet Chunking genau?-\\n### Chunking\\n**Beschreibung:** Einzelinfos zu Einheiten b\\xfcndeln, um schneller abzurufen.\\n**Anwendung:**\\n1. Am Ende jeder Lernphase: 5-10 Pr\\xfcfungsfragen erstellen.\\n2. Fragen in zuf\\xe4lliger Reihenfolge beantworten.\\n3. L\\xfccken markieren und gezielt nacharbeiten.\\n-3-False]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_answer_quality[Was bedeutet Chunking genau?-\\n### Chunking\\n**Beschreibung:** Einzelinfos zu Einheiten b\\xfcndeln, um schneller abzurufen.\\n**Anwendung:**\\n1. Am Ende jeder Lernphase: 5-10 Pr\\xfcfungsfragen erstellen.\\n2. Fragen in zuf\\xe4lliger Reihenfolge beantworten.\\n3. L\\xfccken markieren und gezielt nacharbeiten.\\n-3-False]&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_answer_quality[Was bedeutet Chunking genau?-\\n### Chunking\\n**Beschreibung:** Einzelinfos zu Einheiten b\\xfcndeln, um schneller abzurufen.\\n**Anwendung:**\\n1. Am Ende jeder Lernphase: 5-10 Pr\\xfcfungsfragen erstellen.\\n2. Fragen in zuf\\xe4lliger Reihenfolge beantworten.\\n3. L\\xfccken markieren und gezielt nacharbeiten.\\n-3-False]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[ANSWER] Q: &amp;#x27;Was bedeutet Chunking genau?&amp;#x27; | Score: 3/4 | Die Antwort erkl\u00e4rt korrekt und verst\u00e4ndlich, was Chunking bedeutet, und gibt ei\n&#34;}], &#34;tests/test_llm_judge.py::test_coach_response_vs_reference[thirty-minute-experiment-Ich habe mich nicht unterbrochen, da ich st\\xe4ndig die Uhr vor mir hatte und wirklich versucht habe durchzuhalten. Mein Handy war aus.-du hast die gro\\xdfe, leider unter Studierenden seltene F\\xe4higkeit, l\\xe4ngere Zeit konzentriert zu lernen oder zu arbeiten. Sei stolz auf diese Kompetenz, denn sie hilft dir, in kurzer Zeit t\\xfcchtig voranzukommen.-3]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_coach_response_vs_reference[thirty-minute-experiment-Ich habe mich nicht unterbrochen, da ich st\\xe4ndig die Uhr vor mir hatte und wirklich versucht habe durchzuhalten. Mein Handy war aus.-du hast die gro\\xdfe, leider unter Studierenden seltene F\\xe4higkeit, l\\xe4ngere Zeit konzentriert zu lernen oder zu arbeiten. Sei stolz auf diese Kompetenz, denn sie hilft dir, in kurzer Zeit t\\xfcchtig voranzukommen.-3]&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_coach_response_vs_reference[thirty-minute-experiment-Ich habe mich nicht unterbrochen, da ich st\\xe4ndig die Uhr vor mir hatte und wirklich versucht habe durchzuhalten. Mein Handy war aus.-du hast die gro\\xdfe, leider unter Studierenden seltene F\\xe4higkeit, l\\xe4ngere Zeit konzentriert zu lernen oder zu arbeiten. Sei stolz auf diese Kompetenz, denn sie hilft dir, in kurzer Zeit t\\xfcchtig voranzukommen.-3]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[COACH] thirty-minute-experiment\n  Bot: &amp;#x27;Super, dass du dein Handy ausgeschaltet hast und konsequent bei der Sache geblieben bist! Die Uhr im&amp;#x27;\n  Score: 4/4 | Die Bot-Antwort erkennt die konkrete Leistung des Nutzers an (Handy aus, Uhr im \n&#34;}], &#34;tests/test_llm_judge.py::test_coach_response_vs_reference[commit-decision-Das bewusste fassen von Entschl\\xfcssen f\\xfchlt sich gut an, fast so, als h\\xe4tte man das Vorhaben bereits erledigt.-toll, dass du direkt damit begonnen hast, konkrete Entschl\\xfcsse zu fassen. Nach der Rubikon-Theorie ist dieser Schritt essentiell um ins Handeln zu kommen.-3]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_coach_response_vs_reference[commit-decision-Das bewusste fassen von Entschl\\xfcssen f\\xfchlt sich gut an, fast so, als h\\xe4tte man das Vorhaben bereits erledigt.-toll, dass du direkt damit begonnen hast, konkrete Entschl\\xfcsse zu fassen. Nach der Rubikon-Theorie ist dieser Schritt essentiell um ins Handeln zu kommen.-3]&#34;, &#34;duration&#34;: &#34;00:00:05&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_coach_response_vs_reference[commit-decision-Das bewusste fassen von Entschl\\xfcssen f\\xfchlt sich gut an, fast so, als h\\xe4tte man das Vorhaben bereits erledigt.-toll, dass du direkt damit begonnen hast, konkrete Entschl\\xfcsse zu fassen. Nach der Rubikon-Theorie ist dieser Schritt essentiell um ins Handeln zu kommen.-3]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:05&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[COACH] commit-decision\n  Bot: &amp;#x27;Das ist ein tolles Gef\u00fchl \u2013 das bewusste Entscheiden gibt dir schon einen Motivationsschub! Jetzt k\u00f6&amp;#x27;\n  Score: 4/4 | Die Bot-Antwort erkennt das positive Gef\u00fchl des Nutzers an und spiegelt es wider\n&#34;}], &#34;tests/test_llm_judge.py::test_coach_response_vs_reference[plans-Mit der Planungs-Methode habe ich eine strukturierte \\xdcbersicht erhalten. Allerdings hat mir der Wochenplan nicht so sehr geholfen.-Dass dir der Wochenplan nicht geholfen hat ist anhand deiner Erkl\\xe4rung verst\\xe4ndlich. Passe die Methode gerne so an, wie sie auf deine Bed\\xfcrfnisse passt.-3]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_coach_response_vs_reference[plans-Mit der Planungs-Methode habe ich eine strukturierte \\xdcbersicht erhalten. Allerdings hat mir der Wochenplan nicht so sehr geholfen.-Dass dir der Wochenplan nicht geholfen hat ist anhand deiner Erkl\\xe4rung verst\\xe4ndlich. Passe die Methode gerne so an, wie sie auf deine Bed\\xfcrfnisse passt.-3]&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_coach_response_vs_reference[plans-Mit der Planungs-Methode habe ich eine strukturierte \\xdcbersicht erhalten. Allerdings hat mir der Wochenplan nicht so sehr geholfen.-Dass dir der Wochenplan nicht geholfen hat ist anhand deiner Erkl\\xe4rung verst\\xe4ndlich. Passe die Methode gerne so an, wie sie auf deine Bed\\xfcrfnisse passt.-3]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[COACH] plans\n  Bot: &amp;#x27;Super, dass dir die strukturierte \u00dcbersicht geholfen hat! Wenn der Wochenplan f\u00fcr dich nicht passt, &amp;#x27;\n  Score: 4/4 | Die Bot-Antwort erkennt das positive Feedback zur \u00dcbersicht und geht konkret auf\n&#34;}], &#34;tests/test_llm_judge.py::test_coach_response_vs_reference[commit-decision-ungutes Gef\\xfchl, Stress, etwas wirklich anzugehen, Berg vor Augen?-Das ist ganz normal wenn man sich Sachen stellt, die man ungerne tut. Nimm dir erstmal eine kleinere Sache vor und gehe diese mit dem 30-Minuten-Experiment an.-3]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_coach_response_vs_reference[commit-decision-ungutes Gef\\xfchl, Stress, etwas wirklich anzugehen, Berg vor Augen?-Das ist ganz normal wenn man sich Sachen stellt, die man ungerne tut. Nimm dir erstmal eine kleinere Sache vor und gehe diese mit dem 30-Minuten-Experiment an.-3]&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_coach_response_vs_reference[commit-decision-ungutes Gef\\xfchl, Stress, etwas wirklich anzugehen, Berg vor Augen?-Das ist ganz normal wenn man sich Sachen stellt, die man ungerne tut. Nimm dir erstmal eine kleinere Sache vor und gehe diese mit dem 30-Minuten-Experiment an.-3]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[COACH] commit-decision\n  Bot: &amp;#x27;Danke, dass du dein Gef\u00fchl teilst. Es ist normal, dass gro\u00dfe Aufgaben zuerst \u00fcberw\u00e4ltigend wirken. V&amp;#x27;\n  Score: 4/4 | Die Bot-Antwort geht konkret auf das Gef\u00fchl des Nutzers ein (\u00dcberw\u00e4ltigung, Stre\n&#34;}], &#34;tests/test_llm_judge.py::test_coach_response_vs_reference[stabilize-core-emotion-Das Tool hilft aufjedenfall sich zu entspannen. Inwiefern ich meine Emotionen besser regulieren kann, ist noch nicht absch\\xe4tzbar.-du hast gut erkannt, dass man damit in einen tiefen Ruhezustand kommt. Tags\\xfcber ist es oft besser mit der 3-Minuten-Variante zu arbeiten.-3]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_coach_response_vs_reference[stabilize-core-emotion-Das Tool hilft aufjedenfall sich zu entspannen. Inwiefern ich meine Emotionen besser regulieren kann, ist noch nicht absch\\xe4tzbar.-du hast gut erkannt, dass man damit in einen tiefen Ruhezustand kommt. Tags\\xfcber ist es oft besser mit der 3-Minuten-Variante zu arbeiten.-3]&#34;, &#34;duration&#34;: &#34;00:00:04&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_coach_response_vs_reference[stabilize-core-emotion-Das Tool hilft aufjedenfall sich zu entspannen. Inwiefern ich meine Emotionen besser regulieren kann, ist noch nicht absch\\xe4tzbar.-du hast gut erkannt, dass man damit in einen tiefen Ruhezustand kommt. Tags\\xfcber ist es oft besser mit der 3-Minuten-Variante zu arbeiten.-3]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:04&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[COACH] stabilize-core-emotion\n  Bot: &amp;#x27;Es ist super, dass du dich mit dem Tool entspannen konntest! Emotionen zu regulieren braucht oft etw&amp;#x27;\n  Score: 4/4 | Die Bot-Antwort geht konkret auf das Feedback ein, erkennt die Entspannungserfah\n&#34;}], &#34;tests/test_llm_judge.py::test_coach_response_vs_reference[thirty-minute-experiment-Ich hab ein Problem mit Tagtr\\xe4umen. Mein Kopf driftet direkt ab, wenn ich etwas nicht direkt verstehe.-Wenn deine Gedanken abdriften, musst du unterscheiden was die Ursache ist. Verstehst du etwas nicht und willst das Problem l\\xf6sen, dann gehst du tiefer in die Sache hinein \\u2013 das ist positiv.-3]&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_llm_judge.py::test_coach_response_vs_reference[thirty-minute-experiment-Ich hab ein Problem mit Tagtr\\xe4umen. Mein Kopf driftet direkt ab, wenn ich etwas nicht direkt verstehe.-Wenn deine Gedanken abdriften, musst du unterscheiden was die Ursache ist. Verstehst du etwas nicht und willst das Problem l\\xf6sen, dann gehst du tiefer in die Sache hinein \\u2013 das ist positiv.-3]&#34;, &#34;duration&#34;: &#34;00:00:03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_llm_judge.py::test_coach_response_vs_reference[thirty-minute-experiment-Ich hab ein Problem mit Tagtr\\xe4umen. Mein Kopf driftet direkt ab, wenn ich etwas nicht direkt verstehe.-Wenn deine Gedanken abdriften, musst du unterscheiden was die Ursache ist. Verstehst du etwas nicht und willst das Problem l\\xf6sen, dann gehst du tiefer in die Sache hinein \\u2013 das ist positiv.-3]&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;00:00:03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;----------------------------- Captured stdout call -----------------------------\n\n[COACH] thirty-minute-experiment\n  Bot: &amp;#x27;Danke, dass du das so offen teilst! Es ist ganz normal, dass der Kopf abschweift, besonders bei schw&amp;#x27;\n  Score: 4/4 | Die Bot-Antwort erkennt das Problem des Nutzers an, zeigt Verst\u00e4ndnis und Normal\n&#34;}], &#34;tests/test_unit.py::TestIntentChoose::test_plain_1&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentChoose::test_plain_1&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentChoose::test_plain_1&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentChoose::test_plain_2&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentChoose::test_plain_2&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentChoose::test_plain_2&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentChoose::test_methode_1&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentChoose::test_methode_1&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentChoose::test_methode_1&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentChoose::test_methode_2&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentChoose::test_methode_2&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentChoose::test_methode_2&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentChoose::test_w\u00e4hle_1&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentChoose::test_w\u00e4hle_1&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentChoose::test_w\u00e4hle_1&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentChoose::test_erkl\u00e4re_methode_1&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentChoose::test_erkl\u00e4re_methode_1&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentChoose::test_erkl\u00e4re_methode_1&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentChoose::test_erkl\u00e4re_methode_2&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentChoose::test_erkl\u00e4re_methode_2&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentChoose::test_erkl\u00e4re_methode_2&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentStart::test_starten&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentStart::test_starten&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentStart::test_starten&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentStart::test_starten_emoji&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentStart::test_starten_emoji&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentStart::test_starten_emoji&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentStart::test_los&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentStart::test_los&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentStart::test_los&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentStart::test_ok&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentStart::test_ok&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentStart::test_ok&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentStart::test_start_does_not_trigger_choose&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentStart::test_start_does_not_trigger_choose&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentStart::test_start_does_not_trigger_choose&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentStart::test_methode_1_does_not_trigger_start&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentStart::test_methode_1_does_not_trigger_start&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentStart::test_methode_1_does_not_trigger_start&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentEnd::test_beenden&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentEnd::test_beenden&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentEnd::test_beenden&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentEnd::test_beenden_emoji&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentEnd::test_beenden_emoji&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentEnd::test_beenden_emoji&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentEnd::test_tsch\u00fcss&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentEnd::test_tsch\u00fcss&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentEnd::test_tsch\u00fcss&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentEnd::test_danke_nicht_end&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentEnd::test_danke_nicht_end&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentEnd::test_danke_nicht_end&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentNext::test_n\u00e4chste_methode&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentNext::test_n\u00e4chste_methode&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentNext::test_n\u00e4chste_methode&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentNext::test_n\u00e4chste_methode_emoji&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentNext::test_n\u00e4chste_methode_emoji&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentNext::test_n\u00e4chste_methode_emoji&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentNext::test_andere_methode&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentNext::test_andere_methode&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentNext::test_andere_methode&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentNext::test_neue_methode&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentNext::test_neue_methode&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentNext::test_neue_methode&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentRepeat::test_wiederholen&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentRepeat::test_wiederholen&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentRepeat::test_wiederholen&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentRepeat::test_wiederholen_emoji&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentRepeat::test_wiederholen_emoji&#34;, &#34;duration&#34;: &#34;0 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentRepeat::test_wiederholen_emoji&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;0 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentRepeat::test_nochmal&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentRepeat::test_nochmal&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentRepeat::test_nochmal&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentQuestion::test_echte_frage&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentQuestion::test_echte_frage&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentQuestion::test_echte_frage&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentQuestion::test_was_bedeutet&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentQuestion::test_was_bedeutet&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentQuestion::test_was_bedeutet&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentQuestion::test_kurzer_text_kein_question&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentQuestion::test_kurzer_text_kein_question&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentQuestion::test_kurzer_text_kein_question&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentQuestion::test_blocklist_noch_eine_frage&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentQuestion::test_blocklist_noch_eine_frage&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentQuestion::test_blocklist_noch_eine_frage&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestIntentQuestion::test_wiederholen_kein_question&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestIntentQuestion::test_wiederholen_kein_question&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestIntentQuestion::test_wiederholen_kein_question&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestScoreCalculation::test_24_answers_required&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestScoreCalculation::test_24_answers_required&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestScoreCalculation::test_24_answers_required&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestScoreCalculation::test_alle_null_gleicher_score&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestScoreCalculation::test_alle_null_gleicher_score&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestScoreCalculation::test_alle_null_gleicher_score&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestScoreCalculation::test_prokrastination_h\u00f6chster_score_nicht_in_top2&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestScoreCalculation::test_prokrastination_h\u00f6chster_score_nicht_in_top2&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestScoreCalculation::test_prokrastination_h\u00f6chster_score_nicht_in_top2&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestScoreCalculation::test_leistung_niedrigster_score_in_top2&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestScoreCalculation::test_leistung_niedrigster_score_in_top2&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestScoreCalculation::test_leistung_niedrigster_score_in_top2&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestScoreCalculation::test_top2_hat_zwei_bereiche&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestScoreCalculation::test_top2_hat_zwei_bereiche&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestScoreCalculation::test_top2_hat_zwei_bereiche&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestScoreCalculation::test_max_score_18_pro_bereich&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestScoreCalculation::test_max_score_18_pro_bereich&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestScoreCalculation::test_max_score_18_pro_bereich&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestRegistry::test_alle_tools_laden&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestRegistry::test_alle_tools_laden&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestRegistry::test_alle_tools_laden&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestRegistry::test_keine_deprecated&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestRegistry::test_keine_deprecated&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestRegistry::test_keine_deprecated&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestRegistry::test_prokrastination_reihenfolge&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestRegistry::test_prokrastination_reihenfolge&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestRegistry::test_prokrastination_reihenfolge&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestRegistry::test_unterbrechungen_reihenfolge&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestRegistry::test_unterbrechungen_reihenfolge&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestRegistry::test_unterbrechungen_reihenfolge&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestRegistry::test_next_method_\u00fcberspringt_used&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestRegistry::test_next_method_\u00fcberspringt_used&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestRegistry::test_next_method_\u00fcberspringt_used&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestRegistry::test_next_method_alle_used_gibt_none&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestRegistry::test_next_method_alle_used_gibt_none&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestRegistry::test_next_method_alle_used_gibt_none&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestRegistry::test_top_for_area_gibt_erste_methode&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestRegistry::test_top_for_area_gibt_erste_methode&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestRegistry::test_top_for_area_gibt_erste_methode&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestRegistry::test_alle_tools_haben_name&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestRegistry::test_alle_tools_haben_name&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestRegistry::test_alle_tools_haben_name&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestRegistry::test_alle_tools_haben_kategorie&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestRegistry::test_alle_tools_haben_kategorie&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestRegistry::test_alle_tools_haben_kategorie&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestRegistry::test_format_for_llm_enth\u00e4lt_name&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestRegistry::test_format_for_llm_enth\u00e4lt_name&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestRegistry::test_format_for_llm_enth\u00e4lt_name&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestFeedbackClassification::test_super_emoji&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestFeedbackClassification::test_super_emoji&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestFeedbackClassification::test_super_emoji&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestFeedbackClassification::test_toll&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestFeedbackClassification::test_toll&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestFeedbackClassification::test_toll&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestFeedbackClassification::test_teilweise_gut_emoji&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestFeedbackClassification::test_teilweise_gut_emoji&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestFeedbackClassification::test_teilweise_gut_emoji&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestFeedbackClassification::test_neutral_emoji&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestFeedbackClassification::test_neutral_emoji&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestFeedbackClassification::test_neutral_emoji&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestFeedbackClassification::test_eher_nicht_emoji&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestFeedbackClassification::test_eher_nicht_emoji&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestFeedbackClassification::test_eher_nicht_emoji&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestFeedbackClassification::test_hat_nicht_gepasst&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestFeedbackClassification::test_hat_nicht_gepasst&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestFeedbackClassification::test_hat_nicht_gepasst&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestFeedbackClassification::test_schlecht&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestFeedbackClassification::test_schlecht&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestFeedbackClassification::test_schlecht&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestFeedbackClassification::test_freier_text_unbekannt&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestFeedbackClassification::test_freier_text_unbekannt&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestFeedbackClassification::test_freier_text_unbekannt&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.&#34;}], &#34;tests/test_unit.py::TestFeedbackClassification::test_negativ_schl\u00e4gt_teilneg&#34;: [{&#34;extras&#34;: [], &#34;result&#34;: &#34;Passed&#34;, &#34;testId&#34;: &#34;tests/test_unit.py::TestFeedbackClassification::test_negativ_schl\u00e4gt_teilneg&#34;, &#34;duration&#34;: &#34;1 ms&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Passed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;tests/test_unit.py::TestFeedbackClassification::test_negativ_schl\u00e4gt_teilneg&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;1 ms&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;No log output captured.--------------------------- Captured stdout teardown ---------------------------\n\n\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n  LLM-as-a-Judge Tests abgeschlossen\n  Gesamt: 39 Test-Cases\n  \u251c\u2500 Sentiment synthetisch:       8\n  \u251c\u2500 Sentiment echte User:        20\n  \u251c\u2500 Fragen-Antworten:            5\n  \u2514\u2500 Coach vs. Diethelm-Referenz: 6\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n\n&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;report.html&#34;}"></div>
+    <script>
+      (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')
+
+class DataManager {
+    setManager(data) {
+        const collapsedCategories = [...getCollapsedCategory(data.renderCollapsed)]
+        const collapsedIds = []
+        const tests = Object.values(data.tests).flat().map((test, index) => {
+            const collapsed = collapsedCategories.includes(test.result.toLowerCase())
+            const id = `test_${index}`
+            if (collapsed) {
+                collapsedIds.push(id)
+            }
+            return {
+                ...test,
+                id,
+                collapsed,
+            }
+        })
+        const dataBlob = { ...data, tests }
+        this.data = { ...dataBlob }
+        this.renderData = { ...dataBlob }
+        setCollapsedIds(collapsedIds)
+    }
+
+    get allData() {
+        return { ...this.data }
+    }
+
+    resetRender() {
+        this.renderData = { ...this.data }
+    }
+
+    setRender(data) {
+        this.renderData.tests = [...data]
+    }
+
+    toggleCollapsedItem(id) {
+        this.renderData.tests = this.renderData.tests.map((test) =>
+            test.id === id ? { ...test, collapsed: !test.collapsed } : test,
+        )
+    }
+
+    set allCollapsed(collapsed) {
+        this.renderData = { ...this.renderData, tests: [...this.renderData.tests.map((test) => (
+            { ...test, collapsed }
+        ))] }
+    }
+
+    get testSubset() {
+        return [...this.renderData.tests]
+    }
+
+    get environment() {
+        return this.renderData.environment
+    }
+
+    get initialSort() {
+        return this.data.initialSort
+    }
+}
+
+module.exports = {
+    manager: new DataManager(),
+}
+
+},{"./storage.js":8}],2:[function(require,module,exports){
+const mediaViewer = require('./mediaviewer.js')
+const templateEnvRow = document.getElementById('template_environment_row')
+const templateResult = document.getElementById('template_results-table__tbody')
+
+function htmlToElements(html) {
+    const temp = document.createElement('template')
+    temp.innerHTML = html
+    return temp.content.childNodes
+}
+
+const find = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return elem.querySelector(selector)
+}
+
+const findAll = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return [...elem.querySelectorAll(selector)]
+}
+
+const dom = {
+    getStaticRow: (key, value) => {
+        const envRow = templateEnvRow.content.cloneNode(true)
+        const isObj = typeof value === 'object' && value !== null
+        const values = isObj ? Object.keys(value).map((k) => `${k}: ${value[k]}`) : null
+
+        const valuesElement = htmlToElements(
+            values ? `<ul>${values.map((val) => `<li>${val}</li>`).join('')}<ul>` : `<div>${value}</div>`)[0]
+        const td = findAll('td', envRow)
+        td[0].textContent = key
+        td[1].appendChild(valuesElement)
+
+        return envRow
+    },
+    getResultTBody: ({ testId, id, log, extras, resultsTableRow, tableHtml, result, collapsed }) => {
+        const resultBody = templateResult.content.cloneNode(true)
+        resultBody.querySelector('tbody').classList.add(result.toLowerCase())
+        resultBody.querySelector('tbody').id = testId
+        resultBody.querySelector('.collapsible').dataset.id = id
+
+        resultsTableRow.forEach((html) => {
+            const t = document.createElement('template')
+            t.innerHTML = html
+            resultBody.querySelector('.collapsible').appendChild(t.content)
+        })
+
+        if (log) {
+            // Wrap lines starting with "E" with span.error to color those lines red
+            const wrappedLog = log.replace(/^E.*$/gm, (match) => `<span class="error">${match}</span>`)
+            resultBody.querySelector('.log').innerHTML = wrappedLog
+        } else {
+            resultBody.querySelector('.log').remove()
+        }
+
+        if (collapsed) {
+            resultBody.querySelector('.collapsible > .col-result')?.classList.add('collapsed')
+            resultBody.querySelector('.extras-row').classList.add('hidden')
+        } else {
+            resultBody.querySelector('.collapsible > .col-result')?.classList.remove('collapsed')
+        }
+
+        const media = []
+        extras?.forEach(({ name, format_type, content }) => {
+            if (['image', 'video'].includes(format_type)) {
+                media.push({ path: content, name, format_type })
+            }
+
+            if (format_type === 'html') {
+                resultBody.querySelector('.extraHTML').insertAdjacentHTML('beforeend', `<div>${content}</div>`)
+            }
+        })
+        mediaViewer.setup(resultBody, media)
+
+        // Add custom html from the pytest_html_results_table_html hook
+        tableHtml?.forEach((item) => {
+            resultBody.querySelector('td[class="extra"]').insertAdjacentHTML('beforeend', item)
+        })
+
+        return resultBody
+    },
+}
+
+module.exports = {
+    dom,
+    htmlToElements,
+    find,
+    findAll,
+}
+
+},{"./mediaviewer.js":6}],3:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const storageModule = require('./storage.js')
+
+const getFilteredSubSet = (filter) =>
+    manager.allData.tests.filter(({ result }) => filter.includes(result.toLowerCase()))
+
+const doInitFilter = () => {
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+}
+
+const doFilter = (type, show) => {
+    if (show) {
+        storageModule.showCategory(type)
+    } else {
+        storageModule.hideCategory(type)
+    }
+
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+
+    const sortColumn = storageModule.getSort()
+    doSort(sortColumn, true)
+}
+
+module.exports = {
+    doFilter,
+    doInitFilter,
+}
+
+},{"./datamanager.js":1,"./sort.js":7,"./storage.js":8}],4:[function(require,module,exports){
+const { redraw, bindEvents, renderStatic } = require('./main.js')
+const { doInitFilter } = require('./filter.js')
+const { doInitSort } = require('./sort.js')
+const { manager } = require('./datamanager.js')
+const data = JSON.parse(document.getElementById('data-container').dataset.jsonblob)
+
+function init() {
+    manager.setManager(data)
+    doInitFilter()
+    doInitSort()
+    renderStatic()
+    redraw()
+    bindEvents()
+}
+
+init()
+
+},{"./datamanager.js":1,"./filter.js":3,"./main.js":5,"./sort.js":7}],5:[function(require,module,exports){
+const { dom, find, findAll } = require('./dom.js')
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const { doFilter } = require('./filter.js')
+const {
+    getVisible,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    getSortDirection,
+    possibleFilters,
+} = require('./storage.js')
+
+const removeChildren = (node) => {
+    while (node.firstChild) {
+        node.removeChild(node.firstChild)
+    }
+}
+
+const renderStatic = () => {
+    const renderEnvironmentTable = () => {
+        const environment = manager.environment
+        const rows = Object.keys(environment).map((key) => dom.getStaticRow(key, environment[key]))
+        const table = document.getElementById('environment')
+        removeChildren(table)
+        rows.forEach((row) => table.appendChild(row))
+    }
+    renderEnvironmentTable()
+}
+
+const addItemToggleListener = (elem) => {
+    elem.addEventListener('click', ({ target }) => {
+        const id = target.parentElement.dataset.id
+        manager.toggleCollapsedItem(id)
+
+        const collapsedIds = getCollapsedIds()
+        if (collapsedIds.includes(id)) {
+            const updated = collapsedIds.filter((item) => item !== id)
+            setCollapsedIds(updated)
+        } else {
+            collapsedIds.push(id)
+            setCollapsedIds(collapsedIds)
+        }
+        redraw()
+    })
+}
+
+const renderContent = (tests) => {
+    const sortAttr = getSort(manager.initialSort)
+    const sortAsc = JSON.parse(getSortDirection())
+    const rows = tests.map(dom.getResultTBody)
+    const table = document.getElementById('results-table')
+    const tableHeader = document.getElementById('results-table-head')
+
+    const newTable = document.createElement('table')
+    newTable.id = 'results-table'
+
+    // remove all sorting classes and set the relevant
+    findAll('.sortable', tableHeader).forEach((elem) => elem.classList.remove('asc', 'desc'))
+    tableHeader.querySelector(`.sortable[data-column-type="${sortAttr}"]`)?.classList.add(sortAsc ? 'desc' : 'asc')
+    newTable.appendChild(tableHeader)
+
+    if (!rows.length) {
+        const emptyTable = document.getElementById('template_results-table__body--empty').content.cloneNode(true)
+        newTable.appendChild(emptyTable)
+    } else {
+        rows.forEach((row) => {
+            if (!!row) {
+                findAll('.collapsible td:not(.col-links', row).forEach(addItemToggleListener)
+                find('.logexpander', row).addEventListener('click',
+                    (evt) => evt.target.parentNode.classList.toggle('expanded'),
+                )
+                newTable.appendChild(row)
+            }
+        })
+    }
+
+    table.replaceWith(newTable)
+}
+
+const renderDerived = () => {
+    const currentFilter = getVisible()
+    possibleFilters.forEach((result) => {
+        const input = document.querySelector(`input[data-test-result="${result}"]`)
+        input.checked = currentFilter.includes(result)
+    })
+}
+
+const bindEvents = () => {
+    const filterColumn = (evt) => {
+        const { target: element } = evt
+        const { testResult } = element.dataset
+
+        doFilter(testResult, element.checked)
+        const collapsedIds = getCollapsedIds()
+        const updated = manager.renderData.tests.map((test) => {
+            return {
+                ...test,
+                collapsed: collapsedIds.includes(test.id),
+            }
+        })
+        manager.setRender(updated)
+        redraw()
+    }
+
+    const header = document.getElementById('environment-header')
+    header.addEventListener('click', () => {
+        const table = document.getElementById('environment')
+        table.classList.toggle('hidden')
+        header.classList.toggle('collapsed')
+    })
+
+    findAll('input[name="filter_checkbox"]').forEach((elem) => {
+        elem.addEventListener('click', filterColumn)
+    })
+
+    findAll('.sortable').forEach((elem) => {
+        elem.addEventListener('click', (evt) => {
+            const { target: element } = evt
+            const { columnType } = element.dataset
+            doSort(columnType)
+            redraw()
+        })
+    })
+
+    document.getElementById('show_all_details').addEventListener('click', () => {
+        manager.allCollapsed = false
+        setCollapsedIds([])
+        redraw()
+    })
+    document.getElementById('hide_all_details').addEventListener('click', () => {
+        manager.allCollapsed = true
+        const allIds = manager.renderData.tests.map((test) => test.id)
+        setCollapsedIds(allIds)
+        redraw()
+    })
+}
+
+const redraw = () => {
+    const { testSubset } = manager
+
+    renderContent(testSubset)
+    renderDerived()
+}
+
+module.exports = {
+    redraw,
+    bindEvents,
+    renderStatic,
+}
+
+},{"./datamanager.js":1,"./dom.js":2,"./filter.js":3,"./sort.js":7,"./storage.js":8}],6:[function(require,module,exports){
+class MediaViewer {
+    constructor(assets) {
+        this.assets = assets
+        this.index = 0
+    }
+
+    nextActive() {
+        this.index = this.index === this.assets.length - 1 ? 0 : this.index + 1
+        return [this.activeFile, this.index]
+    }
+
+    prevActive() {
+        this.index = this.index === 0 ? this.assets.length - 1 : this.index -1
+        return [this.activeFile, this.index]
+    }
+
+    get currentIndex() {
+        return this.index
+    }
+
+    get activeFile() {
+        return this.assets[this.index]
+    }
+}
+
+
+const setup = (resultBody, assets) => {
+    if (!assets.length) {
+        resultBody.querySelector('.media').classList.add('hidden')
+        return
+    }
+
+    const mediaViewer = new MediaViewer(assets)
+    const container = resultBody.querySelector('.media-container')
+    const leftArrow = resultBody.querySelector('.media-container__nav--left')
+    const rightArrow = resultBody.querySelector('.media-container__nav--right')
+    const mediaName = resultBody.querySelector('.media__name')
+    const counter = resultBody.querySelector('.media__counter')
+    const imageEl = resultBody.querySelector('img')
+    const sourceEl = resultBody.querySelector('source')
+    const videoEl = resultBody.querySelector('video')
+
+    const setImg = (media, index) => {
+        if (media?.format_type === 'image') {
+            imageEl.src = media.path
+
+            imageEl.classList.remove('hidden')
+            videoEl.classList.add('hidden')
+        } else if (media?.format_type === 'video') {
+            sourceEl.src = media.path
+
+            videoEl.classList.remove('hidden')
+            imageEl.classList.add('hidden')
+        }
+
+        mediaName.innerText = media?.name
+        counter.innerText = `${index + 1} / ${assets.length}`
+    }
+    setImg(mediaViewer.activeFile, mediaViewer.currentIndex)
+
+    const moveLeft = () => {
+        const [media, index] = mediaViewer.prevActive()
+        setImg(media, index)
+    }
+    const doRight = () => {
+        const [media, index] = mediaViewer.nextActive()
+        setImg(media, index)
+    }
+    const openImg = () => {
+        window.open(mediaViewer.activeFile.path, '_blank')
+    }
+    if (assets.length === 1) {
+        container.classList.add('media-container--fullscreen')
+    } else {
+        leftArrow.addEventListener('click', moveLeft)
+        rightArrow.addEventListener('click', doRight)
+    }
+    imageEl.addEventListener('click', openImg)
+}
+
+module.exports = {
+    setup,
+}
+
+},{}],7:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const storageModule = require('./storage.js')
+
+const genericSort = (list, key, ascending, customOrder) => {
+    let sorted
+    if (customOrder) {
+        sorted = list.sort((a, b) => {
+            const aValue = a.result.toLowerCase()
+            const bValue = b.result.toLowerCase()
+
+            const aIndex = customOrder.findIndex((item) => item.toLowerCase() === aValue)
+            const bIndex = customOrder.findIndex((item) => item.toLowerCase() === bValue)
+
+            // Compare the indices to determine the sort order
+            return aIndex - bIndex
+        })
+    } else {
+        sorted = list.sort((a, b) => a[key] === b[key] ? 0 : a[key] > b[key] ? 1 : -1)
+    }
+
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const durationSort = (list, ascending) => {
+    const parseDuration = (duration) => {
+        if (duration.includes(':')) {
+            // If it's in the format "HH:mm:ss"
+            const [hours, minutes, seconds] = duration.split(':').map(Number)
+            return (hours * 3600 + minutes * 60 + seconds) * 1000
+        } else {
+            // If it's in the format "nnn ms"
+            return parseInt(duration)
+        }
+    }
+    const sorted = list.sort((a, b) => parseDuration(a['duration']) - parseDuration(b['duration']))
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const doInitSort = () => {
+    const type = storageModule.getSort(manager.initialSort)
+    const ascending = storageModule.getSortDirection()
+    const list = manager.testSubset
+    const initialOrder = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed', 'Skipped', 'Passed']
+
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    if (type?.toLowerCase() === 'original') {
+        manager.setRender(list)
+    } else {
+        let sortedList
+        switch (type) {
+        case 'duration':
+            sortedList = durationSort(list, ascending)
+            break
+        case 'result':
+            sortedList = genericSort(list, type, ascending, initialOrder)
+            break
+        default:
+            sortedList = genericSort(list, type, ascending)
+            break
+        }
+        manager.setRender(sortedList)
+    }
+}
+
+const doSort = (type, skipDirection) => {
+    const newSortType = storageModule.getSort(manager.initialSort) !== type
+    const currentAsc = storageModule.getSortDirection()
+    let ascending
+    if (skipDirection) {
+        ascending = currentAsc
+    } else {
+        ascending = newSortType ? false : !currentAsc
+    }
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    const list = manager.testSubset
+    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)
+    manager.setRender(sortedList)
+}
+
+module.exports = {
+    doInitSort,
+    doSort,
+}
+
+},{"./datamanager.js":1,"./storage.js":8}],8:[function(require,module,exports){
+const possibleFilters = [
+    'passed',
+    'skipped',
+    'failed',
+    'error',
+    'xfailed',
+    'xpassed',
+    'rerun',
+]
+
+const getVisible = () => {
+    const url = new URL(window.location.href)
+    const settings = new URLSearchParams(url.search).get('visible')
+    const lower = (item) => {
+        const lowerItem = item.toLowerCase()
+        if (possibleFilters.includes(lowerItem)) {
+            return lowerItem
+        }
+        return null
+    }
+    return settings === null ?
+        possibleFilters :
+        [...new Set(settings?.split(',').map(lower).filter((item) => item))]
+}
+
+const hideCategory = (categoryToHide) => {
+    const url = new URL(window.location.href)
+    const visibleParams = new URLSearchParams(url.search).get('visible')
+    const currentVisible = visibleParams ? visibleParams.split(',') : [...possibleFilters]
+    const settings = [...new Set(currentVisible)].filter((f) => f !== categoryToHide).join(',')
+
+    url.searchParams.set('visible', settings)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const showCategory = (categoryToShow) => {
+    if (typeof window === 'undefined') {
+        return
+    }
+    const url = new URL(window.location.href)
+    const currentVisible = new URLSearchParams(url.search).get('visible')?.split(',').filter(Boolean) ||
+        [...possibleFilters]
+    const settings = [...new Set([categoryToShow, ...currentVisible])]
+    const noFilter = possibleFilters.length === settings.length || !settings.length
+
+    noFilter ? url.searchParams.delete('visible') : url.searchParams.set('visible', settings.join(','))
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getSort = (initialSort) => {
+    const url = new URL(window.location.href)
+    let sort = new URLSearchParams(url.search).get('sort')
+    if (!sort) {
+        sort = initialSort || 'result'
+    }
+    return sort
+}
+
+const setSort = (type) => {
+    const url = new URL(window.location.href)
+    url.searchParams.set('sort', type)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getCollapsedCategory = (renderCollapsed) => {
+    let categories
+    if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href)
+        const collapsedItems = new URLSearchParams(url.search).get('collapsed')
+        switch (true) {
+        case !renderCollapsed && collapsedItems === null:
+            categories = ['passed']
+            break
+        case collapsedItems?.length === 0 || /^["']{2}$/.test(collapsedItems):
+            categories = []
+            break
+        case /^all$/.test(collapsedItems) || collapsedItems === null && /^all$/.test(renderCollapsed):
+            categories = [...possibleFilters]
+            break
+        default:
+            categories = collapsedItems?.split(',').map((item) => item.toLowerCase()) || renderCollapsed
+            break
+        }
+    } else {
+        categories = []
+    }
+    return categories
+}
+
+const getSortDirection = () => JSON.parse(sessionStorage.getItem('sortAsc')) || false
+const setSortDirection = (ascending) => sessionStorage.setItem('sortAsc', ascending)
+
+const getCollapsedIds = () => JSON.parse(sessionStorage.getItem('collapsedIds')) || []
+const setCollapsedIds = (list) => sessionStorage.setItem('collapsedIds', JSON.stringify(list))
+
+module.exports = {
+    getVisible,
+    hideCategory,
+    showCategory,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    setSort,
+    getSortDirection,
+    setSortDirection,
+    getCollapsedCategory,
+    possibleFilters,
+}
+
+},{}]},{},[4]);
+    </script>
+  </footer>
+  </body>
+</html>

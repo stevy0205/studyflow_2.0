@@ -9,11 +9,13 @@ from state import CoachState
 from tools_registry import ToolsRegistry
 from langchain_community.chat_models import ChatOllama
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
+from langchain_openai import ChatOpenAI
 
-_llm = ChatOllama(
-    model="llama3.1:8b-instruct-q4_K_M",
+LLM_MODEL = "gpt-4.1"
+
+_llm = ChatOpenAI(
+    model=LLM_MODEL,
     temperature=0,
-    timeout=60,
     max_retries=1
 )
 

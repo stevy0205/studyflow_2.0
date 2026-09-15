@@ -21,7 +21,14 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from openai import AsyncOpenAI
 load_dotenv()
 client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+from langchain_openai import ChatOpenAI
+LLM_MODEL = "gpt-4.1"
 
+judge_llm = ChatOpenAI(
+    model=LLM_MODEL,
+    temperature=0,
+    max_retries=1
+)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Judge-Helper
@@ -29,7 +36,7 @@ client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 async def judge_sentiment(user_text, predicted, expected):
     resp = await client.chat.completions.create(
-        model="gpt-4o-mini", temperature=0, max_tokens=200,
+        model=LLM_MODEL, temperature=0, max_tokens=200,
         messages=[{
             "role": "system",
             "content": (
@@ -50,7 +57,7 @@ async def judge_sentiment(user_text, predicted, expected):
 
 async def judge_answer_quality(question, method_context, answer):
     resp = await client.chat.completions.create(
-        model="gpt-4o-mini", temperature=0, max_tokens=300,
+        model=LLM_MODEL, temperature=0, max_tokens=300,
         messages=[{
             "role": "system",
             "content": (
@@ -76,7 +83,7 @@ async def judge_coach_response(user_feedback, tool_id, bot_response, reference_r
     Bewertet: empathetic, actionable, tone_match, not_generic, score 0-4
     """
     resp = await client.chat.completions.create(
-        model="gpt-4o-mini", temperature=0, max_tokens=400,
+        model=LLM_MODEL, temperature=0, max_tokens=400,
         messages=[{
             "role": "system",
             "content": (
@@ -112,7 +119,7 @@ async def judge_coach_response(user_feedback, tool_id, bot_response, reference_r
 
 async def call_llm_sentiment(text):
     resp = await client.chat.completions.create(
-        model="gpt-4o-mini", temperature=0, max_tokens=10,
+        model=LLM_MODEL, temperature=0, max_tokens=10,
         messages=[{
             "role": "system",
             "content": "Du klassifizierst Feedback zu einer Lernmethode. Antworte NUR mit einem Wort: positive, partial_positive, neutral, partial_negative oder negative."
@@ -124,7 +131,7 @@ async def call_llm_sentiment(text):
 
 async def call_llm_answer(question, method_context):
     resp = await client.chat.completions.create(
-        model="gpt-4o-mini", temperature=0.3, max_tokens=400,
+        model=LLM_MODEL, temperature=0.3, max_tokens=400,
         messages=[{
             "role": "system",
             "content": (
@@ -140,7 +147,7 @@ async def call_llm_answer(question, method_context):
 
 async def call_llm_coach_response(user_feedback, tool_id):
     resp = await client.chat.completions.create(
-        model="gpt-4o-mini", temperature=0.5, max_tokens=300,
+        model=LLM_MODEL, temperature=0.5, max_tokens=300,
         messages=[{
             "role": "system",
             "content": (

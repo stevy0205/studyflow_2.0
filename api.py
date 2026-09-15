@@ -10,6 +10,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from langchain_openai import ChatOpenAI
 from pydantic import BaseModel
 
 from typing import Optional
@@ -18,6 +19,8 @@ from database import init_db, verify_login, register_user, save_result, get_late
 
 # ── App Setup ──────────────────────────────────────────────────────────────────
 app = FastAPI(title="StudyFlow Coach")
+LLM_MODEL = "gpt-4.1"
+
 
 BASE = Path(__file__).parent
 app.mount("/static", StaticFiles(directory=BASE / "frontend" / "static"), name="static")
@@ -232,7 +235,7 @@ async def _llm_sentiment(text: str) -> str:
     from openai import AsyncOpenAI
     client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
     resp = await client.chat.completions.create(
-        model="gpt-4o-mini",
+        model=LLM_MODEL,
         temperature=0,
         max_tokens=10,
         messages=[{
@@ -264,7 +267,7 @@ async def _llm_answer_question(question: str, method: dict, registry) -> str:
     related_context = "\n\n---\n\n".join(registry.format_for_llm(m) for m in related if m.get("name") != method.get("name"))
 
     resp = await client.chat.completions.create(
-        model="gpt-4o-mini",
+        model=LLM_MODEL,
         temperature=0.3,
         max_tokens=400,
         messages=[{
